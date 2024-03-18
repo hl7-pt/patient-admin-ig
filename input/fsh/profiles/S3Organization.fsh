@@ -3,11 +3,7 @@ Parent: Organization
 Id: S3Organization
 
 * id 1..
-* meta ..0
-* implicitRules ..0
-* language ..0
-* text ..0
-* contained ..0
+
 * identifier.id ..0
 * identifier.type ..0
 * identifier.period ..0

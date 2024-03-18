@@ -2,7 +2,7 @@ Extension: S3AddressNuts
 Id: S3AddressNuts
 Context: Address
 
-* id ..0
+
 * extension contains
     nuts-I 0..* and
     nuts-II 0..* and
