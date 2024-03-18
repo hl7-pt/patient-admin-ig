@@ -1,0 +1,110 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/S3AddressGeolocation",
+  "name": "S3AddressGeolocation",
+  "status": "draft",
+  "date": "2024-01-16T08:29:17.0648036+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Address"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.id",
+        "path": "Extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:longitude",
+        "path": "Extension.extension",
+        "sliceName": "longitude"
+      },
+      {
+        "id": "Extension.extension:longitude.id",
+        "path": "Extension.extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:longitude.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "longitude"
+      },
+      {
+        "id": "Extension.extension:longitude.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:latitude",
+        "path": "Extension.extension",
+        "sliceName": "latitude"
+      },
+      {
+        "id": "Extension.extension:latitude.id",
+        "path": "Extension.extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:latitude.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "latitude"
+      },
+      {
+        "id": "Extension.extension:latitude.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:altitude",
+        "path": "Extension.extension",
+        "sliceName": "altitude"
+      },
+      {
+        "id": "Extension.extension:altitude.id",
+        "path": "Extension.extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:altitude.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "altitude"
+      },
+      {
+        "id": "Extension.extension:altitude.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://example.org/fhir/StructureDefinition/S3AddressGeolocation"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

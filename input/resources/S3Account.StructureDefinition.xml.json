@@ -1,0 +1,125 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/S3Account",
+  "name": "S3Account",
+  "status": "draft",
+  "date": "2024-03-15T11:39:59.6012013+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Account",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Account",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Account.id",
+        "path": "Account.id",
+        "min": 1
+      },
+      {
+        "id": "Account.meta",
+        "path": "Account.meta",
+        "max": "0"
+      },
+      {
+        "id": "Account.implicitRules",
+        "path": "Account.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Account.language",
+        "path": "Account.language",
+        "max": "0"
+      },
+      {
+        "id": "Account.text",
+        "path": "Account.text",
+        "max": "0"
+      },
+      {
+        "id": "Account.contained",
+        "path": "Account.contained",
+        "max": "0"
+      },
+      {
+        "id": "Account.identifier",
+        "path": "Account.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Account.type",
+        "path": "Account.type",
+        "max": "0"
+      },
+      {
+        "id": "Account.name",
+        "path": "Account.name",
+        "max": "0"
+      },
+      {
+        "id": "Account.subject",
+        "path": "Account.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Account.subject.id",
+        "path": "Account.subject.id",
+        "max": "0"
+      },
+      {
+        "id": "Account.subject.type",
+        "path": "Account.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Account.subject.identifier",
+        "path": "Account.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Account.subject.display",
+        "path": "Account.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Account.servicePeriod",
+        "path": "Account.servicePeriod",
+        "max": "0"
+      },
+      {
+        "id": "Account.coverage.id",
+        "path": "Account.coverage.id",
+        "max": "0"
+      },
+      {
+        "id": "Account.coverage.priority",
+        "path": "Account.coverage.priority",
+        "max": "0"
+      },
+      {
+        "id": "Account.owner",
+        "path": "Account.owner",
+        "max": "0"
+      },
+      {
+        "id": "Account.guarantor",
+        "path": "Account.guarantor",
+        "max": "0"
+      },
+      {
+        "id": "Account.partOf",
+        "path": "Account.partOf",
+        "max": "0"
+      }
+    ]
+  }
+}

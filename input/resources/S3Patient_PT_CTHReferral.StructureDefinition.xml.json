@@ -1,0 +1,218 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/S3Patient_PT_CTHReferral",
+  "name": "S3Patient_PT_CTHReferral",
+  "status": "draft",
+  "date": "2024-01-11T15:26:55.9490058+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.id",
+        "path": "Patient.id",
+        "min": 1
+      },
+      {
+        "id": "Patient.meta",
+        "path": "Patient.meta",
+        "max": "0"
+      },
+      {
+        "id": "Patient.implicitRules",
+        "path": "Patient.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Patient.language",
+        "path": "Patient.language",
+        "max": "0"
+      },
+      {
+        "id": "Patient.text",
+        "path": "Patient.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contained",
+        "path": "Patient.contained",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "type.coding"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.identifier:residentCardNumber",
+        "path": "Patient.identifier",
+        "sliceName": "residentCardNumber",
+        "definition": "Número do Título de Residência",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:citizenshipCardNumber",
+        "path": "Patient.identifier",
+        "sliceName": "citizenshipCardNumber",
+        "definition": "Número de Identificação Civil",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:taxIdNumber",
+        "path": "Patient.identifier",
+        "sliceName": "taxIdNumber",
+        "definition": "Número de Identificação Fiscal",
+        "max": "0",
+        "fixedIdentifier": {
+          "type": {
+            "text": "Número de Identificação Fiscal"
+          }
+        }
+      },
+      {
+        "id": "Patient.identifier:socialSecurityNumber",
+        "path": "Patient.identifier",
+        "sliceName": "socialSecurityNumber",
+        "definition": "Número de Identificação da Segurança\r\nSocial",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:healthCardNumber",
+        "path": "Patient.identifier",
+        "sliceName": "healthCardNumber",
+        "short": "Número Nacional do Utente",
+        "definition": "Número Nacional do Utente",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:passportNumber",
+        "path": "Patient.identifier",
+        "sliceName": "passportNumber",
+        "short": "Número do Passaporte",
+        "definition": "Número do Passaporte",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:internalIdentifier",
+        "path": "Patient.identifier",
+        "sliceName": "internalIdentifier"
+      },
+      {
+        "id": "Patient.identifier:internalIdentifier.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:internalIdentifier.type",
+        "path": "Patient.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:internalIdentifier.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:internalIdentifier.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "max": "0"
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "max": "0"
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "max": "0"
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "max": "0"
+      },
+      {
+        "id": "Patient.deceased[x]",
+        "path": "Patient.deceased[x]",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "max": "0"
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "path": "Patient.maritalStatus",
+        "max": "0"
+      },
+      {
+        "id": "Patient.multipleBirth[x]",
+        "path": "Patient.multipleBirth[x]",
+        "max": "0"
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact",
+        "path": "Patient.contact",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication",
+        "path": "Patient.communication",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner",
+        "path": "Patient.generalPractitioner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner.extension:patientPrimaryCarePeriod",
+        "path": "Patient.generalPractitioner.extension",
+        "sliceName": "patientPrimaryCarePeriod",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/patient-primary-care-period"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.managingOrganization",
+        "path": "Patient.managingOrganization",
+        "max": "0"
+      },
+      {
+        "id": "Patient.link",
+        "path": "Patient.link",
+        "max": "0"
+      }
+    ]
+  }
+}

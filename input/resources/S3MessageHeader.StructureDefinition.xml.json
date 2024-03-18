@@ -1,0 +1,156 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/S3MessageHeader",
+  "name": "S3MessageHeader",
+  "status": "draft",
+  "date": "2024-01-11T15:39:24.4970839+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MessageHeader",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MessageHeader",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MessageHeader.id",
+        "path": "MessageHeader.id",
+        "min": 1
+      },
+      {
+        "id": "MessageHeader.meta",
+        "path": "MessageHeader.meta",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.implicitRules",
+        "path": "MessageHeader.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.language",
+        "path": "MessageHeader.language",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.text",
+        "path": "MessageHeader.text",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.contained",
+        "path": "MessageHeader.contained",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.event[x]",
+        "path": "MessageHeader.event[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "MessageHeader.destination.target",
+        "path": "MessageHeader.destination.target",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.destination.receiver.type",
+        "path": "MessageHeader.destination.receiver.type",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.destination.receiver.identifier",
+        "path": "MessageHeader.destination.receiver.identifier",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.destination.receiver.display",
+        "path": "MessageHeader.destination.receiver.display",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.sender.type",
+        "path": "MessageHeader.sender.type",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.sender.identifier",
+        "path": "MessageHeader.sender.identifier",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.sender.display",
+        "path": "MessageHeader.sender.display",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.enterer.type",
+        "path": "MessageHeader.enterer.type",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.enterer.identifier",
+        "path": "MessageHeader.enterer.identifier",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.enterer.display",
+        "path": "MessageHeader.enterer.display",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.author",
+        "path": "MessageHeader.author",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.source.software",
+        "path": "MessageHeader.source.software",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.source.version",
+        "path": "MessageHeader.source.version",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.source.contact",
+        "path": "MessageHeader.source.contact",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.responsible",
+        "path": "MessageHeader.responsible",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.reason",
+        "path": "MessageHeader.reason",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.focus.type",
+        "path": "MessageHeader.focus.type",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.focus.identifier",
+        "path": "MessageHeader.focus.identifier",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.focus.display",
+        "path": "MessageHeader.focus.display",
+        "max": "0"
+      },
+      {
+        "id": "MessageHeader.definition",
+        "path": "MessageHeader.definition",
+        "max": "0"
+      }
+    ]
+  }
+}
