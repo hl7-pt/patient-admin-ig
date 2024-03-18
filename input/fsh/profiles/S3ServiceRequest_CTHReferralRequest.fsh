@@ -1,0 +1,64 @@
+Profile: S3ServiceRequest_CTHReferralRequest
+Parent: ServiceRequest
+Id: S3ServiceRequest-CTHReferralRequest
+* ^url = "https://example.org/fhir/StructureDefinition/S3ServiceRequest_CTHReferralRequest"
+* ^status = #draft
+* ^date = "2024-01-11T15:37:22.7200658+00:00"
+* id 1..
+* meta ..0
+* implicitRules ..0
+* language ..0
+* text ..0
+* contained ..0
+* identifier ..0
+* instantiatesCanonical ..0
+* instantiatesUri ..0
+* basedOn ..0
+* replaces ..0
+* requisition.use ..0
+* requisition.type ..0
+* requisition.period ..0
+* requisition.assigner ..0
+* category ..0
+* priority ..0
+* doNotPerform ..0
+* code.coding.version ..0
+* code.coding.display ..0
+* code.coding.userSelected ..0
+* orderDetail ..0
+* quantity[x] ..0
+* subject.type ..0
+* subject.identifier ..0
+* subject.identifier.use ..0
+* subject.identifier.type ..0
+* subject.identifier.period ..0
+* subject.identifier.assigner ..0
+* subject.display ..0
+* encounter ..0
+* occurrence[x] ..0
+* asNeeded[x] ..0
+* requester.type ..0
+* requester.identifier ..0
+* requester.identifier.use ..0
+* requester.identifier.type ..0
+* requester.identifier.period ..0
+* requester.identifier.assigner ..0
+* requester.display ..0
+* performer.type ..0
+* performer.identifier ..0
+* performer.identifier.use ..0
+* performer.identifier.type ..0
+* performer.identifier.period ..0
+* performer.identifier.assigner ..0
+* performer.display ..0
+* locationCode ..0
+* locationReference ..0
+* reasonCode ..0
+* reasonReference ..0
+* insurance ..0
+* supportingInfo ..0
+* specimen ..0
+* bodySite ..0
+* note ..0
+* patientInstruction ..0
+* relevantHistory ..0
