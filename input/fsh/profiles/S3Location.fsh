@@ -1,7 +1,6 @@
 Profile: S3Location
 Parent: Location
 Id: S3Location
-* ^url = "https://example.org/fhir/StructureDefinition/S3Location"
 * ^status = #draft
 * ^date = "2024-01-12T09:29:27.7196402+00:00"
 * id 1..

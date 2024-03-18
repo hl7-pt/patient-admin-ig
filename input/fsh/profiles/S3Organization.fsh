@@ -1,9 +1,7 @@
 Profile: S3Organization
 Parent: Organization
 Id: S3Organization
-* ^url = "https://example.org/fhir/StructureDefinition/S3Organization"
-* ^status = #draft
-* ^date = "2024-01-11T17:04:39.0523529+00:00"
+
 * id 1..
 * meta ..0
 * implicitRules ..0

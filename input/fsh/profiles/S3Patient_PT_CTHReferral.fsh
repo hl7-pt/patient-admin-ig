@@ -1,15 +1,8 @@
 Profile: S3Patient_PT_CTHReferral
 Parent: Patient
 Id: S3Patient-PT-CTHReferral
-* ^url = "https://example.org/fhir/StructureDefinition/S3Patient_PT_CTHReferral"
-* ^status = #draft
-* ^date = "2024-01-11T15:26:55.9490058+00:00"
+
 * id 1..
-* meta ..0
-* implicitRules ..0
-* language ..0
-* text ..0
-* contained ..0
 * identifier ^slicing.discriminator.type = #type
 * identifier ^slicing.discriminator.path = "type.coding"
 * identifier ^slicing.rules = #open

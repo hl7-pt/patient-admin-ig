@@ -1,15 +1,8 @@
 Profile: S3Patient_PT
 Parent: Patient
 Id: S3Patient-PT
-* ^url = "https://example.org/fhir/StructureDefinition/S3Patient_PT"
-* ^status = #draft
-* ^date = "2024-01-18T17:17:16.0415947+00:00"
+
 * id 1..
-* meta ..0
-* implicitRules ..0
-* language ..0
-* text ..0
-* contained ..0
 * extension contains
     S3PersonOccupation named occupation 0..* and
     S3PersonRecordType named patient-record-type 0..* and

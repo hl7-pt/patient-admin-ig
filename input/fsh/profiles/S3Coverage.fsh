@@ -1,15 +1,8 @@
 Profile: S3Coverage
 Parent: Coverage
 Id: S3Coverage
-* ^url = "https://example.org/fhir/StructureDefinition/S3Coverage"
-* ^status = #draft
-* ^date = "2024-01-12T09:09:55.3619881+00:00"
+
 * id 1..
-* meta ..0
-* implicitRules ..0
-* language ..0
-* text ..0
-* contained ..0
 * identifier ..0
 * type ..0
 * policyHolder ..0

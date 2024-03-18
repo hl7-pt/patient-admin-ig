@@ -1,9 +1,7 @@
 Profile: S3MessageHeader
 Parent: MessageHeader
 Id: S3MessageHeader
-* ^url = "https://example.org/fhir/StructureDefinition/S3MessageHeader"
-* ^status = #draft
-* ^date = "2024-01-11T15:39:24.4970839+00:00"
+
 * id 1..
 * meta ..0
 * implicitRules ..0

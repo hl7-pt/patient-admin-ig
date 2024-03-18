@@ -1,9 +1,7 @@
 Profile: S3Organization_CTHReferral
 Parent: Organization
 Id: S3Organization-CTHReferral
-* ^url = "https://example.org/fhir/StructureDefinition/S3Organization_CTHReferreal"
-* ^status = #draft
-* ^date = "2024-01-11T15:32:47.4531879+00:00"
+
 * id 1..
 * meta ..0
 * implicitRules ..0

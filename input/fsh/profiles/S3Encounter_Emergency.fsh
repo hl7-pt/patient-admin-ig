@@ -1,21 +1,7 @@
 Profile: S3Encounter_Emergency
 Parent: Encounter
 Id: S3Encounter-Emergency
-* ^url = "https://example.org/fhir/StructureDefinition/S3Encounter_Emergency"
-* ^status = #draft
-* ^date = "2024-03-18T09:25:35.8819672+00:00"
-* id 1..
-* meta ..0
-* meta.id ..0
-* meta.versionId ..0
-* meta.source ..0
-* meta.profile ..0
-* meta.security ..0
-* meta.tag ..0
-* implicitRules ..0
-* language ..0
-* text ..0
-* contained ..0
+
 * extension contains
     S3Notes named notes 0..* and
     $encounter-modeOfArrival named modeOfArrival 0..* and
