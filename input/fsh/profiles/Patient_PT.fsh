@@ -1,13 +1,13 @@
-Profile: S3Patient_PT
+Profile: Patient_PT
 Parent: Patient
-Id: S3Patient-PT
+Id: Patient-Pt
 
 * id 1..
 * extension contains
-    S3PersonOccupation named occupation 0..* and
-    S3PersonRecordType named patient-record-type 0..* and
-    S3PatientEnrollmentCategoryPrimarycare named s3PatientEnrollmentCategoryPrimarycare 0..* and
-    S3PersonNationality named s3PersonNationality 0..*
+    PersonOccupation_PT named occupation 0..* and
+    PersonRecordType_PT named patient-record-type 0..* and
+    PatientEnrollmentCategoryPrimarycare-Pt named PatientEnrollmentCategoryPrimarycare_PT 0..* and
+    PersonNationality_PT named PersonNationality_PT 0..*
 * identifier ^slicing.discriminator.type = #type
 * identifier ^slicing.discriminator.path = "type.coding"
 * identifier ^slicing.rules = #open
@@ -51,33 +51,33 @@ Id: S3Patient-PT
 * name ..1
 
 * telecom.extension contains
-    S3ContactIndicative named S3ContactIndicative 0..* 
+    ContactIndicative-PT named ContactIndicative_PT 0..*
 
 * address.extension contains
-    S3AddressType named S3AddressType 0..* and
-S3AddressMunicipality named S3AddressMunicipality 0..* and
-S3AddressCounty named S3AddressCounty 0..* and
-S3AddressParish named S3AddressParish 0..* and
-S3AddressGeolocation named S3AddressGeolocation 0..* and
-S3AddressNuts named S3AddressNuts 0..* 
+    AddressType_PT named AddressType_PT 0..* and
+AddressMunicipality_PT named AddressMunicipality_PT 0..* and
+AddressCounty_PT named AddressCounty_PT 0..* and
+AddressParish_PT named AddressParish_PT 0..* and
+AddressGeolocation_PT named AddressGeolocation_PT 0..* and
+AddressNuts_PT named AddressNuts_PT 0..*
 
 
 
 * contact ..1
 * contact.telecom.extension contains
-    S3ContactIndicative named S3ContactIndicative 0..* 
+    ContactIndicative_PT named ContactIndicative_PT 0..* 
 
 
 
 * contact.address.extension contains
-    S3AddressType named S3AddressType 0..* and
-S3AddressMunicipality named S3AddressMunicipality 0..* and
-S3AddressCounty named S3AddressCounty 0..* and
-S3AddressParish named S3AddressParish 0..* and
-S3AddressGeolocation named S3AddressGeolocation 0..* and
-S3AddressNuts named S3AddressNuts 0..* 
+    AddressType_PT named AddressType_PT 0..* and
+AddressMunicipality_PT named AddressMunicipality_PT 0..* and
+AddressCounty_PT named AddressCounty_PT 0..* and
+AddressParish_PT named AddressParish_PT 0..* and
+AddressGeolocation_PT named AddressGeolocation_PT 0..* and
+AddressNuts_PT named AddressNuts_PT 0..* 
 
 
 * generalPractitioner.extension contains
-    S3PatientPrimaryCarePeriod named patientPrimaryCarePeriod 0..* 
+    PatientPrimaryCarePeriod_PT named patientPrimaryCarePeriod 0..* 
 

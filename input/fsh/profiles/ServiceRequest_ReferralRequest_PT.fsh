@@ -1,6 +1,6 @@
-Profile: S3ServiceRequest_CTHReferralRequest
+Profile: ServiceRequest_ReferralRequest_PT
 Parent: ServiceRequest
-Id: S3ServiceRequest-CTHReferralRequest
+Id: ServiceRequest-ReferralRequest-pt
 
 * id 1..
 * identifier ..0

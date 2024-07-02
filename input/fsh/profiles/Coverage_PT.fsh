@@ -1,6 +1,6 @@
-Profile: S3Coverage
+Profile: Coverage_PT
 Parent: Coverage
-Id: S3Coverage
+Id: Coverage-Pt
 
 * id 1..
 * identifier ..0

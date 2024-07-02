@@ -1,11 +1,11 @@
-Profile: S3Encounter_Emergency
+Profile: Encounter_Emergency_PT
 Parent: Encounter
-Id: S3Encounter-Emergency
+Id: Encounter-Emergency-Pt
 
 * extension contains
-    S3Notes named notes 0..* and
+    Notes-Pt named notes 0..* and
     $encounter-modeOfArrival named modeOfArrival 0..* and
-    S3CoduCode named CoduCode 0..1 and
+    CoduCode-Pt named CoduCode 0..1 and
     $encounter-reasonCancelled named reasonCancelled 0..*
 * extension[notes].value[x] 1..
 * extension[modeOfArrival].id ..0

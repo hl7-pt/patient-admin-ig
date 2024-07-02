@@ -1,6 +1,6 @@
-Profile: S3MessageHeader
+Profile: MessageHeader_PT
 Parent: MessageHeader
-Id: S3MessageHeader
+Id: MessageHeader-Pt
 
 * id 1..
 * meta ..0

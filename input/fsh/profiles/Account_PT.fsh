@@ -1,6 +1,6 @@
-Profile: S3Account
+Profile: Account_PT
 Parent: Account
-Id: S3Account
+Id: Account-Pt
 
 * identifier ..0
 * type ..0

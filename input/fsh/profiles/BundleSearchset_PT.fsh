@@ -1,6 +1,6 @@
-Profile: S3BundleSearchset
+Profile: BundleSearchset_PT
 Parent: Bundle
-Id: S3BundleSearchset
+Id: BundleSearchset-Pt
 
 * ^abstract = true
 * identifier ..0

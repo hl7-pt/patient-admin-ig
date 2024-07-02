@@ -1,18 +1,14 @@
-Profile: S3Organization_CTHReferral
+Profile: Organization_PT
 Parent: Organization
-Id: S3Organization-CTHReferral
+Id: Organization-Pt
 
 * id 1..
-* meta ..0
-* implicitRules ..0
-* language ..0
-* text ..0
-* contained ..0
+
+* identifier.id ..0
 * identifier.type ..0
 * identifier.period ..0
 * identifier.assigner ..0
 * type ..0
-* name ..0
 * alias ..0
 * telecom ..0
 * address ..0

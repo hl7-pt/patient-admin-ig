@@ -1,6 +1,6 @@
-Profile: S3BundleMessage
+Profile: BundleMessage_PT
 Parent: Bundle
-Id: S3BundleMessage
+Id: BundleMessage-Pt
 
 * ^abstract = true
 * id 1..
