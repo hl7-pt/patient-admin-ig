@@ -39,8 +39,24 @@ During a routine audit, the staff member discovers that the two profiles for Mar
 
 ### Workflow diagram
 
+```mermaid 
+sequenceDiagram
+    ADTSYS->>+RNU: Patient_Search_Message
+    RNU-->>+ADTSYS: Patient_Search_Response_Message_With_Result
+    ADTSYS->>+ADTSYS: Create NewPatient From RNU Data
+    alt Patient Not Exist In RNU
+        ADTSYS->>+ADTSYS: Create NewPatient
+    end
+    ADTSYS->>+ExtSystem: Patient_New_Message
+    ExtSystem-->>+ADTSYS: Patient_New_Response_Message_With_External_Id
+    ADTSYS->>+ADTSYS: Update Existing Patient
+    ADTSYS->>+ExtSystem: Patient_Update_Message
+    ExtSystem-->>+ADTSYS: Patient_Update_Response_Message
+    ADTSYS->>+ADTSYS: Link 2 Existing Patients
+    ADTSYS->>+ExtSystem: Patient_Link/Merge_Message
+    ExtSystem-->>+ADTSYS: Patient_Link/Merge_Response_Message
 
-
+```
 #### Utente Creation
 
 In Portugal, a user can be created from the National User Register (RNU), or directly in the system if it is not possible to search for the user or the user does not exist in the RNU, or yet an Unidentified User can be created (temporary registration) if it is not possible know who the user in question is. From these processes we can have three possible types of patient identification:
