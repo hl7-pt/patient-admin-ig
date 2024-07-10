@@ -57,9 +57,9 @@ sequenceDiagram
     ExtSystem-->>+ADTSYS: Patient_Link/Merge_Response_Message
 
 ```
-#### Utente Creation
+#### Patient Creation
 
-In Portugal, a user can be created from the National User Register (RNU), or directly in the system if it is not possible to search for the user or the user does not exist in the RNU, or yet an Unidentified User can be created (temporary registration) if it is not possible know who the user in question is. From these processes we can have three possible types of patient identification:
+In Portugal, a user can be created getting patient demographic data from the National User Register (RNU), or inserting data available, provided by patient or its representative, directly in the system if it is not possible to search for the user or the user does not exist in the RNU, or yet a Non Identified User can be created (temporary registration) if it is not possible to know who the user in question is. From these scenarios we can have three possible types of patient identification:
 
 User validated by RNU -> The user is searched in RNU and a successful result is returned. The user is created automatically with the data returned by RNU. In this process the user has a valid NNU.
 
