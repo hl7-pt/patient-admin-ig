@@ -44,7 +44,7 @@ sequenceDiagram
     ADTSYS->>+RNU: Patient_Search_Message
     RNU-->>+ADTSYS: Patient_Search_Response_Message_With_Result
     ADTSYS->>+ADTSYS: Create NewPatient From RNU Data
-    alt Patient Not Exist In RNU
+    alt Patient Not Found In RNU
         ADTSYS->>+ADTSYS: Create NewPatient
     end
     ADTSYS->>+ExtSystem: Patient_New_Message
