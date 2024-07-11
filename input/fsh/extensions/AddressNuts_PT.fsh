@@ -1,5 +1,5 @@
-Extension: S3AddressNuts
-Id: S3AddressNuts
+Extension: AddressNuts_PT
+Id: AddressNuts_PT
 Context: Address
 
 

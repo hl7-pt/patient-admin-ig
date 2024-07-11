@@ -1,5 +1,5 @@
-Extension: S3AddressCounty
-Id: S3AddressCounty
+Extension: AddressCounty_PT
+Id: AddressCounty_PT
 Context: Address
 
 * . ^short = "Codigo do distrito"

@@ -1,5 +1,5 @@
-Extension: S3AddressGeolocation
-Id: S3AddressGeolocation
+Extension: AddressGeolocation_PT
+Id: AddressGeolocation_PT
 Context: Address
 * extension contains
     longitude 0..* and

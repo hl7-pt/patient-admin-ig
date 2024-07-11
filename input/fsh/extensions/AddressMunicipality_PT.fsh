@@ -1,5 +1,5 @@
-Extension: S3AddressMunicipality
-Id: S3AddressMunicipality
+Extension: AddressMunicipality_PT
+Id: AddressMunicipality_PT
 Context: Address
 
 * . ^short = "Codigo do concelho"

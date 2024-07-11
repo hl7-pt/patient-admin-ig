@@ -7,7 +7,8 @@ Id: Patient-Pt
     PersonOccupation_PT named occupation 0..* and
     PersonRecordType_PT named patient-record-type 0..* and
     PatientEnrollmentCategoryPrimarycare-Pt named PatientEnrollmentCategoryPrimarycare_PT 0..* and
-    PersonNationality_PT named PersonNationality_PT 0..*
+    PersonNationality_PT named PersonNationality_PT 0..* and
+    PersonBirthplace_PT named PersonBirthplace_PT 0..1
 * identifier ^slicing.discriminator.type = #type
 * identifier ^slicing.discriminator.path = "type.coding"
 * identifier ^slicing.rules = #open
