@@ -1,5 +1,5 @@
-Extension: S3AddressParish
-Id: S3AddressParish
+Extension: AddressParish_PT
+Id: AddressParish_PT
 Context: Address
 
 * . ^short = "Código da Freguesia"
