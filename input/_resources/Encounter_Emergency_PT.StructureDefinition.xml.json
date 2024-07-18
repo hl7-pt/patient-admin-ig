@@ -1,0 +1,485 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/Encounter_Emergency_PT",
+  "name": "Encounter_Emergency_PT",
+  "status": "draft",
+  "date": "2024-03-18T09:25:35.8819672+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter.id",
+        "path": "Encounter.id",
+        "min": 1
+      },
+      {
+        "id": "Encounter.meta",
+        "path": "Encounter.meta",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.meta.id",
+        "path": "Encounter.meta.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.meta.versionId",
+        "path": "Encounter.meta.versionId",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.meta.source",
+        "path": "Encounter.meta.source",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.meta.profile",
+        "path": "Encounter.meta.profile",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.meta.security",
+        "path": "Encounter.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.meta.tag",
+        "path": "Encounter.meta.tag",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.implicitRules",
+        "path": "Encounter.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.language",
+        "path": "Encounter.language",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.text",
+        "path": "Encounter.text",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.contained",
+        "path": "Encounter.contained",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.extension:notes",
+        "path": "Encounter.extension",
+        "sliceName": "notes",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/Notes"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.extension:notes.value[x]",
+        "path": "Encounter.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Encounter.extension:modeOfArrival",
+        "path": "Encounter.extension",
+        "sliceName": "modeOfArrival",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.extension:modeOfArrival.id",
+        "path": "Encounter.extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.extension:CoduCode",
+        "path": "Encounter.extension",
+        "sliceName": "CoduCode",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/CoduCode"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.extension:CoduCode.value[x]",
+        "path": "Encounter.extension.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Encounter.extension:reasonCancelled",
+        "path": "Encounter.extension",
+        "sliceName": "reasonCancelled",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/encounter-reasonCancelled"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.extension:reasonCancelled.id",
+        "path": "Encounter.extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.identifier.id",
+        "path": "Encounter.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.identifier.use",
+        "path": "Encounter.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.identifier.type",
+        "path": "Encounter.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.identifier.period",
+        "path": "Encounter.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.identifier.assigner",
+        "path": "Encounter.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.statusHistory",
+        "path": "Encounter.statusHistory",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.class.id",
+        "path": "Encounter.class.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.class.version",
+        "path": "Encounter.class.version",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.class.userSelected",
+        "path": "Encounter.class.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.classHistory",
+        "path": "Encounter.classHistory",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.type",
+        "path": "Encounter.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceType",
+        "path": "Encounter.serviceType",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.priority",
+        "path": "Encounter.priority",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.id",
+        "path": "Encounter.subject.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.type",
+        "path": "Encounter.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.identifier",
+        "path": "Encounter.subject.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.display",
+        "path": "Encounter.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.episodeOfCare",
+        "path": "Encounter.episodeOfCare",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.basedOn.id",
+        "path": "Encounter.basedOn.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.basedOn.type",
+        "path": "Encounter.basedOn.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.basedOn.identifier",
+        "path": "Encounter.basedOn.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.basedOn.display",
+        "path": "Encounter.basedOn.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant",
+        "path": "Encounter.participant",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.appointment",
+        "path": "Encounter.appointment",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.period.id",
+        "path": "Encounter.period.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.length",
+        "path": "Encounter.length",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonCode.id",
+        "path": "Encounter.reasonCode.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonCode.coding.id",
+        "path": "Encounter.reasonCode.coding.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonCode.coding.version",
+        "path": "Encounter.reasonCode.coding.version",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonCode.coding.userSelected",
+        "path": "Encounter.reasonCode.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonCode.text",
+        "path": "Encounter.reasonCode.text",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonReference",
+        "path": "Encounter.reasonReference",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis",
+        "path": "Encounter.diagnosis",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.account.id",
+        "path": "Encounter.account.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.account.type",
+        "path": "Encounter.account.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.account.identifier",
+        "path": "Encounter.account.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.account.display",
+        "path": "Encounter.account.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.id",
+        "path": "Encounter.hospitalization.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.preAdmissionIdentifier",
+        "path": "Encounter.hospitalization.preAdmissionIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.origin.id",
+        "path": "Encounter.hospitalization.origin.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.origin.type",
+        "path": "Encounter.hospitalization.origin.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.origin.identifier",
+        "path": "Encounter.hospitalization.origin.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.origin.display",
+        "path": "Encounter.hospitalization.origin.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.id",
+        "path": "Encounter.hospitalization.admitSource.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.coding.id",
+        "path": "Encounter.hospitalization.admitSource.coding.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.coding.version",
+        "path": "Encounter.hospitalization.admitSource.coding.version",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.coding.userSelected",
+        "path": "Encounter.hospitalization.admitSource.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.reAdmission",
+        "path": "Encounter.hospitalization.reAdmission",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.dietPreference",
+        "path": "Encounter.hospitalization.dietPreference",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.specialCourtesy",
+        "path": "Encounter.hospitalization.specialCourtesy",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.specialArrangement",
+        "path": "Encounter.hospitalization.specialArrangement",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.destination",
+        "path": "Encounter.hospitalization.destination",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.destination.id",
+        "path": "Encounter.hospitalization.destination.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.destination.type",
+        "path": "Encounter.hospitalization.destination.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.destination.identifier",
+        "path": "Encounter.hospitalization.destination.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.destination.display",
+        "path": "Encounter.hospitalization.destination.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition",
+        "path": "Encounter.hospitalization.dischargeDisposition",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.id",
+        "path": "Encounter.location.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.location.id",
+        "path": "Encounter.location.location.id",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.location.type",
+        "path": "Encounter.location.location.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.location.identifier",
+        "path": "Encounter.location.location.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.location.display",
+        "path": "Encounter.location.location.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.status",
+        "path": "Encounter.location.status",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.physicalType",
+        "path": "Encounter.location.physicalType",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.period",
+        "path": "Encounter.location.period",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceProvider",
+        "path": "Encounter.serviceProvider",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.partOf",
+        "path": "Encounter.partOf",
+        "max": "0"
+      }
+    ]
+  }
+}

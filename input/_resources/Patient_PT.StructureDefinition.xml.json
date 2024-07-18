@@ -1,0 +1,615 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/Patient_PT",
+  "name": "Patient_PT",
+  "status": "draft",
+  "date": "2024-01-18T17:17:16.0415947+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.id",
+        "path": "Patient.id",
+        "min": 1
+      },
+      {
+        "id": "Patient.meta",
+        "path": "Patient.meta",
+        "max": "0"
+      },
+      {
+        "id": "Patient.implicitRules",
+        "path": "Patient.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Patient.language",
+        "path": "Patient.language",
+        "max": "0"
+      },
+      {
+        "id": "Patient.text",
+        "path": "Patient.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contained",
+        "path": "Patient.contained",
+        "max": "0"
+      },
+      {
+        "id": "Patient.extension:occupation",
+        "path": "Patient.extension",
+        "sliceName": "occupation",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/PersonOccupation_PT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:patient-record-type",
+        "path": "Patient.extension",
+        "sliceName": "patient-record-type",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/PersonRecordType_PT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:PatientEnrollmentCategoryPrimarycare_PT",
+        "path": "Patient.extension",
+        "sliceName": "PatientEnrollmentCategoryPrimarycare_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/PatientEnrollmentCategoryPrimarycare_PT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:PersonNationality_PT",
+        "path": "Patient.extension",
+        "sliceName": "PersonNationality_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/PersonNationality_PT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "type.coding"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.identifier:residentCardNumber",
+        "path": "Patient.identifier",
+        "sliceName": "residentCardNumber",
+        "definition": "Número do Título de Residência"
+      },
+      {
+        "id": "Patient.identifier:residentCardNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:citizenshipCardNumber",
+        "path": "Patient.identifier",
+        "sliceName": "citizenshipCardNumber",
+        "definition": "Número de Identificação Civil"
+      },
+      {
+        "id": "Patient.identifier:citizenshipCardNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:taxIdNumber",
+        "path": "Patient.identifier",
+        "sliceName": "taxIdNumber",
+        "definition": "Número de Identificação Fiscal",
+        "fixedIdentifier": {
+          "type": {
+            "text": "Número de Identificação Fiscal"
+          }
+        }
+      },
+      {
+        "id": "Patient.identifier:taxIdNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:socialSecurityNumber",
+        "path": "Patient.identifier",
+        "sliceName": "socialSecurityNumber",
+        "definition": "Número de Identificação da Segurança\r\nSocial"
+      },
+      {
+        "id": "Patient.identifier:socialSecurityNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:healthCardNumber",
+        "path": "Patient.identifier",
+        "sliceName": "healthCardNumber",
+        "short": "Número Nacional do Utente",
+        "definition": "Número Nacional do Utente"
+      },
+      {
+        "id": "Patient.identifier:healthCardNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:passportNumber",
+        "path": "Patient.identifier",
+        "sliceName": "passportNumber",
+        "short": "Número do Passaporte",
+        "definition": "Número do Passaporte"
+      },
+      {
+        "id": "Patient.identifier:passportNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:patientInternalIdentifier",
+        "path": "Patient.identifier",
+        "sliceName": "patientInternalIdentifier"
+      },
+      {
+        "id": "Patient.identifier:patientInternalIdentifier.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:patientInternalIdentifier.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:militaryIDNumber",
+        "path": "Patient.identifier",
+        "sliceName": "militaryIDNumber"
+      },
+      {
+        "id": "Patient.identifier:militaryIDNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:patientExternalIdentifier",
+        "path": "Patient.identifier",
+        "sliceName": "patientExternalIdentifier"
+      },
+      {
+        "id": "Patient.identifier:patientExternalIdentifier.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:driverLicenseNumber",
+        "path": "Patient.identifier",
+        "sliceName": "driverLicenseNumber"
+      },
+      {
+        "id": "Patient.identifier:driverLicenseNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:anonymousIdentifier",
+        "path": "Patient.identifier",
+        "sliceName": "anonymousIdentifier"
+      },
+      {
+        "id": "Patient.identifier:anonymousIdentifier.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:medicalRecordNumber",
+        "path": "Patient.identifier",
+        "sliceName": "medicalRecordNumber"
+      },
+      {
+        "id": "Patient.identifier:medicalRecordNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:familyRecordNumber",
+        "path": "Patient.identifier",
+        "sliceName": "familyRecordNumber"
+      },
+      {
+        "id": "Patient.identifier:familyRecordNumber.id",
+        "path": "Patient.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "max": "1"
+      },
+      {
+        "id": "Patient.name.id",
+        "path": "Patient.name.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.telecom.id",
+        "path": "Patient.telecom.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.telecom.extension:ContactIndicative_PT",
+        "path": "Patient.telecom.extension",
+        "sliceName": "ContactIndicative_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/ContactIndicative_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.telecom.period.id",
+        "path": "Patient.telecom.period.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.address.extension:AddressType_PT",
+        "path": "Patient.address.extension",
+        "sliceName": "AddressType_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressType_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.address.extension:AddressMunicipality_PT",
+        "path": "Patient.address.extension",
+        "sliceName": "AddressMunicipality_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressMunicipality_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.address.extension:AddressCounty_PT",
+        "path": "Patient.address.extension",
+        "sliceName": "AddressCounty_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressCounty_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.address.extension:AddressParish_PT",
+        "path": "Patient.address.extension",
+        "sliceName": "AddressParish_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressParish_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.address.extension:AddressGeolocation_PT",
+        "path": "Patient.address.extension",
+        "sliceName": "AddressGeolocation_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressGeolocation_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.address.extension:AddressNuts_PT",
+        "path": "Patient.address.extension",
+        "sliceName": "AddressNuts_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressNuts_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.maritalStatus.id",
+        "path": "Patient.maritalStatus.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.photo.id",
+        "path": "Patient.photo.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact",
+        "path": "Patient.contact",
+        "max": "1"
+      },
+      {
+        "id": "Patient.contact.id",
+        "path": "Patient.contact.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.relationship.id",
+        "path": "Patient.contact.relationship.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.name.id",
+        "path": "Patient.contact.name.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.telecom.id",
+        "path": "Patient.contact.telecom.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.telecom.extension:ContactIndicative_PT",
+        "path": "Patient.contact.telecom.extension",
+        "sliceName": "ContactIndicative_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/ContactIndicative_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.contact.address.id",
+        "path": "Patient.contact.address.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.address.extension:AddressCounty_PT",
+        "path": "Patient.contact.address.extension",
+        "sliceName": "AddressCounty_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressCounty_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.contact.address.extension:AddressGeolocation_PT",
+        "path": "Patient.contact.address.extension",
+        "sliceName": "AddressGeolocation_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressGeolocation_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.contact.address.extension:AddressMunicipality_PT",
+        "path": "Patient.contact.address.extension",
+        "sliceName": "AddressMunicipality_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressMunicipality_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.contact.address.extension:AddressNuts_PT",
+        "path": "Patient.contact.address.extension",
+        "sliceName": "AddressNuts_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressNuts_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.contact.address.extension:AddressParish_PT",
+        "path": "Patient.contact.address.extension",
+        "sliceName": "AddressParish_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressParish_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.contact.address.extension:AddressType_PT",
+        "path": "Patient.contact.address.extension",
+        "sliceName": "AddressType_PT",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/AddressType_PT"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.contact.organization.id",
+        "path": "Patient.contact.organization.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.organization.type",
+        "path": "Patient.contact.organization.type",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.organization.identifier",
+        "path": "Patient.contact.organization.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.period.id",
+        "path": "Patient.contact.period.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication.id",
+        "path": "Patient.communication.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication.language.id",
+        "path": "Patient.communication.language.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner.id",
+        "path": "Patient.generalPractitioner.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner.extension:patientPrimaryCarePeriod",
+        "path": "Patient.generalPractitioner.extension",
+        "sliceName": "patientPrimaryCarePeriod",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/patient-primary-care-period"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.generalPractitioner.extension:patientPrimaryCarePeriod.id",
+        "path": "Patient.generalPractitioner.extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner.type",
+        "path": "Patient.generalPractitioner.type",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner.identifier",
+        "path": "Patient.generalPractitioner.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner.identifier.id",
+        "path": "Patient.generalPractitioner.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner.display",
+        "path": "Patient.generalPractitioner.display",
+        "max": "0"
+      },
+      {
+        "id": "Patient.managingOrganization.id",
+        "path": "Patient.managingOrganization.id",
+        "max": "0"
+      },
+      {
+        "id": "Patient.managingOrganization.type",
+        "path": "Patient.managingOrganization.type",
+        "max": "0"
+      },
+      {
+        "id": "Patient.managingOrganization.identifier",
+        "path": "Patient.managingOrganization.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Patient.managingOrganization.display",
+        "path": "Patient.managingOrganization.display",
+        "max": "0"
+      },
+      {
+        "id": "Patient.link.id",
+        "path": "Patient.link.id",
+        "max": "0"
+      }
+    ]
+  }
+}

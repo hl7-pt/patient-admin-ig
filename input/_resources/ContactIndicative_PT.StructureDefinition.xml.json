@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/ContactIndicative_PT",
+  "name": "ContactIndicative_PT",
+  "status": "draft",
+  "date": "2024-01-16T08:29:17.0648036+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ContactPoint"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.id",
+        "path": "Extension.id",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://example.org/fhir/StructureDefinition/ContactIndicative_PT"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].id",
+        "path": "Extension.value[x].id",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].coding.id",
+        "path": "Extension.value[x].coding.id",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].coding.userSelected",
+        "path": "Extension.value[x].coding.userSelected",
+        "max": "0"
+      }
+    ]
+  }
+}

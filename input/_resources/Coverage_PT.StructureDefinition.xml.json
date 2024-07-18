@@ -1,0 +1,172 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/Coverage_PT",
+  "name": "Coverage_PT",
+  "status": "draft",
+  "date": "2024-01-12T09:09:55.3619881+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Coverage",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coverage",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Coverage.id",
+        "path": "Coverage.id",
+        "min": 1
+      },
+      {
+        "id": "Coverage.meta",
+        "path": "Coverage.meta",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.implicitRules",
+        "path": "Coverage.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.language",
+        "path": "Coverage.language",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.text",
+        "path": "Coverage.text",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.contained",
+        "path": "Coverage.contained",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.identifier",
+        "path": "Coverage.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.type",
+        "path": "Coverage.type",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.policyHolder",
+        "path": "Coverage.policyHolder",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.subscriber.id",
+        "path": "Coverage.subscriber.id",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.subscriber.type",
+        "path": "Coverage.subscriber.type",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.subscriber.identifier",
+        "path": "Coverage.subscriber.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.subscriber.display",
+        "path": "Coverage.subscriber.display",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.subscriberId",
+        "path": "Coverage.subscriberId",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.beneficiary.id",
+        "path": "Coverage.beneficiary.id",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.beneficiary.type",
+        "path": "Coverage.beneficiary.type",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.beneficiary.identifier",
+        "path": "Coverage.beneficiary.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.beneficiary.display",
+        "path": "Coverage.beneficiary.display",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.dependent",
+        "path": "Coverage.dependent",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.relationship",
+        "path": "Coverage.relationship",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.period.id",
+        "path": "Coverage.period.id",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.payor.id",
+        "path": "Coverage.payor.id",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.payor.type",
+        "path": "Coverage.payor.type",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.payor.identifier",
+        "path": "Coverage.payor.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.payor.display",
+        "path": "Coverage.payor.display",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.class",
+        "path": "Coverage.class",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.order",
+        "path": "Coverage.order",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.network",
+        "path": "Coverage.network",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.costToBeneficiary",
+        "path": "Coverage.costToBeneficiary",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.subrogation",
+        "path": "Coverage.subrogation",
+        "max": "0"
+      },
+      {
+        "id": "Coverage.contract",
+        "path": "Coverage.contract",
+        "max": "0"
+      }
+    ]
+  }
+}

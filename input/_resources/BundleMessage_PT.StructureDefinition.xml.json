@@ -1,0 +1,62 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/BundleMessage_PT",
+  "name": "BundleMessage_PT",
+  "status": "draft",
+  "date": "2024-01-11T15:41:29.8935053+00:00",
+  "fhirVersion": "4.3.0",
+  "kind": "resource",
+  "abstract": true,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.id",
+        "path": "Bundle.id",
+        "min": 1
+      },
+      {
+        "id": "Bundle.meta",
+        "path": "Bundle.meta",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.implicitRules",
+        "path": "Bundle.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.language",
+        "path": "Bundle.language",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.identifier",
+        "path": "Bundle.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "min": 1
+      },
+      {
+        "id": "Bundle.total",
+        "path": "Bundle.total",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.link",
+        "path": "Bundle.link",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.signature",
+        "path": "Bundle.signature",
+        "max": "0"
+      }
+    ]
+  }
+}
