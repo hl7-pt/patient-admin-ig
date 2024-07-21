@@ -1,8 +1,9 @@
 # Scope
-The goal of this Implementation Guide is to specify how to represent the Patient Administration Management Profile defining transactions based on FHIR massage exchanges to support patient identity and encounter information, as well as movements within a healthcare facility encounter.
-This can be represented by the following two use cases in accordance to IHE [PAM Profile](http://profiles.ihe.net/ITI/TF/Volume1/ch-14.html).
+O objetivo deste Guia de Implementação é especificar como representar o Perfil de Gestão de Administração de Pacientes, definindo operações baseadas em trocas de massagens FHIR para a gestão da identidade do paciente e informações das interações do utente com as unidades de prestação de cuidados de saúde.
 
-ADT System provides two main functions: Patient Identity Management and Patient Encounter Management and will act as a _Patient Demographic Supplier_ and a _Patient Encounter Supplier_.
+Estes contextos podem ser representdos pelos seguintes dois casos de uso de acordo com o IHE [PAM Profile](http://profiles.ihe.net/ITI/TF/Volume1/ch-14.html).
+
+Os sistemas ADT apresentam duas grandes funcões: Gestão da Identidade do Utente e Gestão das Interações do Utente com as Unidades de Saúde, e atuam como um _Patient Demographic Supplier_ e um _Patient Encounter Supplier_.
 
 ```mermaid
 graph TD
@@ -14,30 +15,25 @@ graph TD
         PDS[Patient Demographics Supplier] -->PDC[Patient Demographics Consumer]
     end
 ```
-## Patient Identity Management
-This section corresponds to transaction “Patient Identity Management” of the IHE IT Infrastructure Technical Framework. This 
-transaction is used by the actors Patient Demographics Supplier and Patient Demographics Consumer.
+## Gestão da Identidade do Utente
+Esta seção corresponde à transação “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE. Esta transação é usada pelos atores Patient Demographics Supplier e Patient Demographics Consumer.
 
-The term “patient demographics” is intended to convey the patient identification and full identity and also information on 
-persons related to this patient, such as primary caregiver, family doctor, guarantor, next of kin. 
+O termo “dados demográficos do paciente” refere-se à identificação e identidade completa do paciente e também informações sobre pessoas relacionadas com ele, como cuidador principal, médico de família, tutor, familiares mais próximos, etc.
 
-This transaction transmits patient demographics in a patient identification domain and contains events for creating, updating,
-merging, linking and unlinking patients. The transaction can be used in acute care settings for both inpatients (i.e., those who are assigned a bed at the facility) and outpatients (i.e., those who are not assigned a bed at the facility) 
-and can also be used in a pure ambulatory environment.
+Esta transação transmite dados demográficos do paciente no domínio de identificação do utente e contém eventos para criação, atualização, fusão, associaçao e desassociação de utentes. A transação pode ser usada nos vários contextos internamento (ou seja, aqueles que recebem um leito na unidade de saude) e pacientes urgentes, consulta externa e outros que não têm atribuído um leito na unidade de saúde), e também pode ser usado em ambiente ambulatorial.
 
-### Use case
-Maria Silva felt unwell and decided to go to Hospital HCH for medical attention. 
+### Caso de Uso
+O José Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendida por médico.
 
-The administrative staff member of the Patient Registration department begins the process of creating a new patient profile for Maria Silva, based on limited information provided by her. At this stage, only basic details about Maria Silva are available; her date of birth, home address, and home phone number are unknown. Using the registration application, the staff member creates Maria Silva's initial patient identity and ensures a Patient Creation message is sent to all downstream applications with the available personal information.
+O funcionário administrativo do secretariado da Urgencia inicia o processo de criação de um novo utente para o José Silva, com base nas limitadas informações por ele fornecidas. Nesta fase, apenas estão disponíveis detalhes básicos sobre José Silva; sua data de nascimento. O endereço da residencia e número de telefone da residencia são desconhecidos. Utilizando o aplicativo de registo, o funcionário cria a identidade inicial do utente José Silva, e o sistema ADT garante que uma mensagem de Criação do Utente seja enviada para todas as aplicações que necessitam de ter cenhecimento do novo utente, com as informações pessoais disponíveis.
 
-The following day, more detailed personal information about Maria Silva becomes available. The staff member updates her patient identity record in the registration application and sends out a Patient Update message to reflect these new details.
+Mais tarde nesse dia, são disponibilizadas informações pessoais mais detalhadas sobre o José Silva. O administrativo atualiza o registo de identidade da paciente no sistema ADT e este envia uma mensagem de Atualização do Paciente para refletir esses novos detalhes nos sistemas que necessitam destas informações.
 
-A week later, the staff member receives a request from Imaging Center Moon to create a temporary patient profile for Maria José Silva. Following standard procedures, the staff member inputs the information into the registration application, creating Maria José Silva's identity. Upon further reconciliation, the staff member updates Maria José Silva's demographics with the healthcare national number to complete the full identification data of the patient.
+Uma semana depois, o funcionário recebe um pedido do Centro de Imagiologia para criar um perfil temporário de um paciente para José Manuel Santos Silva. Seguindo procedimentos padrão, o funcionário insere os dados no pedido de registo, com as informações disponiveis da identidade de  José Manuel Santos Silva. Após nova reconciliação, o funcionário atualiza os dados demográficos de José Manuel Santos Silva com o número nacional de utente para completar os dados de identificação do utente.
 
-During a routine audit, the staff member discovers that the two profiles for Maria Silva represent the same individual. To resolve this, the staff member merges the second identity with the initially established identity of Maria Silva in the system. A Patient Merge message is then communicated to all downstream applications, ensuring all records are up-to-date and consistent.
+Durante uma auditoria de rotina, o funcionário descobre que os dois perfis José Silva e José Manuel Santos Silva representam a mesma pessoa. Para resolver esta duplicação de registos, o funcionário associa a segunda identidade à identidade de José Silva criada anteriormente no sistema. Uma mensagem de associação de utentes é então comunicada a todas as aplicações anteriores, garantindo que todos os registos estejam atualizados e consistentes.
 
-
-### Workflow diagram
+### Diagrama de fluxo de Dados
 
 ```mermaid 
 sequenceDiagram
@@ -57,16 +53,49 @@ sequenceDiagram
     ExtSystem-->>+ADTSYS: Patient_Link/Merge_Response_Message
 
 ```
-#### Patient Creation
+#### Criação de um utente
 
-In Portugal, a user can be created getting patient demographic data from the National User Register (RNU), or inserting data available, provided by patient or its representative, directly in the system if it is not possible to search for the user or the user does not exist in the RNU, or yet a Non Identified User can be created (temporary registration) if it is not possible to know who the user in question is. From these scenarios we can have three possible types of patient identification:
+Em Portugal, um utente pode ser criado através da obtenção dos dados demográficos no Registo Nacional de Utentes (RNU), ou inserindo os dados disponíveis, fornecidos pelo paciente ou seu representante, diretamente no sistema, caso não seja possível pesquisar o utente ou o utente não exista no RNU, ou pode ser ainda criado um Utente Não Identificado (registo temporário) caso não seja possível saber quem é o utente em questão. A partir destes cenários podemos ter três tipos possíveis de identificação de utentes:
 
-User validated by RNU -> The user is searched in RNU and a successful result is returned. The user is created automatically with the data returned by RNU. In this process the user has a valid NNU.
+Utente validado por RNU -> O utente é pesquisado em RNU e um resultado bem-sucedido é retornado. O utente é criado automaticamente com os dados retornados pelo RNU. Neste processo o utente possui um NNU válido.
 
-Non-validatable user -> The RNU search does not return results for the searched user, and it is necessary to create it in the system without the data centrally validated by the RNU, with the identification data available.
+Utente não validável -> A pesquisa do RNU não devolve resultados para o utilizador pesquisado, sendo necessário criá-lo no sistema sem os dados validados centralmente pelo RNU, com os dados de identificação disponíveis.
 
-Unidentified user -> There is no identification of the user and an unidentified user is created with the data possible to associate this user created in the system with the user who will receive clinical care, so that identification can later be made and associate it with the correct user.
+Utente não identificado -> Não há identificação do utente e é criado um utente não identificado com os dados possíveis para associar esse utente criado no sistema ao utente que receberá atendimento clínico, para que posteriormente possa ser feita a identificação e associá-lo ao utente correto.
 
 
+A mensagem de Criação de novo Utente deve ser produzida de acordo com as regras de comunicação por mensagem Fhir:
+
+- Bundle
+  
+- [x] type="message"
+
+
+- MessageHeader 
+  
+- [x] obrigatório ser o primeiro recurso do bundle.entry
+- [x] eventCoding = PATIENT_NEW (Códigos dos eventos defenidos nesta implementação e cujo valueset é disponibilizado na tabela 1 ( _inserir tabela_) e que tentamos uma correspondencia com os eventos do HL7 V2.x)
+
+- Patient
+
+
+- Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
+
+
+- Practitioner
+  
+- [x] Profissional que executou a ação, referenciado no "enterer" do MessageHeader
+  
+- [x] Médico de familia, se vier referencia na idententificação do utente (recurso Patient) 
+ 
+
+- Organization
+  
+- [x] Organização(ões) referenciada(s) no "sender" e "receiver" do MessageHeader
+  
+- [x] Organização(ões) / Entidades referenciada(s) no recurso Coverage
+
+        
+Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
 
 
