@@ -1,7 +1,7 @@
-# Scope
-O objetivo deste Guia de Implementação é especificar como representar o Perfil de Gestão de Administração de Pacientes, definindo operações baseadas em trocas de massagens FHIR para a gestão da identidade do paciente e informações das interações do utente com as unidades de prestação de cuidados de saúde.
+# Ambito
+O objetivo deste Guia de Implementação é especificar como representar o Perfil de Gestão de Administração de Pacientes, definindo operações baseadas em trocas de massagens FHIR para a gestão da identidade do paciente e informações das interações do utente com as unidades de prestação de cuidados de saúde. 
 
-Estes contextos podem ser representdos pelos seguintes dois casos de uso de acordo com o IHE [PAM Profile](http://profiles.ihe.net/ITI/TF/Volume1/ch-14.html).
+Estes contextos podem ser representados pelos seguintes dois casos de uso de acordo com o IHE [PAM Profile](http://profiles.ihe.net/ITI/TF/Volume1/ch-14.html).
 
 Os sistemas ADT apresentam duas grandes funcões: Gestão da Identidade do Utente e Gestão das Interações do Utente com as Unidades de Saúde, e atuam como um _Patient Demographic Supplier_ e um _Patient Encounter Supplier_.
 
@@ -16,11 +16,11 @@ graph TD
     end
 ```
 ## Gestão da Identidade do Utente
-Esta seção corresponde à transação “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE. Esta transação é usada pelos atores Patient Demographics Supplier e Patient Demographics Consumer.
+Esta seção corresponde à operação “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE. Esta transação é usada pelos atores Patient Demographics Supplier e Patient Demographics Consumer.
 
-O termo “dados demográficos do paciente” refere-se à identificação e identidade completa do paciente e também informações sobre pessoas relacionadas com ele, como cuidador principal, médico de família, tutor, familiares mais próximos, etc.
+O termo “dados demográficos do paciente” refere-se à aos dados de identificação e identidade completa do paciente e também às informações sobre pessoas relacionadas com ele, como cuidador principal, médico de família, tutor, familiares mais próximos, etc.
 
-Esta transação transmite dados demográficos do paciente no domínio de identificação do utente e contém eventos para criação, atualização, fusão, associaçao e desassociação de utentes. A transação pode ser usada nos vários contextos internamento (ou seja, aqueles que recebem um leito na unidade de saude) e pacientes urgentes, consulta externa e outros que não têm atribuído um leito na unidade de saúde), e também pode ser usado em ambiente ambulatorial.
+Esta transação transmite dados demográficos do paciente no domínio de identificação do utente e contém eventos para criação, atualização, fusão, associaçao e desassociação de utentes. A transação pode ser usada nos vários contextos como internamento, e aqueles que recebem um leito na unidade de saude, ou urgência, consulta externa, hospital de dia e ambulatorio e outros que não têm atribuído um leito na unidade de saúde.
 
 ### Caso de Uso
 O José Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendida por médico.
@@ -37,65 +37,41 @@ Durante uma auditoria de rotina, o funcionário descobre que os dois perfis Jos�
 
 ```mermaid 
 sequenceDiagram
-    ADTSYS->>+RNU: Patient_Search_Message
-    RNU-->>+ADTSYS: Patient_Search_Response_Message_With_Result
-    ADTSYS->>+ADTSYS: Create NewPatient From RNU Data
-    alt Patient Not Found In RNU
-        ADTSYS->>+ADTSYS: Create NewPatient
+    actor User
+    User->>+ADTSYS: Pesquisa Utente via RNU
+    ADTSYS->>+RNU: Mensagem de pesquisa de utente
+    RNU-->>+ADTSYS: Mensagem de resposta do RNU com resultado de Utente encontrato
+    ADTSYS->>+ADTSYS: Cria/Atualiza utente com dados do RNU
+    alt Utente não encontrado no RNU
+        User->>+ADTSYS: Cria utente localmente
     end
-    ADTSYS->>+ExtSystem: Patient_New_Message
-    ExtSystem-->>+ADTSYS: Patient_New_Response_Message_With_External_Id
-    ADTSYS->>+ADTSYS: Update Existing Patient
-    ADTSYS->>+ExtSystem: Patient_Update_Message
-    ExtSystem-->>+ADTSYS: Patient_Update_Response_Message
-    ADTSYS->>+ADTSYS: Link 2 Existing Patients
-    ADTSYS->>+ExtSystem: Patient_Link/Merge_Message
-    ExtSystem-->>+ADTSYS: Patient_Link/Merge_Response_Message
+    ADTSYS->>+ExtSystem: Mensagem de Novo Utente Criado (se utente novo)
+    ExtSystem-->>+ADTSYS: Mensagem de Resposta de Novo Utente Criado comcucesso e Identificador Externo
+    User->>+ADTSYS: Atualização de dados de utente existente no sistema
+    ADTSYS->>+ExtSystem: Mensagem de Atualização do Utente
+    ExtSystem-->>+ADTSYS: Mensagem de Resposta de Atualização do Utente
+    User->>+ADTSYS: Associação de 2 Utentes existentes que representam o mesmo utente
+    ADTSYS->>+ExtSystem: Mensagem de Associação de 2 Utentes
+    ExtSystem-->>+ADTSYS: Mensagem de de Resposta Associação de 2 Utentes
 
 ```
 #### Criação de um utente
 
 Em Portugal, um utente pode ser criado através da obtenção dos dados demográficos no Registo Nacional de Utentes (RNU), ou inserindo os dados disponíveis, fornecidos pelo paciente ou seu representante, diretamente no sistema, caso não seja possível pesquisar o utente ou o utente não exista no RNU, ou pode ser ainda criado um Utente Não Identificado (registo temporário) caso não seja possível saber quem é o utente em questão. A partir destes cenários podemos ter três tipos possíveis de identificação de utentes:
 
-Utente validado por RNU -> O utente é pesquisado em RNU e um resultado bem-sucedido é retornado. O utente é criado automaticamente com os dados retornados pelo RNU. Neste processo o utente possui um NNU válido.
+Utente validado pelo RNU -> ESte utente possui os seguintes dados de identificação Numero Nacional de Utente (NNU), ou Numero de Identificação Fiscal (NIF), Cartão de cidadão ou Passaporte. Ainda É possivel ser validado por Nome e Data de Nascimento mas não é garantido que os resultados retornem o utente em causa. O utente é pesquisado no RNU e é retoenado um resultado com sucesso. O utente é criado automaticamente com os dados retornados pelo RNU.
 
-Utente não validável -> A pesquisa do RNU não devolve resultados para o utilizador pesquisado, sendo necessário criá-lo no sistema sem os dados validados centralmente pelo RNU, com os dados de identificação disponíveis.
+Utente não validável pelo RNU -> A pesquisa do RNU não devolve resultados para o utilizador pesquisado, sendo necessário criá-lo no sistema sem os dados validados centralmente pelo RNU, com os dados de identificação disponíveis.
 
 Utente não identificado -> Não há identificação do utente e é criado um utente não identificado com os dados possíveis para associar esse utente criado no sistema ao utente que receberá atendimento clínico, para que posteriormente possa ser feita a identificação e associá-lo ao utente correto.
 
+A mensagem de Criação de novo Utente deve ser produzida de acordo com as regras de comunicação por mensagem Fhir, encapsulando num bundle do tipo "mensagem" todos os resursos necessários, devendo o recurso _MessageHeader_ ser o primeiro do _bundle.entry_.
 
-A mensagem de Criação de novo Utente deve ser produzida de acordo com as regras de comunicação por mensagem Fhir:
+![Diagrama](images/FhirMessagePatientIdentityManagement.png)
 
-- Bundle
-  
-- [x] type="message"
+- [x] MessageHeader.eventCoding = PATIENT_NEW (_Disponibilizar valuset dos códigos dos eventos_ e a relação com com os eventos do HL7 V2.x)
+- [x] Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
-
-- MessageHeader 
-  
-- [x] obrigatório ser o primeiro recurso do bundle.entry
-- [x] eventCoding = PATIENT_NEW (Códigos dos eventos defenidos nesta implementação e cujo valueset é disponibilizado na tabela 1 ( _inserir tabela_) e que tentamos uma correspondencia com os eventos do HL7 V2.x)
-
-- Patient
-
-
-- Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
-
-
-- Practitioner
-  
-- [x] Profissional que executou a ação, referenciado no "enterer" do MessageHeader
-  
-- [x] Médico de familia, se vier referencia na idententificação do utente (recurso Patient) 
- 
-
-- Organization
-  
-- [x] Organização(ões) referenciada(s) no "sender" e "receiver" do MessageHeader
-  
-- [x] Organização(ões) / Entidades referenciada(s) no recurso Coverage
-
-        
 Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
 
 
