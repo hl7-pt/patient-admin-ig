@@ -58,11 +58,11 @@ sequenceDiagram
 
 Em Portugal, um utente pode ser criado através da obtenção dos dados demográficos no Registo Nacional de Utentes (RNU), ou inserindo os dados disponíveis, fornecidos pelo paciente ou seu representante, diretamente no sistema, caso não seja possível pesquisar o utente ou o utente não exista no RNU, ou pode ser ainda criado um Utente Não Identificado (registo temporário) caso não seja possível saber quem é o utente em questão. A partir destes cenários podemos ter três tipos possíveis de identificação de utentes:
 
-Utente validado pelo RNU -> ESte utente possui os seguintes dados de identificação Numero Nacional de Utente (NNU), ou Numero de Identificação Fiscal (NIF), Cartão de cidadão ou Passaporte. Ainda É possivel ser validado por Nome e Data de Nascimento mas não é garantido que os resultados retornem o utente em causa. O utente é pesquisado no RNU e é retoenado um resultado com sucesso. O utente é criado automaticamente com os dados retornados pelo RNU.
+- Utente validado pelo RNU -> ESte utente possui os seguintes dados de identificação Numero Nacional de Utente (NNU), ou Numero de Identificação Fiscal (NIF), Cartão de cidadão ou Passaporte. Ainda É possivel ser validado por Nome e Data de Nascimento mas não é garantido que os resultados retornem o utente em causa. O utente é pesquisado no RNU e é retoenado um resultado com sucesso. O utente é criado automaticamente com os dados retornados pelo RNU.
 
-Utente não validável pelo RNU -> A pesquisa do RNU não devolve resultados para o utilizador pesquisado, sendo necessário criá-lo no sistema sem os dados validados centralmente pelo RNU, com os dados de identificação disponíveis.
+- Utente não validável pelo RNU -> A pesquisa do RNU não devolve resultados para o utilizador pesquisado, sendo necessário criá-lo no sistema sem os dados validados centralmente pelo RNU, com os dados de identificação disponíveis.
 
-Utente não identificado -> Não há identificação do utente sendo criado um utente não identificado com os dados possíveis para associar esse utente criado no sistema ao utente que receberá atendimento clínico, para que posteriormente possa ser feita a identificação e associá-lo ao utente correto.
+- Utente não identificado -> Não há identificação do utente sendo criado um utente não identificado com os dados possíveis para associar esse utente criado no sistema ao utente que receberá atendimento clínico, para que posteriormente possa ser feita a identificação e associá-lo ao utente correto.
 
 
 #### Criação de um utente e Atualização de dados do Utente
