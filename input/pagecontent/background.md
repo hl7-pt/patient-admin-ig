@@ -55,7 +55,6 @@ sequenceDiagram
     ExtSystem-->>+ADTSYS: Mensagem de de Resposta Associação de 2 Utentes
 
 ```
-#### Criação de um utente
 
 Em Portugal, um utente pode ser criado através da obtenção dos dados demográficos no Registo Nacional de Utentes (RNU), ou inserindo os dados disponíveis, fornecidos pelo paciente ou seu representante, diretamente no sistema, caso não seja possível pesquisar o utente ou o utente não exista no RNU, ou pode ser ainda criado um Utente Não Identificado (registo temporário) caso não seja possível saber quem é o utente em questão. A partir destes cenários podemos ter três tipos possíveis de identificação de utentes:
 
@@ -65,13 +64,22 @@ Utente não validável pelo RNU -> A pesquisa do RNU não devolve resultados par
 
 Utente não identificado -> Não há identificação do utente e é criado um utente não identificado com os dados possíveis para associar esse utente criado no sistema ao utente que receberá atendimento clínico, para que posteriormente possa ser feita a identificação e associá-lo ao utente correto.
 
-A mensagem de Criação de novo Utente deve ser produzida de acordo com as regras de comunicação por mensagem Fhir, encapsulando num bundle do tipo "mensagem" todos os resursos necessários, devendo o recurso _MessageHeader_ ser o primeiro do _bundle.entry_.
+
+#### Criação de um utente e Atualização de dados do Utente
+No sistema de _Messaging_ todas as mensagens devem ser produzidas de acordo com as regras de comunicação por mensagem Fhir, encapsulando num bundle do tipo "mensagem" todos os resursos necessários, devendo o recurso _MessageHeader_ ser o primeiro do _bundle.entry_.
 
 ![Diagrama](images/FhirMessagePatientIdentityManagement.png)
 
-- [x] MessageHeader.eventCoding = PATIENT_NEW (_Disponibilizar valuset dos códigos dos eventos_ e a relação com com os eventos do HL7 V2.x)
+- [x] MessageHeader.eventCoding  (_Disponibilizar valuset dos códigos dos eventos_ e a relação com os eventos do HL7 V2.x)
+  - Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
+  - Para uma mensagem PATIENT_UPDATE é esperada uma resposta PATIENT_UPDATE_RESPONSE
+  - Para as mensagems de resposta é obrigatorio o envio do elemento MessageHeader.response
+
 - [x] Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
-Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
+#### Associação de utentes
 
+![Diagrama](images/FhirMessagePatientlink.png)
 
+- [x] MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
+    - Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
