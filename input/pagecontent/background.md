@@ -62,7 +62,7 @@ Utente validado pelo RNU -> ESte utente possui os seguintes dados de identifica�
 
 Utente não validável pelo RNU -> A pesquisa do RNU não devolve resultados para o utilizador pesquisado, sendo necessário criá-lo no sistema sem os dados validados centralmente pelo RNU, com os dados de identificação disponíveis.
 
-Utente não identificado -> Não há identificação do utente e é criado um utente não identificado com os dados possíveis para associar esse utente criado no sistema ao utente que receberá atendimento clínico, para que posteriormente possa ser feita a identificação e associá-lo ao utente correto.
+Utente não identificado -> Não há identificação do utente sendo criado um utente não identificado com os dados possíveis para associar esse utente criado no sistema ao utente que receberá atendimento clínico, para que posteriormente possa ser feita a identificação e associá-lo ao utente correto.
 
 
 #### Criação de um utente e Atualização de dados do Utente
