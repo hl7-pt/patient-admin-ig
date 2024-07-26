@@ -1,4 +1,4 @@
-# Ambito
+# Âmbito
 O objetivo deste Guia de Implementação é especificar como representar o Perfil de Gestão de Administração de Pacientes, definindo operações baseadas em trocas de massagens FHIR para a gestão da identidade do paciente e informações das interações do utente com as unidades de prestação de cuidados de saúde. 
 
 Estes contextos podem ser representados pelos seguintes dois casos de uso de acordo com o IHE [PAM Profile](http://profiles.ihe.net/ITI/TF/Volume1/ch-14.html).
@@ -82,4 +82,4 @@ No sistema de _Messaging_ todas as mensagens devem ser produzidas de acordo com 
 ![Diagrama](images/FhirMessagePatientlink.png)
 
 - [x] MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
-    - Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
+    - Para uma mensagem PATIENT_LINK é esperada uma resposta PATIENT_LINK_RESPONSE
