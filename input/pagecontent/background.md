@@ -18,7 +18,7 @@ graph TD
 ## Gestão da Identidade do Utente
 Esta seção corresponde à operação “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE. Esta transação é usada pelos atores Patient Demographics Supplier e Patient Demographics Consumer.
 
-O termo “dados demográficos do paciente” refere-se à aos dados de identificação e identidade completa do paciente e também às informações sobre pessoas relacionadas com ele, como cuidador principal, médico de família, tutor, familiares mais próximos, etc.
+O termo “dados demográficos do paciente” refere-se aos dados de identificação e identidade completa do paciente e também às informações sobre pessoas relacionadas com ele, como cuidador principal, médico de família, tutor, familiares mais próximos, etc.
 
 Esta transação transmite dados demográficos do paciente no domínio de identificação do utente e contém eventos para criação, atualização, fusão, associaçao e desassociação de utentes. A transação pode ser usada nos vários contextos como internamento, e aqueles que recebem um leito na unidade de saude, ou urgência, consulta externa, hospital de dia e ambulatorio e outros que não têm atribuído um leito na unidade de saúde.
 
@@ -37,13 +37,13 @@ Durante uma auditoria de rotina, o funcionário descobre que os dois perfis Jos�
 
 ```mermaid 
 sequenceDiagram
-    actor User
-    User->>+ADTSYS: Pesquisa Utente via RNU
+    actor Administrativo
+  Administrativo->>+ADTSYS: Pesquisa Utente via RNU
     ADTSYS->>+RNU: Mensagem de pesquisa de utente
     RNU-->>+ADTSYS: Mensagem de resposta do RNU com resultado de Utente encontrato
     ADTSYS->>+ADTSYS: Cria/Atualiza utente com dados do RNU
     alt Utente não encontrado no RNU
-        User->>+ADTSYS: Cria utente localmente
+      Administrativo->>+ADTSYS: Cria utente localmente
     end
     ADTSYS->>+ExtSystem: Mensagem de Novo Utente Criado (se utente novo)
     ExtSystem-->>+ADTSYS: Mensagem de Resposta de Novo Utente Criado comcucesso e Identificador Externo
@@ -83,3 +83,42 @@ No sistema de _Messaging_ todas as mensagens devem ser produzidas de acordo com 
 
 - [x] MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
     - Para uma mensagem PATIENT_LINK é esperada uma resposta PATIENT_LINK_RESPONSE
+
+
+## Gestão de Interações do Utente com a Entidade Prestadora de Cuidados de Saúde
+Esta seção corresponde à operação “Gestão de Interações do Utente com a Entidade de Prestação de Cuidados de Saúde” (_Patient Encounter Management_) da Estrutura Técnica de Infraestrutura de TI do IHE. Esta transação é usada pelos atores _Patient Encounters Supplier_ e _Patient Encounters Consumer_.
+
+O termo “Interações do Utente com a Entidade de Prestação de Cuidados de Saúde” refere-se a todas interaçãoes do utente com a entidade prestadora de cuidados de saúde e a todas as informações relevantes relacionadas com essa interação como tipo de interaçao, admissão, triagem, transferencias, altas, mdcts, entidades responsaveis, etc.
+
+### Diagrama de fluxo de Dados no contxto da Urgencia
+
+```mermaid 
+  sequenceDiagram
+    actor Administrativo
+    Administrativo->>+ADTSYS: Cria admissão do utente na urgencia
+    DATSYS-->>ExtSystem: Mensagem de resposta Admissão do utente na urgencia
+    ExtSystem-->>+ADTSYS: Mensagem de resposta Admissão do utente na urgencia
+  actor Enfermeiro
+    Enfermeiro-->>+ExtSystem: Realização da triagem do utente na urgencia
+    ExtSystem-->>+ADTSYS: Mensagem de triagem realizada ao utente na urgencia
+    ADTSYS->>+ExtSystem:Mensagem de Resposta de realização da triagem do utente na urgencia
+  actor Medico
+    Medico-->>+ExtSystem: Chamada do utente na urgencia pelo médico
+    ExtSystem-->>+ADTSYS: Mensagem de chamada do utente na urgencia pelo médico
+    ADTSYS->>+ExtSystem:Mensagem de Resposta de chamada do utente na urgencia pelo médico
+  alt Decorrentes
+    Medico->>+ExtSystem: Cria pedido de MCDTs
+    ExtSystem-->>+ADTSYS: Mensagem pedido de MCDTs
+    ADTSYS->>+ExtSystem:Mensagem de Resposta pedido de MCDTs
+    ExtSystem-->>+ADTSYS: Mensagem de realizaçao de MCDTs
+    ADTSYS->>+ExtSystem:Mensagem de Resposta realizaçao de MCDTs
+  end
+  alt Alta clinica (medica / enfermagem)
+    Medico->>+ExtSystem: Cria alta medica
+    ExtSystem-->>+ADTSYS: Mensagem de alta médica
+    ADTSYS->>+ExtSystem:Mensagem de Resposta de alta médica
+    Enfermeiro->>+ExtSystem: Cria alta enfermagem
+    ExtSystem-->>+ADTSYS: Mensagem de alta de enfermagem
+    ADTSYS->>+ExtSystem:Mensagem de Resposta de alta de enfermagem
+  end
+```
