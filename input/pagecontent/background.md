@@ -122,3 +122,10 @@ O termo “Interações do Utente com a Entidade de Prestação de Cuidados de S
     ADTSYS->>+ExtSystem:Mensagem de Resposta de alta de enfermagem
   end
 ```
+#### Criação de uma admissão à Urgência 
+Uma admissão à urgencia pode ter origen numa referenciação (SNS24, CSP, INEM) que prepara a admissaõ do utente mesmo antes do utente chegar ao hospital, ou diretamente no secretariado do serviço do Urgencia se o utente se dirigiu pelos pr´pprios meios sem contactar sem o SNS24 nem os CSP.
+
+![Diagrama](images/FhirMessageEncounterNew.png)
+
+- [x] MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
+  - Para uma mensagem EMERGENCY_ADMISSION é esperada uma resposta EMERGENCY_ADMISSION_RESPONSE
