@@ -47,10 +47,10 @@ sequenceDiagram
     end
     ADTSYS->>+ExtSystem: Mensagem de Novo Utente Criado (se utente novo)
     ExtSystem-->>+ADTSYS: Mensagem de Resposta de Novo Utente Criado comcucesso e Identificador Externo
-    User->>+ADTSYS: Atualização de dados de utente existente no sistema
+  Administrativo->>+ADTSYS: Atualização de dados de utente existente no sistema
     ADTSYS->>+ExtSystem: Mensagem de Atualização do Utente
     ExtSystem-->>+ADTSYS: Mensagem de Resposta de Atualização do Utente
-    User->>+ADTSYS: Associação de 2 Utentes existentes que representam o mesmo utente
+  Administrativo->>+ADTSYS: Associação de 2 Utentes existentes que representam o mesmo utente
     ADTSYS->>+ExtSystem: Mensagem de Associação de 2 Utentes
     ExtSystem-->>+ADTSYS: Mensagem de de Resposta Associação de 2 Utentes
 
@@ -123,7 +123,7 @@ O termo “Interações do Utente com a Entidade de Prestação de Cuidados de S
   end
 ```
 #### Criação de uma admissão à Urgência 
-Uma admissão à urgencia pode ter origen numa referenciação (SNS24, CSP, INEM) que prepara a admissaõ do utente mesmo antes do utente chegar ao hospital, ou diretamente no secretariado do serviço do Urgencia se o utente se dirigiu pelos pr´pprios meios sem contactar sem o SNS24 nem os CSP.
+Uma admissão à urgencia pode ter origen numa referenciação (SNS24, CSP, INEM) que prepara a admissão do utente mesmo antes do utente chegar ao hospital, ou diretamente no secretariado do serviço do Urgencia se o utente se dirigiu pelos pr´pprios meios sem contactar sem o SNS24 nem os CSP.
 
 ![Diagrama](images/FhirMessageEncounterNew.png)
 
