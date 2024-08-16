@@ -96,7 +96,7 @@ O termo “Interações do Utente com a Entidade de Prestação de Cuidados de S
   sequenceDiagram
     actor Administrativo
     Administrativo->>+ADTSYS: Cria admissão do utente na urgencia
-    DATSYS-->>ExtSystem: Mensagem de resposta Admissão do utente na urgencia
+    ADTSYS-->>ExtSystem: Mensagem de resposta Admissão do utente na urgencia
     ExtSystem-->>+ADTSYS: Mensagem de resposta Admissão do utente na urgencia
   actor Enfermeiro
     Enfermeiro-->>+ExtSystem: Realização da triagem do utente na urgencia
