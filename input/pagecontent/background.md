@@ -1,74 +1,59 @@
-# Âmbito
-O objetivo deste Guia de Implementação é especificar como representar o Perfil de Gestão de Administração de Pacientes, definindo operações baseadas em trocas de massagens FHIR para a gestão da identidade do paciente e informações das interações do utente com as unidades de prestação de cuidados de saúde. 
-
-Estes contextos podem ser representados pelos seguintes dois casos de uso de acordo com o IHE [PAM Profile](http://profiles.ihe.net/ITI/TF/Volume1/ch-14.html).
-
-Os sistemas ADT apresentam duas grandes funcões: Gestão da Identidade do Utente e Gestão das Interações do Utente com as Unidades de Saúde, e atuam como um _Patient Demographic Supplier_ e um _Patient Encounter Supplier_.
-
-```mermaid
-graph TD
-    subgraph Patient Encounter Management
-        PES[Patient Encounter Supplier] --> PEC[Patient Encounter Consumer]
-    end
-    
-    subgraph Patient Identity Management
-        PDS[Patient Demographics Supplier] -->PDC[Patient Demographics Consumer]
-    end
-```
-## Gestão da Identidade do Utente
-Esta seção corresponde à operação “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE. Esta transação é usada pelos atores Patient Demographics Supplier e Patient Demographics Consumer.
-
-O termo “dados demográficos do paciente” refere-se aos dados de identificação e identidade completa do paciente e também às informações sobre pessoas relacionadas com ele, como cuidador principal, médico de família, tutor, familiares mais próximos, etc.
-
-Esta transação transmite dados demográficos do paciente no domínio de identificação do utente e contém eventos para criação, atualização, fusão, associaçao e desassociação de utentes. A transação pode ser usada nos vários contextos como internamento, e aqueles que recebem um leito na unidade de saude, ou urgência, consulta externa, hospital de dia e ambulatorio e outros que não têm atribuído um leito na unidade de saúde.
+Conforme descrito na introdução deste IG, os sistemas ADT apresentam duas grandes funcões: Gestão da Identidade do Utente e Gestão das Interações do Utente com as Unidades de Saúde. O ambito deste IG é focado na gestão da identidade do utente.
 
 ### Caso de Uso
-O José Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendida por médico.
+O Joaquim Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendido por médico.
 
-O funcionário administrativo do secretariado da Urgencia inicia o processo de criação de um novo utente para o José Silva, com base nas limitadas informações por ele fornecidas. Nesta fase, apenas estão disponíveis detalhes básicos sobre José Silva; sua data de nascimento. O endereço da residencia e número de telefone da residencia são desconhecidos. Utilizando o aplicativo de registo, o funcionário cria a identidade inicial do utente José Silva, e o sistema ADT garante que uma mensagem de Criação do Utente seja enviada para todas as aplicações que necessitam de ter cenhecimento do novo utente, com as informações pessoais disponíveis.
+O funcionário administrativo do secretariado da Urgencia inicia o processo de criação de um novo utente para o Joaquim Silva, com base nas limitadas informações por ele fornecidas. Nesta fase, apenas estão disponíveis detalhes básicos sobre José Silva; sua data de nascimento. O endereço da residencia e número de telefone da residencia são desconhecidos. Utilizando o aplicativo de registo, o funcionário cria a identidade inicial do utente José Silva, e o sistema ADT garante que uma mensagem de Criação do Utente seja enviada para todas as aplicações que necessitam de ter cenhecimento do novo utente, com as informações pessoais disponíveis.
 
 Mais tarde nesse dia, são disponibilizadas informações pessoais mais detalhadas sobre o José Silva. O administrativo atualiza o registo de identidade da paciente no sistema ADT e este envia uma mensagem de Atualização do Paciente para refletir esses novos detalhes nos sistemas que necessitam destas informações.
 
-Uma semana depois, o funcionário recebe um pedido do Centro de Imagiologia para criar um perfil temporário de um paciente para José Manuel Santos Silva. Seguindo procedimentos padrão, o funcionário insere os dados no pedido de registo, com as informações disponiveis da identidade de  José Manuel Santos Silva. Após nova reconciliação, o funcionário atualiza os dados demográficos de José Manuel Santos Silva com o número nacional de utente para completar os dados de identificação do utente.
+Uma semana depois, o funcionário recebe um pedido do Centro de Imagiologia para criar um perfil temporário de um paciente para Joaquim Manuel Santos Silva. Seguindo procedimentos padrão, o funcionário insere os dados no pedido de registo, com as informações disponiveis da identidade de  José Manuel Santos Silva. Após nova reconciliação, o funcionário atualiza os dados demográficos de José Manuel Santos Silva com o número nacional de utente para completar os dados de identificação do utente.
 
-Durante uma auditoria de rotina, o funcionário descobre que os dois perfis José Silva e José Manuel Santos Silva representam a mesma pessoa. Para resolver esta duplicação de registos, o funcionário associa a segunda identidade à identidade de José Silva criada anteriormente no sistema. Uma mensagem de associação de utentes é então comunicada a todas as aplicações anteriores, garantindo que todos os registos estejam atualizados e consistentes.
+Durante uma auditoria de rotina, o funcionário descobre que os dois registos de utente José Silva e José Manuel Santos Silva representam a mesma pessoa. Para resolver esta duplicação de registos, o funcionário associa a segunda identidade à identidade de José Silva criada anteriormente no sistema. Uma mensagem de associação de utentes é então comunicada a todas as aplicações anteriores, garantindo que todos os registos estejam atualizados e consistentes.
 
-### Diagrama de fluxo de Dados
+### Workflow de processos
 
-```mermaid 
-sequenceDiagram
-    actor Administrativo
-  Administrativo->>+ADTSYS: Pesquisa Utente via RNU
-    ADTSYS->>+RNU: Mensagem de pesquisa de utente
-    RNU-->>+ADTSYS: Mensagem de resposta do RNU com resultado de Utente encontrato
-    ADTSYS->>+ADTSYS: Cria/Atualiza utente com dados do RNU
-    alt Utente não encontrado no RNU
-      Administrativo->>+ADTSYS: Cria utente localmente
-    end
-    ADTSYS->>+ExtSystem: Mensagem de Novo Utente Criado (se utente novo)
-    ExtSystem-->>+ADTSYS: Mensagem de Resposta de Novo Utente Criado comcucesso e Identificador Externo
-  Administrativo->>+ADTSYS: Atualização de dados de utente existente no sistema
-    ADTSYS->>+ExtSystem: Mensagem de Atualização do Utente
-    ExtSystem-->>+ADTSYS: Mensagem de Resposta de Atualização do Utente
-  Administrativo->>+ADTSYS: Associação de 2 Utentes existentes que representam o mesmo utente
-    ADTSYS->>+ExtSystem: Mensagem de Associação de 2 Utentes
-    ExtSystem-->>+ADTSYS: Mensagem de de Resposta Associação de 2 Utentes
+O **Diagrama de Sequência** seguinte ilustra as interaçoes entre o sistema ADT e sistemas terceiros:
 
-```
-
-Em Portugal, um utente pode ser criado através da obtenção dos dados demográficos no Registo Nacional de Utentes (RNU), ou inserindo os dados disponíveis, fornecidos pelo paciente ou seu representante, diretamente no sistema, caso não seja possível pesquisar o utente ou o utente não exista no RNU, ou pode ser ainda criado um Utente Não Identificado (registo temporário) caso não seja possível saber quem é o utente em questão. A partir destes cenários podemos ter três tipos possíveis de identificação de utentes:
-
-- Utente validado pelo RNU -> ESte utente possui os seguintes dados de identificação Numero Nacional de Utente (NNU), ou Numero de Identificação Fiscal (NIF), Cartão de cidadão ou Passaporte. Ainda É possivel ser validado por Nome e Data de Nascimento mas não é garantido que os resultados retornem o utente em causa. O utente é pesquisado no RNU e é retoenado um resultado com sucesso. O utente é criado automaticamente com os dados retornados pelo RNU.
-
-- Utente não validável pelo RNU -> A pesquisa do RNU não devolve resultados para o utilizador pesquisado, sendo necessário criá-lo no sistema sem os dados validados centralmente pelo RNU, com os dados de identificação disponíveis.
-
-- Utente não identificado -> Não há identificação do utente sendo criado um utente não identificado com os dados possíveis para associar esse utente criado no sistema ao utente que receberá atendimento clínico, para que posteriormente possa ser feita a identificação e associá-lo ao utente correto.
+![PatientIdentityWorkflow.png](images/PatientIdentityWorkflow.png)<br>
 
 
-#### Criação de um utente e Atualização de dados do Utente
-No sistema de _Messaging_ todas as mensagens devem ser produzidas de acordo com as regras de comunicação por mensagem Fhir, encapsulando num bundle do tipo "mensagem" todos os resursos necessários, devendo o recurso _MessageHeader_ ser o primeiro do _bundle.entry_.
+O fluxo representado tem em conta que os dados do utente poderão ser validados pelo serviço do Registo Nacional do Utente (RNU) e que essa é a fonte de verdade de dados do utente, e prevê que quando não é possivel encontrar ou validar o utente via RNU o administrativo tem que criar o utente localmente no sistema ADT.
+Do ponto de vista do sustema ADT o utente pode ser classificado em 3 categorias:
+
+- Utente validável pelo RNU -> O utente possui NNU ou atributos que permitem validar o utente via RNU e quando é pesquisado no RNU é retornado resultado com sucesso. Os dados devolvidos pelo RNU permitem que os dados do utente sejam atualizados no sistema ADT. No entanto, se a pesquisa falha fica temporariamente não validado, mas mantém a condição de validável.
+
+- Utente não validável -> O utente não possui NNU, ou os atributos existentes não permitem validar o utente via RNU.
+
+- Utente não identificado -> Não existe identificação do utente que permita validar via RNU.
+
+### Eventos desencadeados na Gestão de Identidade do Utente
+
+As ações representadas no fluxo da gestão de identidade do utente são:
+- criação do utente
+- atualização de dados do utente
+- fusão/associação do utente
+
+Adicionalmente podem ser necessárias ações de pesquisa baseado no perfil IHE [[PDQ] Patient Demographics Query](https://wiki.ihe.net/index.php/Patient_Demographics_Query):
+- pesquisa de utente
+- pesquisa de dados demográficos do utente
+
+Seguindo o perfil “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE, proposmos uma correspondencia entre as mensagens HL7v2.x e mensagens FHIR correspondentes sendo necessário para tal defenir um sistema de codificação de eventos para FHIR.
+
+## Estrutura das mensagens FHIR
+
+Estando perante o paradigma de mensagens, de forma genérica, os recursos necessários à comunicação dos dados dos utentes são os representados no diagrama abaixo, e devem ser encapsulados num bundle que deve seguir as regras da arquitetura de *Messaging*. As mensagems Fhir geradas para estes eventos são sempre composta por um *bundle type="message"*, que vai agregar todos os recursos necessários, sendo obrigatório que o primeiro recurso da lista de recursos (*bundle.entry*) seja o recurso *MessageHeader*:
+
+O bundle tem como entradas os Recursos:
+- MessageHeader (Obrigatório ser o primeiro recurso do elemento *entry* do *bunle*)
+- Patient (Recurso principal da mensagem)
+- Coverage *
+- Organization *
+- Practitioner *
 
 ![Diagrama](images/FhirMessagePatientIdentityManagement.png)
+
+#### Criação de um utente e Atualização de dados do Utente
 
 - [x] MessageHeader.eventCoding  (_Disponibilizar valuset dos códigos dos eventos_ e a relação com os eventos do HL7 V2.x)
   - Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
@@ -77,55 +62,31 @@ No sistema de _Messaging_ todas as mensagens devem ser produzidas de acordo com 
 
 - [x] Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
-#### Associação de utentes
+#### Associação de utentes / Fusão de sutentes
 
-![Diagrama](images/FhirMessagePatientlink.png)
-
+Para associação de utentes
 - [x] MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
     - Para uma mensagem PATIENT_LINK é esperada uma resposta PATIENT_LINK_RESPONSE
 
-
-## Gestão de Interações do Utente com a Entidade Prestadora de Cuidados de Saúde
-Esta seção corresponde à operação “Gestão de Interações do Utente com a Entidade de Prestação de Cuidados de Saúde” (_Patient Encounter Management_) da Estrutura Técnica de Infraestrutura de TI do IHE. Esta transação é usada pelos atores _Patient Encounters Supplier_ e _Patient Encounters Consumer_.
-
-O termo “Interações do Utente com a Entidade de Prestação de Cuidados de Saúde” refere-se a todas interaçãoes do utente com a entidade prestadora de cuidados de saúde e a todas as informações relevantes relacionadas com essa interação como tipo de interaçao, admissão, triagem, transferencias, altas, mdcts, entidades responsaveis, etc.
-
-### Diagrama de fluxo de Dados no contxto da Urgencia
-
-```mermaid 
-  sequenceDiagram
-    actor Administrativo
-    Administrativo->>+ADTSYS: Cria admissão do utente na urgencia
-    ADTSYS-->>ExtSystem: Mensagem de resposta Admissão do utente na urgencia
-    ExtSystem-->>+ADTSYS: Mensagem de resposta Admissão do utente na urgencia
-  actor Enfermeiro
-    Enfermeiro-->>+ExtSystem: Realização da triagem do utente na urgencia
-    ExtSystem-->>+ADTSYS: Mensagem de triagem realizada ao utente na urgencia
-    ADTSYS->>+ExtSystem:Mensagem de Resposta de realização da triagem do utente na urgencia
-  actor Medico
-    Medico-->>+ExtSystem: Chamada do utente na urgencia pelo médico
-    ExtSystem-->>+ADTSYS: Mensagem de chamada do utente na urgencia pelo médico
-    ADTSYS->>+ExtSystem:Mensagem de Resposta de chamada do utente na urgencia pelo médico
-  alt Decorrentes
-    Medico->>+ExtSystem: Cria pedido de MCDTs
-    ExtSystem-->>+ADTSYS: Mensagem pedido de MCDTs
-    ADTSYS->>+ExtSystem:Mensagem de Resposta pedido de MCDTs
-    ExtSystem-->>+ADTSYS: Mensagem de realizaçao de MCDTs
-    ADTSYS->>+ExtSystem:Mensagem de Resposta realizaçao de MCDTs
-  end
-  alt Alta clinica (medica / enfermagem)
-    Medico->>+ExtSystem: Cria alta medica
-    ExtSystem-->>+ADTSYS: Mensagem de alta médica
-    ADTSYS->>+ExtSystem:Mensagem de Resposta de alta médica
-    Enfermeiro->>+ExtSystem: Cria alta enfermagem
-    ExtSystem-->>+ADTSYS: Mensagem de alta de enfermagem
-    ADTSYS->>+ExtSystem:Mensagem de Resposta de alta de enfermagem
-  end
-```
-#### Criação de uma admissão à Urgência 
-Uma admissão à urgencia pode ter origen numa referenciação (SNS24, CSP, INEM) que prepara a admissão do utente mesmo antes do utente chegar ao hospital, ou diretamente no secretariado do serviço do Urgencia se o utente se dirigiu pelos pr´pprios meios sem contactar sem o SNS24 nem os CSP.
-
-![Diagrama](images/FhirMessageEncounterNew.png)
-
+Para fusão de utentes
 - [x] MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
-  - Para uma mensagem EMERGENCY_ADMISSION é esperada uma resposta EMERGENCY_ADMISSION_RESPONSE
+  - Para uma mensagem PATIENT_MERGE é esperada uma resposta PATIENT_MERGE_RESPONSE
+
+### Eventos a comunicar nas mensagens
+
+| Event                                             | Mensagem^Trigger  | Evento Fhir             |
+|---------------------------------------------------|-------------------|-------------------------|
+| Criação de novo utente                            | ADT^A28           | PATIENT_NEW             |
+| Resposta da criação novo utente                   | ADT^A08 / ADT^A31 | PATIENT_NEW_RESPONSE    |
+| Atualização de dados do utente                    | ADT^A08 / ADT^A31 | PATIENT_UPDATE          |
+| Resposta da atualização de dados do utente        | ACK^A08 / ACK^A31 | PATIENT_UPDATE_RESPONSE |
+| Associação de utentes                             | ADT^A24           | PATIENT_LINK            |
+| Resposta da associação de utentes                 | ACK^A24           | PATIENT_LINK_RESPONSE   |
+| Fusão de utentes                                  | ADT^A40           | PATIENT_MERGE           |
+| Resposta da fusão de utentes                      | ACK^A40           | PATIENT_MERGE_RESPONSE  |
+| Pesquisa de utente                                | QBP^Q22           | PATIENT_SEARCH          |
+| Resposta da pesquisa de utente                    | RSP^K22           | PATIENT_SEARCH_RESPONSE |
+| Pesquisa de dados demograficos do utente          | QRY^A19           | PATIENT_SEARCH          |
+| Resposta pesquisa de dados demograficos do utente | ADR^A19           | PATIENT_SEARCH_RESPONSE |
+
+Os eventos aqui apresentados têm igualmente em conta o standard HL7 v2.x e a documentação publica de especificação da SPMS, que está implementada em grande parte das instituições de prestação de cuidados de Saúde em particular nos Cuidados de Saúde Hospitalares.

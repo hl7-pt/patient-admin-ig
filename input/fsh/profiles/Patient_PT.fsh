@@ -51,8 +51,8 @@ Id: Patient-Pt
 * identifier[familyRecordNumber].id ..0
 * name ..1
 
-* telecom.extension contains
-    ContactIndicative-PT named ContactIndicative_PT 0..*
+//* telecom.extension contains
+//    ContactIndicative-PT named ContactIndicative_Pt 0..*
 
 * address.extension contains
     AddressType_PT named AddressType_PT 0..* and
@@ -63,11 +63,9 @@ AddressGeolocation_PT named AddressGeolocation_PT 0..* and
 AddressNuts_PT named AddressNuts_PT 0..*
 
 
-
 * contact ..1
-* contact.telecom.extension contains
-    ContactIndicative_PT named ContactIndicative_PT 0..* 
-
+//* contact.telecom.extension contains
+//    ContactIndicative_PT named ContactIndicative_PT 0..*
 
 
 * contact.address.extension contains

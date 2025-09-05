@@ -1,5 +1,5 @@
 Extension: AddressGeolocation_PT
-Id: AddressGeolocation_PT
+Id: AddressGeolocation-Pt
 Context: Address
 * extension contains
     longitude 0..* and

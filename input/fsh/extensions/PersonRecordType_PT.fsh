@@ -1,5 +1,5 @@
 Extension: PersonRecordType_PT
-Id: PersonRecordType_PT
+Id: PersonRecordType-Pt
 Context: Patient
 
 * value[x] only boolean

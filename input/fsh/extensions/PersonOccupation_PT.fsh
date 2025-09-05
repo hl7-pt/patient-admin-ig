@@ -1,5 +1,5 @@
 Extension: PersonOccupation_PT
-Id: PersonOccupation_PT
+Id: PersonOccupation-Pt
 Context: Patient
 
 * extension contains

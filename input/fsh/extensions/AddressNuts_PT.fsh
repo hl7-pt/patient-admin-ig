@@ -1,5 +1,5 @@
 Extension: AddressNuts_PT
-Id: AddressNuts_PT
+Id: AddressNuts-Pt
 Context: Address
 
 

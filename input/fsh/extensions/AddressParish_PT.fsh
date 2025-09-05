@@ -1,5 +1,5 @@
 Extension: AddressParish_PT
-Id: AddressParish_PT
+Id: AddressParish-Pt
 Context: Address
 
 * . ^short = "Código da Freguesia"
