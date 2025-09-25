@@ -1,4 +1,4 @@
-Extension: PatientEnrollmentCategoryPrimarycare_PT
+Extension: PTPatientEnrollmentCategoryPrimarycare
 Id: PatientEnrollmentCategoryPrimarycare-Pt
 Context: Patient
 

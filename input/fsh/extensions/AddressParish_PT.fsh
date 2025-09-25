@@ -1,4 +1,4 @@
-Extension: AddressParish_PT
+Extension: PTAddressParish
 Id: AddressParish-Pt
 Context: Address
 

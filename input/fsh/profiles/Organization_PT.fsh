@@ -1,4 +1,4 @@
-Profile: Organization_PT
+Profile: PTOrganization
 Parent: Organization
 Id: Organization-Pt
 

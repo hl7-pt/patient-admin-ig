@@ -62,7 +62,8 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for `uri` and `version`.
-#dependencies:
+dependencies:
+  hl7.fhir.uv.ips: current
 #  hl7.fhir.us.core: 3.1.0
 #  hl7.fhir.us.mcode:
 #    id: mcode
@@ -164,22 +165,29 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
 pages:
   index.md:
-    title: Home Page   
+    title: Inicio
   background.md:
     title: Background
-  spec.md:
-    title: Specification
-  downloads.html:
-    title: Downloads
-  changes.html:
-    title: IG Change History
-		
+  fun_spec.md:
+    title: Especificação Funcional
+  tech_spec.md:
+    title: Especificação Técnica
+#  usage.md:
+#    title: Usar este IG
+  changes.xml:
+    title: Histórico de Alterações
+
 menu:
-  IG Home: index.html
-  Background: background.html
-  Specification: spec.html
-  Artifact Index: artifacts.html			
+  Inicio: index.html
+  Contextualização: background.html
+  Especificação:
+    Especificação Funcional: fun_spec.html
+    Especificação Técnica: tech_spec.html
+  Artefactos: artifacts.html
   Downloads: downloads.html
+  Histórico de Alterações: changes.html
+# Usar este IG: usage.html
+
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating

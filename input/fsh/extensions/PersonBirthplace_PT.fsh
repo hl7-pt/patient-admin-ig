@@ -1,4 +1,4 @@
-Extension: PersonBirthplace_PT
+Extension: PTPersonBirthplace
 Id: PersonBirthplace-Pt
 Context: Patient
 

@@ -1,4 +1,4 @@
-Extension: AddressMunicipality_PT
+Extension: PTAddressMunicipality
 Id: AddressMunicipality-Pt
 Context: Address
 

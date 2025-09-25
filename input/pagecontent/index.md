@@ -16,7 +16,9 @@ Em Portugal começam a existir várias implemetações em FHIR que mapeaiam as i
 Tem como base o perfil [PatientAdministration Management](https://profiles.ihe.net/ITI/TF/Volume1/ch-14.html#14) da Estrutura Técnica de Infraestrutura de TI do IHE para a abordagem em HL7v2.x e que tem como atores *"Patient Demographics Supplier"* e *"Patient Demographics Consumer"*.
 
 O paradigma de mensagem FHIR permite manter a comunicação assáncrona de menagens e evoluir a comunicação para o Standard FHIR e ao mesmo tempo, usando ferramentas de conversão, manter a comunicação com os sistemas que mantém as integrações em HL7 v2 (Fig.1).  
-![message_paradigm_schema.png](images/message_paradigm_schema.png)  
+
+
+![Arquitetura de Paradigma de Messaging](images/message_paradigm_schema.png)  
 
 
 Fig.1 -Fhir Messaging Paradigms Schema  
@@ -25,19 +27,48 @@ Fig.1 -Fhir Messaging Paradigms Schema
 
 O perfil IHE PatientAdministration Managament apresenta duas transações: *Patient Identity Management* e *Patient Enconter Management*. O âmbito desta IG é focado na transação *Patient Identity Management* (Fig.2) o qual inclui as operações que permitem fazer a gestão dos dados demográfios dos utentes.
 
-![domains_adt.png](images/domains_adt.png)  
+<br>
+
+
+![Dominios do ADT](images/domains_adt.png)  
+
+<br>
 
 
 Fig.2 - Atores da trasanção Gestão da Identidade do Utente  
 
-
+<br>
 
 O termo “dados demográficos do utente” refere-se aos dados da identidade completa do utente, incluindo informações sobre pessoas relacionadas com ele, como cuidador principal, médico de família, tutor, familiares mais próximos, entidades responsáveis, etc.
 
 A transação *Patient Identity Management* transmite dados demográficos do utente no domínio de identificação do utente e contém eventos para criação, atualização, fusão/associaçao de utentes. Esta transação é usada nos vários contextos como internamento, e todos aqueles que recebem um leito na unidade de saúde, ou urgência, consulta externa, hospital de dia, ambulatório e outros que não têm atribuído um leito na unidade de saúde.
 
 Em Hl7v2, as mensagens qu suportam as ações necessárias estão especificadas no profile IHE mencionado anteriormente prevendo a toca de mensagens com eventos especificos já defenidos pelo standard HL7 v2:
-![hl7profilemessages](images/hl7profilemessages.png)
+
+<br>
+
+| **Event**                      | **Trigger** | **Message Static Definition** |
+| ------------------------------ | ----------- | ----------------------------- |
+| Create new patient             | A28         | ADT^A28^ADT\_A05              |
+| Update patient information     | A31         | ADT^A31^ADT\_A05              |
+| Change Patient Identifier List | A47         | ADT^A47^ADT\_A30              |
+| Merge two patients             | A40         | ADT^A40^ADT\_A39              |
+
+Tabela 1 - Subconjunto de mensagens obrigatórias com a opção “Fusão” (fonte IHE)
+
+<br>
+
+| **Event**                      | **Trigger** | **Message Static Definition** |
+| ------------------------------ | ----------- | ----------------------------- |
+| Create new patient             | A28         | ADT^A28^ADT\_A05              |
+| Update patient information     | A31         | ADT^A31^ADT\_A05              |
+| Change Patient Identifier List | A47         | ADT^A47^ADT\_A30              |
+| Link Patient Information       | A24         | ADT^A24^ADT\_A24              |
+| Unlink Patient Information     | A37         | ADT^A37^ADT\_A37              |
+
+Tabela 2 - Subconjunto de mensagens obrigatórias com a opção “Associar/Desassociar” (fonte IHE)
+
+<br>
 
 Em FHIR não existe a definição de eventos pada dar suporte a mensagens orientadas a eventos tal como no HL7 v2, mas o FHIR está preparado para isso. Torna-se assim necessário definir uma sistema de codificação para estes eventos de forma a tormar uniforme os codigos dos eventos a enviar nas mensagens entre os diferentes sistemas.  
 

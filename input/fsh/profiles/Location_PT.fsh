@@ -1,4 +1,4 @@
-Profile: Location_PT
+Profile: PTLocation
 Parent: Location
 Id: Location-Pt
 * ^status = #draft

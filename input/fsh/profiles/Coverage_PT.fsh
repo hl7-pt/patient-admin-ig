@@ -1,4 +1,4 @@
-Profile: Coverage_PT
+Profile: PTCoverage
 Parent: Coverage
 Id: Coverage-Pt
 
@@ -11,6 +11,8 @@ Id: Coverage-Pt
 * subscriber.identifier ..0
 * subscriber.display ..0
 * subscriberId ..0
+* beneficiary 1..1 MS
+* beneficiary only Reference(Patient)
 * beneficiary.id ..0
 * beneficiary.type ..0
 * beneficiary.identifier ..0
@@ -18,6 +20,8 @@ Id: Coverage-Pt
 * dependent ..0
 * relationship ..0
 * period.id ..0
+* payor 1..1 MS
+* payor only Reference(Organization)
 * payor.id ..0
 * payor.type ..0
 * payor.identifier ..0

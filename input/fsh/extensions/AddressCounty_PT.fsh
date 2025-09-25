@@ -1,4 +1,4 @@
-Extension: AddressCounty_PT
+Extension: PTAddressCounty
 Id: AddressCounty-Pt
 Context: Address
 

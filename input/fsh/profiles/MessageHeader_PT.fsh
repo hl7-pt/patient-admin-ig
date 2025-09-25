@@ -1,4 +1,4 @@
-Profile: MessageHeader_PT
+Profile: PTMessageHeader
 Parent: MessageHeader
 Id: MessageHeader-Pt
 

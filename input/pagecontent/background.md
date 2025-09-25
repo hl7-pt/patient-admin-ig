@@ -13,9 +13,11 @@ Durante uma auditoria de rotina, o funcionário descobre que os dois registos de
 
 ### Workflow de processos
 
-O **Diagrama de Sequência** seguinte ilustra as interaçoes entre o sistema ADT e sistemas terceiros:
+O **Diagrama de Sequência** seguinte ilustra as interaçoes entre o sistema ADT e sistemas terceiros: <br>
 
-![PatientIdentityWorkflow.png](images/PatientIdentityWorkflow.png)<br>
+![PatientIdentityWorkflow.png](images/PatientIdentityWorkflow.png) 
+
+<br>
 
 
 O fluxo representado tem em conta que os dados do utente poderão ser validados pelo serviço do Registo Nacional do Utente (RNU) e que essa é a fonte de verdade de dados do utente, e prevê que quando não é possivel encontrar ou validar o utente via RNU o administrativo tem que criar o utente localmente no sistema ADT.
@@ -51,8 +53,11 @@ O bundle tem como entradas os Recursos:
 - Organization *
 - Practitioner *
 
+<br>
+
 ![Diagrama](images/FhirMessagePatientIdentityManagement.png)
 
+<br>
 #### Criação de um utente e Atualização de dados do Utente
 
 - [x] MessageHeader.eventCoding  (_Disponibilizar valuset dos códigos dos eventos_ e a relação com os eventos do HL7 V2.x)

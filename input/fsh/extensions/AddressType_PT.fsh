@@ -1,4 +1,4 @@
-Extension: AddressType_PT
+Extension: PTAddressType
 Id: AddressType-Pt
 Context: Address
 

@@ -1,4 +1,4 @@
-Extension: ContactIndicative_PT
+Extension: PTContactIndicative
 Id: ContactIndicative-Pt
 Context: ContactPoint
 

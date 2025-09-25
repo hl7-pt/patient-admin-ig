@@ -1,4 +1,4 @@
-Extension: PersonRecordType_PT
+Extension: PTPersonRecordType
 Id: PersonRecordType-Pt
 Context: Patient
 

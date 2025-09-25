@@ -1,4 +1,4 @@
-Extension: PersonEducation_PT
+Extension: PTPersonEducation
 Id: PersonEducation-Pt
 Context: Patient
 * ^status = #draft

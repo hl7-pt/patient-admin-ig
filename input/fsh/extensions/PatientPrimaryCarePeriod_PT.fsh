@@ -1,4 +1,4 @@
-Extension: PatientPrimaryCarePeriod_PT
+Extension: PTPatientPrimaryCarePeriod
 Id: PatientPrimaryCarePeriod-Pt
 Context: Patient.generalPractitioner
 

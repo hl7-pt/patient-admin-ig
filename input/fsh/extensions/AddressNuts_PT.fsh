@@ -1,4 +1,4 @@
-Extension: AddressNuts_PT
+Extension: PTAddressNuts
 Id: AddressNuts-Pt
 Context: Address
 
