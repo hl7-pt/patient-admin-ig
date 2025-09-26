@@ -48,15 +48,41 @@ Outro cenário possível, é o registo de utentes não identificados no sistema 
 ## Casos de Uso 
 
 ### Criação de Utente
+O Administrativo cria um registo de um novo utente no sistema que pode ser por via RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de ceriação de novo utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
+<br/>
+![Fluxo de criação de novo utente](images/Flow_PatientNew.png)<br/>
 
 
 ### Atualização de dados do Utente
+O Administrativo atualiza o registo de um utente existente no sistema. Esta atualização pode ser desencadeada por sincronização de dados com o RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de atualização de dados do utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
+
+<br/>
+
+![Fluxo de atualização de utente](images/Flow_PatientUpdate.png)<br/>
+
+### Fusão de identificação de Utentes
+O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de fusão dos 2 registos num só. Esta ação desencadeia uma mensagem de fusão de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
+
+<br/>
+
+![Fluxo de fusão de_utentes](images/Flow_PatientMerge.png)<br/>
 
 
 ### Associação de identificação Utentes
+O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de _linkagem_ dos 2 registos. Esta ação desencadeia uma mensagem de associação de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
+
+<br/>
+
+![Fluxo de associação de_utentes](images/Flow_PatientLink.png)<br/>
 
 
-### Fusão de identificação de Utentes
+### Desassociação de identificação Utentes
+O Administrativo identifica que 2 registos foram erradamente associados no sistema e procede à ação de desassociação dos 2 registos. Esta ação desencadeia uma mensagem de desassociação de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
+
+
+<br/>
+
+![Fluxo de desassociação de_utentes](images/Flow_PatientUnlink.png)<br/>
 
 
 
