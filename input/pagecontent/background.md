@@ -16,7 +16,7 @@ Durante uma auditoria de rotina, o funcionário descobre que os dois registos de
 O **Diagrama de Sequência** seguinte ilustra as interaçoes entre o sistema ADT e sistemas terceiros: 
 <br>
 
-![PatientIdentityWorkflow.png](images/PatientIdentityWorkflow.png) 
+![Patient Identity Workflow](images/PatientIdentityWorkflow.png) 
 
 <br>
 
@@ -54,33 +54,32 @@ O bundle tem como entradas os Recursos:
 - Organization *
 - Practitioner *
 
-<br>
 
-![Diagrama](images/FhirMessagePatientIdentityManagement.png)
+![Fluxo do Patient Link](images/FhirMessagePatientIdentityManagement.png)
 
 <br>
 #### Criação de um utente e Atualização de dados do Utente
 
 
-- [x] MessageHeader.eventCoding 
+- MessageHeader.eventCoding 
   - Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
   - Para uma mensagem PATIENT_UPDATE é esperada uma resposta PATIENT_UPDATE_RESPONSE
   - Para as mensagems de resposta é obrigatorio o envio do elemento MessageHeader.response
-- [x] Patient
-- [x] Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)
-- [x] Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)
-- [x] Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
+- Patient
+- Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)
+- Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)
+- Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
 
 #### Associação/Desassociação de utentes 
 
 
 Para associação de utentes
-- [x] MessageHeader.eventCoding
+- MessageHeader.eventCoding
     - Para uma mensagem PATIENT_LINK é esperada uma resposta PATIENT_LINK_RESPONSE
 
 Para desassociação de utentes
-- [x] MessageHeader.eventCoding
+- MessageHeader.eventCoding
   - Para uma mensagem PATIENT_UNLINK é esperada uma resposta PATIENT_UNLINK_RESPONSE
   
 
@@ -88,18 +87,19 @@ Para desassociação de utentes
 
 
 Para fusão de utentes
-- [x] MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
+- MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
   - Para uma mensagem PATIENT_MERGE é esperada uma resposta PATIENT_MERGE_RESPONSE
 
 ### Eventos a comunicar nas mensagens
 
+<br/>
 
 | Event                                             | Mensagem^Trigger  | Evento Fhir             |
 |---------------------------------------------------|-------------------|-------------------------|
 | Criação de novo utente                            | ADT^A28           | PATIENT_NEW             |
-| Resposta da criação novo utente                   | ADT^A08 / ADT^A31 | PATIENT_NEW_RESPONSE    |
-| Atualização de dados do utente                    | ADT^A08 / ADT^A31 | PATIENT_UPDATE          |
-| Resposta da atualização de dados do utente        | ACK^A08 / ACK^A31 | PATIENT_UPDATE_RESPONSE |
+| Resposta da criação novo utente                   | ACK^A28           | PATIENT_NEW_RESPONSE    |
+| Atualização de dados do utente                    | ADT^A31 / ADT^A08 | PATIENT_UPDATE          |
+| Resposta da atualização de dados do utente        | ACK^A31 / ACK^A08 | PATIENT_UPDATE_RESPONSE |
 | Associação de utentes                             | ADT^A24           | PATIENT_LINK            |
 | Resposta da associação de utentes                 | ACK^A24           | PATIENT_LINK_RESPONSE   |
 | Desassociação de utentes                          | ADT^A37           | PATIENT_UNLINK          |
@@ -108,8 +108,9 @@ Para fusão de utentes
 | Resposta da fusão de utentes                      | ACK^A40           | PATIENT_MERGE_RESPONSE  |
 | Pesquisa de utente                                | QBP^Q22           | PATIENT_SEARCH          |
 | Resposta da pesquisa de utente                    | RSP^K22           | PATIENT_SEARCH_RESPONSE |
-| Pesquisa de dados demograficos do utente          | QRY^A19           | PATIENT_SEARCH          |
-| Resposta pesquisa de dados demograficos do utente | ADR^A19           | PATIENT_SEARCH_RESPONSE |
+| Pesquisa de dados demograficos do utente          | QRY^A19           | PATIENT_DEMOGRAPHIC     |
+| Resposta pesquisa de dados demograficos do utente | ADR^A19           | PATIENT_DEMOGRAPHIC_RESPONSE |
 
+<br/>
 
 Os eventos aqui apresentados têm igualmente em conta o standard HL7 v2.x e a documentação publica de especificação da SPMS, que está implementada em grande parte das instituições de prestação de cuidados de Saúde em particular nos Cuidados de Saúde Hospitalares. No caso do evento de atualização de utentes as mensagens HL7 v2 defenidas pela SPMS, conforme especificação publica, aplicam a mensagem e evento ADT^A08.

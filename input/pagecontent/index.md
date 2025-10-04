@@ -18,7 +18,7 @@ Tem como base o perfil [PatientAdministration Management](https://profiles.ihe.n
 O paradigma de mensagem FHIR permite manter a comunicação assáncrona de menagens e evoluir a comunicação para o Standard FHIR e ao mesmo tempo, usando ferramentas de conversão, manter a comunicação com os sistemas que mantém as integrações em HL7 v2 (Fig.1).  
 
 
-![Arquitetura de Paradigma de Messaging](images/message_paradigm_schema.png)  
+![Arquitetura de Paradigma de Messaging](images/messageParadigmSchema.png)  
 
 
 Fig.1 -Fhir Messaging Paradigms Schema  
@@ -30,7 +30,7 @@ O perfil IHE PatientAdministration Managament apresenta duas transações: *Pati
 <br>
 
 
-![Dominios do ADT](images/domains_adt.png)  
+![Dominios do ADT](images/domainsAdt.png)  
 
 <br>
 

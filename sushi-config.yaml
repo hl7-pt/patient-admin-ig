@@ -172,8 +172,12 @@ pages:
     title: Especificação Funcional
   tech_spec.md:
     title: Especificação Técnica
-#  usage.md:
-#    title: Usar este IG
+  conversionV2Fhir.md:
+    title: Conversão de mensagens entre Standards
+  conversionFhirV2.md:
+    title: Conversão de mensagens entre Standards
+  downloads.md:
+    title: Downloads
   changes.xml:
     title: Histórico de Alterações
 
@@ -183,10 +187,11 @@ menu:
   Especificação:
     Especificação Funcional: fun_spec.html
     Especificação Técnica: tech_spec.html
+    Conversão HL7 v2 para FHIR: conversionV2Fhir.html
+    Conversão FHIR para HL7 v2: conversionFhirV2.html
   Artefactos: artifacts.html
   Downloads: downloads.html
   Histórico de Alterações: changes.html
-# Usar este IG: usage.html
 
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide

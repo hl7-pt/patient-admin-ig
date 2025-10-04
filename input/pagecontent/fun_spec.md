@@ -1,5 +1,7 @@
 ### Introdução
+
 #### O que é um Utente?
+
 No sistema de saúde português, utente é o termo utilizado para designar qualquer pessoa que utiliza os serviços do Serviço Nacional de Saúde (SNS). Em outras palavras, é o equivalente a “paciente” ou “beneficiário” em outros contextos como o sistema de saúde privado, mas com um sentido mais amplo, já que inclui qualquer cidadão que recorra aos cuidados de saúde, independentemente de estar doente ou não.
 Assim, o utente é uma pessoa que recebe ou necessita de cuidados e está sob os cuidados de um sistema ou profissional de saúde, seja por prevenção de doenças e manutenção da saúde até o diagnóstico, tratamento e acompanhamento de condições agudas ou crónicas.
 
@@ -50,22 +52,23 @@ Outro cenário possível, é o registo de utentes não identificados no sistema 
 ### Criação de Utente
 O Administrativo cria um registo de um novo utente no sistema que pode ser por via RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de ceriação de novo utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 <br/>
-![Fluxo de criação de novo utente](images/Flow_PatientNew.png)<br/>
+![Fluxo de criação de novo utente](images/FlowPatientNew.png)
 
+<br/>
 
 ### Atualização de dados do Utente
 O Administrativo atualiza o registo de um utente existente no sistema. Esta atualização pode ser desencadeada por sincronização de dados com o RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de atualização de dados do utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
 <br/>
 
-![Fluxo de atualização de utente](images/Flow_PatientUpdate.png)<br/>
+![Fluxo de atualização de utente](images/FlowPatientUpdate.png)<br/>
 
 ### Fusão de identificação de Utentes
 O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de fusão dos 2 registos num só. Esta ação desencadeia uma mensagem de fusão de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
 <br/>
 
-![Fluxo de fusão de_utentes](images/Flow_PatientMerge.png)<br/>
+![Fluxo de fusão de_utentes](images/FlowPatientMerge.png)<br/>
 
 
 ### Associação de identificação Utentes
@@ -73,7 +76,7 @@ O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e
 
 <br/>
 
-![Fluxo de associação de_utentes](images/Flow_PatientLink.png)<br/>
+![Fluxo de associação de_utentes](images/FlowPatientLink.png)<br/>
 
 
 ### Desassociação de identificação Utentes
@@ -82,7 +85,9 @@ O Administrativo identifica que 2 registos foram erradamente associados no siste
 
 <br/>
 
-![Fluxo de desassociação de_utentes](images/Flow_PatientUnlink.png)<br/>
+![Fluxo de desassociação de_utentes](images/FlowPatientUnlink.png)
+
+<br/>
 
 
 

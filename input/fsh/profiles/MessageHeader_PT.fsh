@@ -9,6 +9,7 @@ Id: MessageHeader-Pt
 * text ..0
 * contained ..0
 * event[x] only Coding
+* eventCoding from VS_PatientIdentityEvents (extensible)
 * destination.target ..0
 * destination.receiver.type ..0
 * destination.receiver.identifier ..0
