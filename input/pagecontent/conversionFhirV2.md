@@ -1,3 +1,4 @@
+
 ## FHIR para HL7 v2
 
 Muitas ddas implementações exigem que seja realizado a conversão entre mensagens HL7 v2 e mensagens FHIR em ambos os sentidos. Apesar de existir alguma informação de conversão entre HL7 v2 e FHIR, no sentido de FHIR para HL7 v2 nem por isso. Esta secção pretende dar uma orientação para que em implementaçãoes que necessitem de mapeamento de mensagens entre os dois standards em ambos os sentidos haja um entendimento comum.    
