@@ -1,8 +1,9 @@
-Extension: PTAddressParish
-Id: AddressParish-Pt
+Extension: PTAddressCountry
+Id: AddressCountry-Pt
 Context: Address
 
-* . ^short = "Código da Freguesia"
+* . ^short = "Codigo do distrito"
+
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept.coding.system = "http://www.ine.pt"
