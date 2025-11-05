@@ -3,30 +3,12 @@ Parent: MessageHeader
 Id: MessageHeader-Pt
 
 * id 1..
-* meta ..0
-* implicitRules ..0
-* language ..0
-* text ..0
-* contained ..0
+
+* event[x] 1..1
 * event[x] only Coding
 * eventCoding from VS_PatientIdentityEvents (extensible)
-* destination.target ..0
-* destination.receiver.type ..0
-* destination.receiver.identifier ..0
-* destination.receiver.display ..0
-* sender.type ..0
-* sender.identifier ..0
-* sender.display ..0
-* enterer.type ..0
-* enterer.identifier ..0
-* enterer.display ..0
-* author ..0
-* source.software ..0
-* source.version ..0
-* source.contact ..0
-* responsible ..0
-* reason ..0
-* focus.type ..0
-* focus.identifier ..0
-* focus.display ..0
-* definition ..0
+* destination 1..1 MS
+* sender 1..1 MS
+* enterer 0..1 MS
+* source 1..1 MS
+* focus 1..* MS

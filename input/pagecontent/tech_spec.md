@@ -36,7 +36,13 @@ A ocorrência de um evento de criação de novo utente deve ser enviada uma mens
   - Entidade de destino (referenciado no _MessageHeader.destination.receiver_)
   - Centro de Saúde do Utente (referenciado no _Patient.generalPractitioner_)
 - Coverage 
-  - Referencia o Utente no Coverage.beneficiary
+  - Referencia o Utente no elemento Coverage.beneficiary
+  - Referencia uma Entidade Responsável no elemento Coverage.payor
+  - Notas adicionais sobre Coverage:
+    - uma cobertura é um instrumento que cobre parcialmente ou totalmente as custas de prestação de cuidados de saúde. Podem existir diferentes tipos de coberturas ou beneficios atribuidos aos utentes.
+    - utentes beneficiários do SNS tem redução de custos estnado sujeitos apenas ao pagamento de taxas moderadpres, sendo o valor remanescente pago pelo SNS, ou estarem totalmente isentos por determinada condição (ex: insuficiencia economica, excombatentes, entre outros motivos). 
+    - os utentes do SNS podem acumular vários motivos de isenções, o que pode dar origem a vários recursos coverage a referenciarem o mesmo utente.
+    - Os utentes podem ter coberturas adicionais como subsistemas de saúde, ou planos e/ou seguros de saúde
 
 
 ### Atualização de dados do Utente

@@ -4,7 +4,7 @@ Id: Patient-Pt
 Title: "P TPatient"
 Description: "Perfil de Patient para contexto PT, incluindo categoria de inscrição, nacionalidade, naturalidade (INE), notas, endereços IOP e contactos."
 
-* id 1.. MS
+* id 1..1 MS
 * name 1..1 MS
 * telecom 0..* MS
 * gender 1..1 MS
