@@ -48,6 +48,59 @@ Outro cenário possível, é o registo de utentes não identificados no sistema 
 
 
 ## Casos de Uso 
+O sr. Joaquim Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendido por médico.
+
+O funcionário administrativo do secretariado da Urgencia inicia o processo de criação de um novo utente para o Joaquim Silva, com base nas limitadas informações por ele fornecidas. Nesta fase, apenas estão disponíveis detalhes básicos sobre José Silva; sua data de nascimento. O endereço da residencia e número de telefone da residencia são desconhecidos. Utilizando o aplicativo de registo, o funcionário cria a identidade inicial do utente José Silva, e o sistema ADT garante que uma mensagem de Criação do Utente seja enviada para todas as aplicações que necessitam de ter cenhecimento do novo utente, com as informações pessoais disponíveis.
+
+Mais tarde nesse dia, são disponibilizadas informações pessoais mais detalhadas sobre o José Silva. O administrativo atualiza o registo de identidade da paciente no sistema ADT e este envia uma mensagem de Atualização do Paciente para refletir esses novos detalhes nos sistemas que necessitam destas informações.
+
+Uma semana depois, o funcionário recebe um pedido do Centro de Imagiologia para criar um perfil temporário de um paciente para Joaquim Manuel Santos Silva. Seguindo procedimentos padrão, o funcionário insere os dados no pedido de registo, com as informações disponiveis da identidade de  José Manuel Santos Silva. Após nova reconciliação, o funcionário atualiza os dados demográficos de José Manuel Santos Silva com o número nacional de utente para completar os dados de identificação do utente.
+
+Durante uma auditoria de rotina, o funcionário descobre que os dois registos de utente José Silva e José Manuel Santos Silva representam a mesma pessoa. Para resolver esta duplicação de registos, o funcionário associa a segunda identidade à identidade de José Silva criada anteriormente no sistema. Uma mensagem de associação de utentes é então comunicada a todas as aplicações anteriores, garantindo que todos os registos estejam atualizados e consistentes.
+
+
+### Workflow de processos
+
+O **Diagrama de Sequência** seguinte ilustra as interaçoes entre o sistema ADT e sistemas terceiros:
+<br>
+
+![Patient Identity Workflow](images/PatientIdentityWorkflow.png)
+
+<br>
+O fluxo representado tem em conta que os dados do utente poderão ser validados pelo serviço do Registo Nacional do Utente (RNU) e que essa é a fonte de verdade de dados do utente, e prevê que quando não é possivel encontrar ou validar o utente via RNU o administrativo tem que criar o utente localmente no sistema ADT.
+Do ponto de vista do sustema ADT o utente pode ser classificado em 3 categorias:
+
+- Utente validável pelo RNU -> O utente possui NNU ou atributos que permitem validar o utente via RNU e quando é pesquisado no RNU é retornado resultado com sucesso. Os dados devolvidos pelo RNU permitem que os dados do utente sejam atualizados no sistema ADT. No entanto, se a pesquisa falha fica temporariamente não validado, mas mantém a condição de validável.
+
+- Utente não validável -> O utente não possui NNU, ou os atributos existentes não permitem validar o utente via RNU.
+
+- Utente não identificado -> Não existe identificação do utente que permita validar via RNU.
+
+### Eventos desencadeados na Gestão de Identidade do Utente
+
+As ações representadas no fluxo da gestão de identidade do utente são:
+- criação do utente
+- atualização de dados do utente
+- fusão/associação do utente
+
+Adicionalmente podem ser necessárias ações de pesquisa baseado no perfil IHE [[PDQ] Patient Demographics Query](https://wiki.ihe.net/index.php/Patient_Demographics_Query):
+- pesquisa de utente
+- pesquisa de dados demográficos do utente
+
+Seguindo o perfil “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE, proposmos uma correspondencia entre as mensagens HL7v2.x e mensagens FHIR correspondentes sendo necessário para tal defenir um sistema de codificação de eventos para FHIR.
+
+## Estrutura das mensagens FHIR
+
+Estando perante o paradigma de mensagens, de forma genérica, os recursos necessários à comunicação dos dados dos utentes são os representados no diagrama abaixo, e devem ser encapsulados num bundle que deve seguir as regras da arquitetura de *Messaging*. As mensagems Fhir geradas para estes eventos são sempre composta por um *bundle type="message"*, que vai agregar todos os recursos necessários, sendo obrigatório que o primeiro recurso da lista de recursos (*bundle.entry*) seja o recurso *MessageHeader*:
+
+O bundle tem como entradas os Recursos:
+- MessageHeader (Obrigatório ser o primeiro recurso do elemento *entry* do *bunle*)
+- Patient (Recurso principal da mensagem)
+- Coverage *
+- Organization *
+- Practitioner *
+
+![Estrutura da mensagem fhir de gestão de dados do utente](FhirMessagePatientIdentityManagement.png)
 
 ### Criação de Utente
 O Administrativo cria um registo de um novo utente no sistema que pode ser por via RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de ceriação de novo utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
@@ -56,12 +109,28 @@ O Administrativo cria um registo de um novo utente no sistema que pode ser por v
 
 <br/>
 
+- MessageHeader.eventCoding
+    - Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
+    - Para as mensagems de resposta é obrigatorio o envio do elemento MessageHeader.response
+- Patient
+- Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)
+- Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)
+- Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
+
 ### Atualização de dados do Utente
 O Administrativo atualiza o registo de um utente existente no sistema. Esta atualização pode ser desencadeada por sincronização de dados com o RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de atualização de dados do utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
 <br/>
 
 ![Fluxo de atualização de utente](images/FlowPatientUpdate.png)<br/>
+
+- MessageHeader.eventCoding
+    - Para uma mensagem PATIENT_UPDATE é esperada uma resposta PATIENT_UPDATE_RESPONSE
+    - Para as mensagems de resposta é obrigatorio o envio do elemento MessageHeader.response
+- Patient
+- Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)
+- Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)
+- Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
 ### Fusão de identificação de Utentes
 O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de fusão dos 2 registos num só. Esta ação desencadeia uma mensagem de fusão de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
@@ -71,6 +140,10 @@ O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e
 ![Fluxo de fusão de_utentes](images/FlowPatientMerge.png)<br/>
 
 
+Para fusão de utentes
+- MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
+    - Para uma mensagem PATIENT_MERGE é esperada uma resposta PATIENT_MERGE_RESPONSE
+
 ### Associação de identificação Utentes
 O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de _linkagem_ dos 2 registos. Esta ação desencadeia uma mensagem de associação de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
@@ -78,7 +151,10 @@ O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e
 
 ![Fluxo de associação de_utentes](images/FlowPatientLink.png)<br/>
 
-
+Para associação de utentes
+- MessageHeader.eventCoding
+    - Para uma mensagem PATIENT_LINK é esperada uma resposta PATIENT_LINK_RESPONSE
+- 
 ### Desassociação de identificação Utentes
 O Administrativo identifica que 2 registos foram erradamente associados no sistema e procede à ação de desassociação dos 2 registos. Esta ação desencadeia uma mensagem de desassociação de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
@@ -88,6 +164,35 @@ O Administrativo identifica que 2 registos foram erradamente associados no siste
 ![Fluxo de desassociação de_utentes](images/FlowPatientUnlink.png)
 
 <br/>
+Para desassociação de utentes
+- MessageHeader.eventCoding
+  - Para uma mensagem PATIENT_UNLINK é esperada uma resposta PATIENT_UNLINK_RESPONSE
+
+
+### Eventos a comunicar nas mensagens
+
+<br/>
+
+| Event                                             | Mensagem^Trigger  | Evento Fhir             |
+|---------------------------------------------------|-------------------|-------------------------|
+| Criação de novo utente                            | ADT^A28           | PATIENT_NEW             |
+| Resposta da criação novo utente                   | ACK^A28           | PATIENT_NEW_RESPONSE    |
+| Atualização de dados do utente                    | ADT^A31 / ADT^A08 | PATIENT_UPDATE          |
+| Resposta da atualização de dados do utente        | ACK^A31 / ACK^A08 | PATIENT_UPDATE_RESPONSE |
+| Associação de utentes                             | ADT^A24           | PATIENT_LINK            |
+| Resposta da associação de utentes                 | ACK^A24           | PATIENT_LINK_RESPONSE   |
+| Desassociação de utentes                          | ADT^A37           | PATIENT_UNLINK          |
+| Resposta da desassociação de utentes              | ACK^A37           | PATIENT_UNLINK_RESPONSE |
+| Fusão de utentes                                  | ADT^A40           | PATIENT_MERGE           |
+| Resposta da fusão de utentes                      | ACK^A40           | PATIENT_MERGE_RESPONSE  |
+| Pesquisa de utente                                | QBP^Q22           | PATIENT_SEARCH          |
+| Resposta da pesquisa de utente                    | RSP^K22           | PATIENT_SEARCH_RESPONSE |
+| Pesquisa de dados demograficos do utente          | QRY^A19           | PATIENT_DEMOGRAPHIC     |
+| Resposta pesquisa de dados demograficos do utente | ADR^A19           | PATIENT_DEMOGRAPHIC_RESPONSE |
+
+<br/>
+
+Os eventos aqui apresentados têm igualmente em conta o standard HL7 v2.x e a documentação publica de especificação da SPMS, que está implementada em grande parte das instituições de prestação de cuidados de Saúde em particular nos Cuidados de Saúde Hospitalares. No caso do evento de atualização de utentes as mensagens HL7 v2 defenidas pela SPMS, conforme especificação publica, aplicam a mensagem e evento ADT^A08.
 
 
 

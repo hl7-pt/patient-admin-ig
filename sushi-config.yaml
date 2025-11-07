@@ -166,8 +166,6 @@ dependencies:
 pages:
   index.md:
     title: Inicio
-  background.md:
-    title: Background
   fun_spec.md:
     title: Especificação Funcional
   tech_spec.md:
@@ -183,7 +181,6 @@ pages:
 
 menu:
   Inicio: index.html
-  Contextualização: background.html
   Especificação:
     Especificação Funcional: fun_spec.html
     Especificação Técnica: tech_spec.html
