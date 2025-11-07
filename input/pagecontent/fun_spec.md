@@ -47,8 +47,8 @@ No entanto, se o utente não está registado no RNU ou se não tem informação 
 Outro cenário possível, é o registo de utentes não identificados no sistema ADT, que ocorre quando não é possivel identificar utentes que dão entrada no hospital sem condições de se proceder à sua identificação. Este é um cenário particular da Urgencia Hospitalar.
 
 
-## Casos de Uso 
-O sr. Joaquim Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendido por médico.
+### Casos de Uso 
+_O sr. Joaquim Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendido por médico.
 
 O funcionário administrativo do secretariado da Urgencia inicia o processo de criação de um novo utente para o Joaquim Silva, com base nas limitadas informações por ele fornecidas. Nesta fase, apenas estão disponíveis detalhes básicos sobre José Silva; sua data de nascimento. O endereço da residencia e número de telefone da residencia são desconhecidos. Utilizando o aplicativo de registo, o funcionário cria a identidade inicial do utente José Silva, e o sistema ADT garante que uma mensagem de Criação do Utente seja enviada para todas as aplicações que necessitam de ter cenhecimento do novo utente, com as informações pessoais disponíveis.
 
@@ -56,7 +56,7 @@ Mais tarde nesse dia, são disponibilizadas informações pessoais mais detalhad
 
 Uma semana depois, o funcionário recebe um pedido do Centro de Imagiologia para criar um perfil temporário de um paciente para Joaquim Manuel Santos Silva. Seguindo procedimentos padrão, o funcionário insere os dados no pedido de registo, com as informações disponiveis da identidade de  José Manuel Santos Silva. Após nova reconciliação, o funcionário atualiza os dados demográficos de José Manuel Santos Silva com o número nacional de utente para completar os dados de identificação do utente.
 
-Durante uma auditoria de rotina, o funcionário descobre que os dois registos de utente José Silva e José Manuel Santos Silva representam a mesma pessoa. Para resolver esta duplicação de registos, o funcionário associa a segunda identidade à identidade de José Silva criada anteriormente no sistema. Uma mensagem de associação de utentes é então comunicada a todas as aplicações anteriores, garantindo que todos os registos estejam atualizados e consistentes.
+Durante uma auditoria de rotina, o funcionário descobre que os dois registos de utente José Silva e José Manuel Santos Silva representam a mesma pessoa. Para resolver esta duplicação de registos, o funcionário associa a segunda identidade à identidade de José Silva criada anteriormente no sistema. Uma mensagem de associação de utentes é então comunicada a todas as aplicações anteriores, garantindo que todos os registos estejam atualizados e consistentes._
 
 
 ### Workflow de processos
@@ -81,13 +81,16 @@ Do ponto de vista do sustema ADT o utente pode ser classificado em 3 categorias:
 As ações representadas no fluxo da gestão de identidade do utente são:
 - criação do utente
 - atualização de dados do utente
-- fusão/associação do utente
+- fusão de 2 registos do mesmo utente
+- cenário alternativo à fusão:
+  - associação de 2 registos do mesmo utente
+  - desassoaição de 2 registos de utentes
 
-Adicionalmente podem ser necessárias ações de pesquisa baseado no perfil IHE [[PDQ] Patient Demographics Query](https://wiki.ihe.net/index.php/Patient_Demographics_Query):
+Adicionalmente podem ser necessárias ações de pesquisa baseado no perfil IHE [[PDQ] Patient Demographics Query](https://wiki.ihe.net/index.php/Patient_Demographics_Query) (NOTA=> remeter para outra IG):
 - pesquisa de utente
 - pesquisa de dados demográficos do utente
 
-Seguindo o perfil “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE, proposmos uma correspondencia entre as mensagens HL7v2.x e mensagens FHIR correspondentes sendo necessário para tal defenir um sistema de codificação de eventos para FHIR.
+Seguindo o perfil “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE, propomos uma uma abordagem de mapeamento entre as mensagens HL7v2.x e mensagens FHIR correspondentes sendo necessário para tal defenir um sistema de codificação de eventos para FHIR.
 
 ## Estrutura das mensagens FHIR
 
@@ -115,7 +118,7 @@ O Administrativo cria um registo de um novo utente no sistema que pode ser por v
 - Patient
 - Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)
 - Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)
-- Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
+- Coverage (Sistema ou Subsistema de saúde/Motivos de isenção de taxas moderadoras/ Planos/Apólices de Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
 ### Atualização de dados do Utente
 O Administrativo atualiza o registo de um utente existente no sistema. Esta atualização pode ser desencadeada por sincronização de dados com o RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de atualização de dados do utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
@@ -130,7 +133,7 @@ O Administrativo atualiza o registo de um utente existente no sistema. Esta atua
 - Patient
 - Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)
 - Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)
-- Coverage (Planos/Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
+- Coverage (Sistema ou Subsistema de saúde/Motivos de isenção de taxas moderadoras/ Planos/Apólices de Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
 ### Fusão de identificação de Utentes
 O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de fusão dos 2 registos num só. Esta ação desencadeia uma mensagem de fusão de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.

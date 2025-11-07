@@ -43,7 +43,7 @@ O termo “dados demográficos do utente” refere-se aos dados da identidade co
 
 A transação *Patient Identity Management* transmite dados demográficos do utente no domínio de identificação do utente e contém eventos para criação, atualização, fusão/associaçao de utentes. Esta transação é usada nos vários contextos como internamento, e todos aqueles que recebem um leito na unidade de saúde, ou urgência, consulta externa, hospital de dia, ambulatório e outros que não têm atribuído um leito na unidade de saúde.
 
-Em Hl7v2, as mensagens qu suportam as ações necessárias estão especificadas no profile IHE mencionado anteriormente prevendo a toca de mensagens com eventos especificos já defenidos pelo standard HL7 v2:
+Em Hl7v2, as mensagens que suportam as ações necessárias estão especificadas no profile IHE mencionado anteriormente prevendo a toca de mensagens com eventos especificos já defenidos pelo standard HL7 v2:
 
 <br>
 
@@ -70,7 +70,7 @@ Tabela 2 - Subconjunto de mensagens obrigatórias com a opção “Associar/Desa
 
 <br>
 
-Em FHIR não existe a definição de eventos pada dar suporte a mensagens orientadas a eventos tal como no HL7 v2, mas o FHIR está preparado para isso. Torna-se assim necessário definir uma sistema de codificação para estes eventos de forma a tormar uniforme os codigos dos eventos a enviar nas mensagens entre os diferentes sistemas.  
+Em FHIR não existe a definição de eventos para dar suporte a mensagens orientadas a eventos tal como no HL7 v2, mas o FHIR está preparado para isso. Torna-se assim necessário definir uma sistema de codificação para estes eventos de forma a tormar uniforme os codigos dos eventos a enviar nas mensagens entre os diferentes sistemas.  
 
 ### Dependencies
 
