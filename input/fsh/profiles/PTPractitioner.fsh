@@ -1,6 +1,8 @@
 Profile: PTPractitioner
 Parent: Practitioner
 Id: Practitioner-Pt
+Title: "Profissional de Saúde (Portugal)"
+Description: "Perfil de Practitioner para contexto PT, com identificadores institucionais e requisitos mínimos de nome/contatos."
 
 * id 1..1 MS
 * identifier 1..* MS
