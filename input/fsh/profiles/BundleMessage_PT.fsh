@@ -1,6 +1,9 @@
 Profile: PTBundleMessage
 Parent: Bundle
 Id: BundleMessage-Pt
+Title: "PTBundleMessage"
+Description: "Perfil de BundleMessage para contexto de comunicação _Messaging_."
+
 
 * ^abstract = true
 * id 1..

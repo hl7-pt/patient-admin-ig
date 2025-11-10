@@ -1,8 +1,8 @@
 Profile: PTPatient
 Parent: Patient
 Id: Patient-Pt
-Title: "P TPatient"
-Description: "Perfil de Patient para contexto PT, incluindo categoria de inscrição, nacionalidade, naturalidade (INE), notas, endereços IOP e contactos."
+Title: "PTPatient"
+Description: "Perfil de Patient para contexto PT, incluindo tipos de indentificadores, nacionalidade, naturalidade (INE), notas, endereços codidificados, contactos, inscrição nos CSP."
 
 * id 1..1 MS
 * name 1..1 MS

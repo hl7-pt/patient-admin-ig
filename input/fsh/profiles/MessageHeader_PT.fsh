@@ -1,6 +1,9 @@
 Profile: PTMessageHeader
 Parent: MessageHeader
 Id: MessageHeader-Pt
+Title: "PTMessageHeader"
+Description: "Perfil de MessageHeader para contexto de comunicação _Messaging_."
+
 
 * id 1..
 

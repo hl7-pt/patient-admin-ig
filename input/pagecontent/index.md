@@ -10,6 +10,7 @@ O presente guia de implementação (IG) foi desenvolvido com o objetivo de unifo
 
 Este guia fornece especificações técnicas utilizando o FHIR Versão 4B, e funcionais e pressupõe que o leitor esteja familiarizado com a especificação funcional e com esta versão do FHIR.
 
+
 ### Introdução
 
 Em Portugal começam a existir várias implemetações em FHIR que mapeaiam as implementações de mensagens HL7v2.x para mensagens HL7 FHIR. Este IG pretende dar suporte a integrações em FHIR que implementam o paradigma de *FHIR Messaging*, fazendo a ponte entre as implementações que já existem em HL7v2.x e mensagens HL7 FHIR. 
@@ -18,7 +19,7 @@ Tem como base o perfil [PatientAdministration Management](https://profiles.ihe.n
 O paradigma de mensagem FHIR permite manter a comunicação assáncrona de menagens e evoluir a comunicação para o Standard FHIR e ao mesmo tempo, usando ferramentas de conversão, manter a comunicação com os sistemas que mantém as integrações em HL7 v2 (Fig.1).  
 
 
-![Arquitetura de Paradigma de Messaging](images/messageParadigmSchema.png)  
+![Arquitetura de Paradigma de Messaging](messageParadigmSchema.png)  
 
 
 Fig.1 -Fhir Messaging Paradigms Schema  
@@ -27,17 +28,14 @@ Fig.1 -Fhir Messaging Paradigms Schema
 
 O perfil IHE PatientAdministration Managament apresenta duas transações: *Patient Identity Management* e *Patient Enconter Management*. O âmbito desta IG é focado na transação *Patient Identity Management* (Fig.2) o qual inclui as operações que permitem fazer a gestão dos dados demográfios dos utentes.
 
-<br>
 
+![Dominios do ADT](domainsAdt.png)  
 
-![Dominios do ADT](images/domainsAdt.png)  
-
-<br>
 
 
 Fig.2 - Atores da trasanção Gestão da Identidade do Utente  
 
-<br>
+
 
 O termo “dados demográficos do utente” refere-se aos dados da identidade completa do utente, incluindo informações sobre pessoas relacionadas com ele, como cuidador principal, médico de família, tutor, familiares mais próximos, entidades responsáveis, etc.
 
@@ -45,7 +43,7 @@ A transação *Patient Identity Management* transmite dados demográficos do ute
 
 Em Hl7v2, as mensagens que suportam as ações necessárias estão especificadas no profile IHE mencionado anteriormente prevendo a toca de mensagens com eventos especificos já defenidos pelo standard HL7 v2:
 
-<br>
+
 
 | **Event**                      | **Trigger** | **Message Static Definition** |
 | ------------------------------ | ----------- | ----------------------------- |
@@ -56,7 +54,7 @@ Em Hl7v2, as mensagens que suportam as ações necessárias estão especificadas
 
 Tabela 1 - Subconjunto de mensagens obrigatórias com a opção “Fusão” (fonte IHE)
 
-<br>
+
 
 | **Event**                      | **Trigger** | **Message Static Definition** |
 | ------------------------------ | ----------- | ----------------------------- |
