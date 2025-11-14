@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "patient-merge",
+  "id": "patient-link",
   "type": "message",
   "timestamp": "2025-10-24T14:16:30.035+01:00",
   "entry": [
@@ -10,8 +10,8 @@
         "id": "96af02f3-5a9c-4220-8f62-ece462f2b4d3",
         "eventCoding": {
           "system": "http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events",
-          "code": "PATIENT_MERGE",
-          "display": "Junção de identificações de utente"
+          "code": "PATIENT_LINK",
+          "display": "Associação de registos de identificações de utente"
         },
         "destination": [
           {

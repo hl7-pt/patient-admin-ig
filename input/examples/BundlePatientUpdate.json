@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "c003f928-d3f8-4d60-85b0-47aa3b6447c2",
+  "id": "patient-update",
   "type": "message",
   "timestamp": "2025-10-24T12:55:36.839+01:00",
   "entry": [
