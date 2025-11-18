@@ -7,7 +7,7 @@ This is an empty IG
 ### Publication
 This ImplementationGuide is published in the following locations:
 
-Continuous Build: [__http://build.fhir.org/ig/<handle\>/<repo\>/branches/main/index.html__  ](https://hl7-pt.github.io/patient-admin-ig/)  
+Continuous Build: https://hl7-pt.github.io/patient-admin-ig/  
 Canonical / permanent URL: 
 <br> </br>
 
