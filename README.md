@@ -1,4 +1,4 @@
-### Publication
+### Publicação
 
 Continuous Build: https://hl7-pt.github.io/patient-admin-ig/  
 Canonical / permanent URL: 
