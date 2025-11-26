@@ -7,11 +7,11 @@ Usage: #example
 * entry[0].fullUrl = "urn:uuid:96af02f3-5a9c-4220-8f62-ece462f2b4d3"
 * entry[0].resource = 96af02f3-5a9c-4220-8f62-ece462f2b4d3
 * entry[+].fullUrl = "urn:uuid:21af15d4-7e31-3976-8391-ff0b3a4ab37d"
-* entry[+].resource = 21af15d4-7e31-3976-8391-ff0b3a4ab37d
+* entry[=].resource = 21af15d4-7e31-3976-8391-ff0b3a4ab37d
 * entry[+].fullUrl = "urn:uuid:17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6"
-* entry[+].resource = 17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6
+* entry[=].resource = 17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6
 * entry[+].fullUrl = "urn:uuid:cc5416a2-8697-3367-bba8-eec87f189664"
-* entry[+].resource = cc5416a2-8697-3367-bba8-eec87f189664
+* entry[=].resource = cc5416a2-8697-3367-bba8-eec87f189664
 
 Instance: 96af02f3-5a9c-4220-8f62-ece462f2b4d3
 InstanceOf: MessageHeader
