@@ -4,13 +4,13 @@ InstanceOf: Bundle
 Usage: #example
 * type = #message
 * timestamp = "2025-10-24T14:16:30.035+01:00"
-* entry[0].fullUrl = "urn:uuid:96af02f3-5a9c-4220-8f62-ece462f2b4d3"
+* entry[0].fullUrl = "http://example.org/MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3"
 * entry[0].resource = 96af02f3-5a9c-4220-8f62-ece462f2b4d3
-* entry[+].fullUrl = "urn:uuid:21af15d4-7e31-3976-8391-ff0b3a4ab37d"
+* entry[+].fullUrl = "http://example.org/Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d"
 * entry[=].resource = 21af15d4-7e31-3976-8391-ff0b3a4ab37d
-* entry[+].fullUrl = "urn:uuid:17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6"
+* entry[+].fullUrl = "http://example.org/Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6"
 * entry[=].resource = 17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6
-* entry[+].fullUrl = "urn:uuid:cc5416a2-8697-3367-bba8-eec87f189664"
+* entry[+].fullUrl = "http://example.org/Practitioner/cc5416a2-8697-3367-bba8-eec87f189664"
 * entry[=].resource = cc5416a2-8697-3367-bba8-eec87f189664
 
 Instance: 96af02f3-5a9c-4220-8f62-ece462f2b4d3
@@ -19,8 +19,8 @@ Usage: #inline
 * eventCoding = $cs-fhir-events#PATIENT_LINK "Associação de registos de identificações de utente"
 * destination.name = "EXTERNAL SYSTEM"
 * destination.endpoint = "DEV/EXTERNALSYSTEM"
-* destination.receiver = Reference(Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8) "Unidade Local de Saúde Dev"
-* sender = Reference(Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8) "Unidade Local de Saúde Dev"
+* destination.receiver = Reference(http://example.org/fhir/Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8) "Unidade Local de Saúde Dev"
+* sender = Reference(http://example.org/fhir/Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8) "Unidade Local de Saúde Dev"
 * enterer = Reference(cc5416a2-8697-3367-bba8-eec87f189664)
 * source.name = "ADT"
 * source.endpoint = "DEV/ADT"
@@ -133,7 +133,7 @@ Usage: #inline
 * identifier[+].use = #official
 * identifier[=].type = $v2-0203#CZ "Citizenship Card"
 * identifier[=].type.text = "Número de identificação civil"
-* identifier[=].system = "IRN"
+* identifier[=].system = "http://example.org/IRN"
 * identifier[=].value = "12755547"
 * active = true
 * name.use = #official
@@ -150,7 +150,6 @@ Usage: #inline
 * gender = #female
 * birthDate = "1973-02-04"
 * deceasedBoolean = false
-* address.id = "c264baba-5727-3f88-bcc0-a2dc89f2fec7"
 * address.extension.extension[0].url = "parish"
 * address.extension.extension[=].valueCodeableConcept = $ine#150202
 * address.extension.extension[+].url = "municipality"
@@ -162,12 +161,12 @@ Usage: #inline
 * address.line = "Rua Dr Manuel Da Cruz Junior 128 Moradia 14 Samouco"
 * address.postalCode = "2890-002"
 * maritalStatus = $v3-MaritalStatus#M "Married"
-* contact[0].relationship = $v2-0131#FTH "Father"
+* contact[0].relationship = $v3-RoleCode#FTH "Father"
 * contact[=].name.use = #official
 * contact[=].name.family = "Nunes"
 * contact[=].name.given[0] = "Joao"
 * contact[=].name.given[+] = "Jose"
-* contact[+].relationship = $v2-0131#MTH "Mother"
+* contact[+].relationship = $v3-RoleCode#MTH "Mother"
 * contact[=].name.use = #official
 * contact[=].name.family = "Nunes"
 * contact[=].name.given[0] = "Maria"
