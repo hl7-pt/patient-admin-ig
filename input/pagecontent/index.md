@@ -93,18 +93,18 @@ Em FHIR não existe a definição de eventos para dar suporte a mensagens orient
 <table>
 <thead>
 <tr class="header">
-<th>Roles</th>
-<th>Name</th>
-<th>Organization</th>
-<th>Contact</th>
+<th>Papel</th>
+<th>Nome</th>
+<th>Organização</th>
+<th>Contacto</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Author</td>
+<td>Autor</td>
 <td>Liliana Correia</td>
 <td> </td>
-<td>lilianamsacorreia@gmail.com</td>
+<td>lilianamsacorreia [at] gmail.com</td>
 </tr><tr class="even">
 <td>Colaborador</td>
 <td>Liliane Sousa</td>
