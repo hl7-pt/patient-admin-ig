@@ -70,22 +70,8 @@ Tabela 2 - Subconjunto de mensagens obrigatórias com a opção “Associar/Desa
 
 Em FHIR não existe a definição de eventos para dar suporte a mensagens orientadas a eventos tal como no HL7 v2, mas o FHIR está preparado para isso. Torna-se assim necessário definir uma sistema de codificação para estes eventos de forma a tormar uniforme os codigos dos eventos a enviar nas mensagens entre os diferentes sistemas.  
 
-### Dependencies
-
-{% include dependency-table.xhtml %}
 
 
-### Cross Version Analysis
-
-{% include cross-version-analysis.xhtml %}
-
-### Global Profiles
-
-{% include globals-table.xhtml %}
-
-### IP statements
-
-{% include ip-statements.xhtml %}
 
 
 ### Autores e Colaboradores
