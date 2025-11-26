@@ -51,7 +51,7 @@ Em Hl7v2, as mensagens que suportam as ações necessárias estão especificadas
 | Update patient information     | A31         | ADT^A31^ADT\_A05              |
 | Change Patient Identifier List | A47         | ADT^A47^ADT\_A30              |
 | Merge two patients             | A40         | ADT^A40^ADT\_A39              |
-
+{:.table-bordered}
 Tabela 1 - Subconjunto de mensagens obrigatórias com a opção “Fusão” (fonte IHE)
 
 
@@ -63,7 +63,7 @@ Tabela 1 - Subconjunto de mensagens obrigatórias com a opção “Fusão” (fo
 | Change Patient Identifier List | A47         | ADT^A47^ADT\_A30              |
 | Link Patient Information       | A24         | ADT^A24^ADT\_A24              |
 | Unlink Patient Information     | A37         | ADT^A37^ADT\_A37              |
-
+{:.table-bordered}
 Tabela 2 - Subconjunto de mensagens obrigatórias com a opção “Associar/Desassociar” (fonte IHE)
 
 <br>
