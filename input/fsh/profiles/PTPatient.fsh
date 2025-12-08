@@ -17,8 +17,8 @@ Description: "Perfil de Patient para contexto PT, incluindo tipos de indentifica
 * identifier 0..* MS
 * active 0..1 MS
 
-* extension contains PTPersonBirthplace named birthplace 0..1 MS
-* extension contains PTNationality named nationality 0..* MS
+* extension contains PTPersonBirthplace named birthplace-pt 0..1 MS
+* extension contains PTNationality named nationality-pt 0..* MS
 * extension contains PTNotes named notes 0..1 MS
 
 * address 0..* MS
@@ -30,10 +30,7 @@ Description: "Perfil de Patient para contexto PT, incluindo tipos de indentifica
 * address.postalCode 0..1 MS
 * address.country 0..1 MS
 
-* address.extension contains PTAddressCountry named country-pt 0..1 MS
-* address.extension contains PTAddressCounty named county-pt 0..1 MS
-* address.extension contains PTAddressMunicipality named municipality-pt 0..1 MS
-* address.extension contains PTAddressParish named parish-pt 0..1 MS
+* address.extension contains PTAddress named address-pt 0..1 MS
 
 * contact.address 0..1 MS
 * contact.address.use 0..1 MS
@@ -44,10 +41,7 @@ Description: "Perfil de Patient para contexto PT, incluindo tipos de indentifica
 * contact.address.postalCode 0..1 MS
 * contact.address.country 0..1 MS
 
-* contact.address.extension contains PTAddressCountry named country-pt 0..1 MS
-* contact.address.extension contains PTAddressCounty named county-pt 0..1 MS
-* contact.address.extension contains PTAddressMunicipality named municipality-pt 0..1 MS
-* contact.address.extension contains PTAddressParish named parish-pt 0..1 MS
+* contact.address.extension contains PTAddress named address-pt 0..1 MS
 
 * generalPractitioner.extension contains
     PTPatientPrimaryCarePeriod named patient-primary-care-period 0..* MS

@@ -4,14 +4,16 @@ InstanceOf: Bundle
 Usage: #example
 * type = #message
 * timestamp = "2025-10-24T14:16:30.035+01:00"
-* entry[0].fullUrl = "http://example.org/MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3"
+* entry[0].fullUrl = "urn:uuid:96af02f3-5a9c-4220-8f62-ece462f2b4d3"
 * entry[0].resource = 96af02f3-5a9c-4220-8f62-ece462f2b4d3
-* entry[+].fullUrl = "http://example.org/Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d"
+* entry[+].fullUrl = "urn:uuid:21af15d4-7e31-3976-8391-ff0b3a4ab37d"
 * entry[=].resource = 21af15d4-7e31-3976-8391-ff0b3a4ab37d
-* entry[+].fullUrl = "http://example.org/Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6"
+* entry[+].fullUrl = "urn:uuid:17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6"
 * entry[=].resource = 17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6
-* entry[+].fullUrl = "http://example.org/Practitioner/cc5416a2-8697-3367-bba8-eec87f189664"
+* entry[+].fullUrl = "urn:uuid:cc5416a2-8697-3367-bba8-eec87f189664"
 * entry[=].resource = cc5416a2-8697-3367-bba8-eec87f189664
+* entry[+].fullUrl = "urn:uuid:70cfff33-ebcb-4f99-9bf5-c560575295d8"
+* entry[=].resource = 70cfff33-ebcb-4f99-9bf5-c560575295d8
 
 Instance: 96af02f3-5a9c-4220-8f62-ece462f2b4d3
 InstanceOf: MessageHeader
@@ -19,18 +21,18 @@ Usage: #inline
 * eventCoding = $cs-fhir-events#PATIENT_LINK "Associação de registos de identificações de utente"
 * destination.name = "EXTERNAL SYSTEM"
 * destination.endpoint = "DEV/EXTERNALSYSTEM"
-* destination.receiver = Reference(http://example.org/fhir/Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8) "Unidade Local de Saúde Dev"
-* sender = Reference(http://example.org/fhir/Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8) "Unidade Local de Saúde Dev"
-* enterer = Reference(cc5416a2-8697-3367-bba8-eec87f189664)
+* destination.receiver = Reference(urn:uuid:70cfff33-ebcb-4f99-9bf5-c560575295d8) "Unidade Local de Saúde Dev"
+* sender = Reference(urn:uuid:70cfff33-ebcb-4f99-9bf5-c560575295d8) "Unidade Local de Saúde Dev"
+* enterer = Reference(urn:uuid:cc5416a2-8697-3367-bba8-eec87f189664)
 * source.name = "ADT"
 * source.endpoint = "DEV/ADT"
-* focus = Reference(21af15d4-7e31-3976-8391-ff0b3a4ab37d)
+* focus = Reference(urn:uuid:21af15d4-7e31-3976-8391-ff0b3a4ab37d)
 
 Instance: 21af15d4-7e31-3976-8391-ff0b3a4ab37d
 InstanceOf: Patient
 Usage: #inline
 * meta.security = $v3-Confidentiality#N "Normal"
-* extension.url = "http://spms.min-saude.pt/fhir/iop/extensions/nationality"
+* extension.url = "http://example.com/fhir/hl7pt/StructureDefinition/nationality-pt"
 * extension.valueCodeableConcept = $iso-3166-country-codes.html#PT "Portugal"
 * identifier[0].use = #usual
 * identifier[=].type = $v2-0203#PI "Patient internal identifier"
@@ -74,15 +76,11 @@ Usage: #inline
 * gender = #female
 * birthDate = "1995-10-09"
 * deceasedBoolean = false
-* address.extension.extension[0].url = "address-type"
-* address.extension.extension[=].valueCodeableConcept = $address-types#MA "Main Address"
-* address.extension.extension[+].url = "parish"
-* address.extension.extension[=].valueCodeableConcept = $ine#060201
-* address.extension.extension[+].url = "municipality"
-* address.extension.extension[=].valueCodeableConcept = $ine#0602
-* address.extension.extension[+].url = "county"
-* address.extension.extension[=].valueCodeableConcept = $ine#06
-* address.extension.url = "http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2"
+* address[0].extension[PTAddress].url = "http://example.com/fhir/hl7pt/StructureDefinition/address-pt"
+* address[0].extension[PTAddress].extension[addressType].valueCoding = $address-types#MA "Main Address"
+* address[0].extension[PTAddress].extension[parish].valueCodeableConcept = $ine#060201
+* address[0].extension[PTAddress].extension[municipality].valueCodeableConcept = $ine#0602
+* address[0].extension[PTAddress].extension[county].valueCodeableConcept = $ine#06
 * address.use = #billing
 * address.line = "Rua De Casa, N.2 Ançã"
 * address.postalCode = "3060-009"
@@ -101,14 +99,14 @@ Usage: #inline
 * contact.telecom[+].system = #email
 * contact.telecom[=].value = "li@email.com"
 * contact.telecom[=].rank = 1
-* link.other = Reference(17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6)
+* link.other = Reference(urn:uuid:17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6)
 * link.type = #replaces
 
 Instance: 17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6
 InstanceOf: Patient
 Usage: #inline
 * meta.security = $v3-Confidentiality#N "Normal"
-* extension.url = "http://example.com/fhir/hl7pt/extensions/nationality"
+* extension.url = "http://example.com/fhir/hl7pt/StructureDefinition/nationality-pt"
 * extension.valueCodeableConcept = $iso-3166-country-codes.html#PT "Portugal"
 * identifier[0].use = #usual
 * identifier[=].type = $v2-0203#PI "Patient internal identifier"
@@ -150,13 +148,10 @@ Usage: #inline
 * gender = #female
 * birthDate = "1973-02-04"
 * deceasedBoolean = false
-* address.extension.extension[0].url = "parish"
-* address.extension.extension[=].valueCodeableConcept = $ine#150202
-* address.extension.extension[+].url = "municipality"
-* address.extension.extension[=].valueCodeableConcept = $ine#1502
-* address.extension.extension[+].url = "county"
-* address.extension.extension[=].valueCodeableConcept = $ine#15
-* address.extension.url = "http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2"
+* address[0].extension[PTAddress].extension[addressType].valueCoding = $address-types#MA "Main Address"
+* address[0].extension[PTAddress].extension[parish].valueCodeableConcept = $ine#150202
+* address[0].extension[PTAddress].extension[municipality].valueCodeableConcept = $ine#1502
+* address[0].extension[PTAddress].extension[county].valueCodeableConcept = $ine#15
 * address.use = #billing
 * address.line = "Rua Dr Manuel Da Cruz Junior 128 Moradia 14 Samouco"
 * address.postalCode = "2890-002"
@@ -198,3 +193,12 @@ Usage: #inline
 * identifier[=].system = "http://example.org/RHV"
 * identifier[=].value = "30047"
 * active = true
+
+Instance: 70cfff33-ebcb-4f99-9bf5-c560575295d8
+InstanceOf: Organization
+Usage: #inline
+* identifier[0].use = #usual
+* identifier[=].system = $sonho
+* identifier[=].value = "454321"
+* active = true
+* name = "ULS DEV"

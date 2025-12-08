@@ -7,3 +7,6 @@ Alias: $ine = http://www.ine.pt
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
+Alias: $sonho = http://example.org/SONHO
+Alias: $coverage-type = http://spms.min-saude.pt/rnu/systemcodes/coverage-type
+Alias: $address-types = http://spms.min-saude.pt/rnu/extensions/address-types
