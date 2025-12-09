@@ -1,6 +1,9 @@
 Extension: PTPersonBirthplace
-Id: PersonBirthplace-Pt
+Id: birthplace-pt
 Context: Patient
+
+* ^url = "http://example.com/fhir/hl7pt/StructureDefinition/birthplace-pt"
+* ^status = #active
 
 * extension contains
     country 0..1 and
@@ -8,7 +11,4 @@ Context: Patient
     municipality 0..1 and
     parish 0..1
 
-* extension contains PTAddressCountry named country-pt 0..1 MS
-* extension contains PTAddressCounty named county-pt 0..1 MS
-* extension contains PTAddressMunicipality named municipality-pt 0..1 MS
-* extension contains PTAddressParish named parish-pt 0..1 MS
+* extension contains PTAddress named address-pt 0..1 MS

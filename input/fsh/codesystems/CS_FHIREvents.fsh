@@ -24,7 +24,7 @@ Este CodeSystem inclui mapeamentos para eventos de diferentes domínios (ex: ges
 * #PATIENT_UPDATE_RESPONSE "Resposta da atualização de dados do utente"
   * ^definition = "Resposta FHIR à atualização de dados do utente."
 
-* #PATIENT_LINK "Associação de utentes"
+* #PATIENT_LINK "Associação de registos de identificações de utente"
   * ^definition = "Evento FHIR que representa a associação (link) de utentes."
 
 * #PATIENT_LINK_RESPONSE "Resposta da associação de utentes"

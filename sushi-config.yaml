@@ -8,8 +8,8 @@
 
 
 id: hl7.fhir.pt.patient-admin-ig
-canonical: http://example.com/fhir/example
-url: http://example.com/fhir/example
+canonical: http://example.com/fhir/hl7pt
+url: http://example.com/fhir/hl7pt
 name: ExampleIG
 title: "HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1"
 description: Example IG exercises many of the fields in a SUSHI configuration.
