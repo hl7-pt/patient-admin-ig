@@ -70,8 +70,9 @@ _Durante uma auditoria de rotina, o funcionário descobre que os dois registos d
 
 O **Diagrama de Sequência** seguinte ilustra as interaçoes entre o sistema ADT e sistemas terceiros:
 
-
-![Patient Identity Workflow](PatientIdentityWorkflow.png)
+<br>
+<img src="PatientIdentityWorkflow.png" alt="Patient Identity Workflow"/>
+<br>
 
 
 O fluxo representado tem em conta que os dados do utente poderão ser validados pelo serviço do Registo Nacional do Utente (RNU) e que essa é a fonte de verdade de dados do utente, e prevê que quando não é possivel encontrar ou validar o utente via RNU o administrativo tem que criar o utente localmente no sistema ADT.
@@ -115,19 +116,18 @@ O bundle tem como entradas os Recursos:
 - Organization *
 - Practitioner *
 
-
-![Estrutura da mensagem fhir de gestão de dados do utente](FhirMessagePatientIdentityManagement.png)
-
-
+<br>
+<img src="FhirMessagePatientIdentityManagement.png" alt="Estrutura da mensagem fhir de gestão de dados do utente"/>
+<br>
 
 ### Criação de Utente
 
 
 O Administrativo cria um registo de um novo utente no sistema que pode ser por via RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de ceriação de novo utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
-
-![Fluxo de criação de novo utente](FlowPatientNew.png)
-
+<br>
+<img src="FlowPatientNew.png" alt="Fluxo de criação de novo utente"/>
+<br>
 
 - MessageHeader.eventCoding
     - Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
@@ -143,8 +143,9 @@ O Administrativo cria um registo de um novo utente no sistema que pode ser por v
 O Administrativo atualiza o registo de um utente existente no sistema. Esta atualização pode ser desencadeada por sincronização de dados com o RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de atualização de dados do utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
 
-
-![Fluxo de atualização de utente](FlowPatientUpdate.png)
+<br>
+<img src="FlowPatientUpdate.png" alt="Fluxo de atualização de utente"/>
+<br>
 
 
 - MessageHeader.eventCoding
@@ -161,8 +162,9 @@ O Administrativo atualiza o registo de um utente existente no sistema. Esta atua
 O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de fusão dos 2 registos num só. Esta ação desencadeia uma mensagem de fusão de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
 
-
-![Fluxo de fusão de_utentes](FlowPatientMerge.png)
+<br>
+<img src="FlowPatientMerge.png" alt="Fluxo de fusão de utentes"/>
+<br>
 
 
 Para fusão de utentes
@@ -173,8 +175,9 @@ Para fusão de utentes
 O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de _linkagem_ dos 2 registos. Esta ação desencadeia uma mensagem de associação de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
 
-
-![Fluxo de associação de_utentes](FlowPatientLink.png)
+<br>
+<img src="FlowPatientLink.png" alt="Fluxo de associação de utentes"/>
+<br>
 
 
 Para associação de utentes
@@ -184,14 +187,15 @@ Para associação de utentes
 ### Desassociação de identificação Utentes
 O Administrativo identifica que 2 registos foram erradamente associados no sistema e procede à ação de desassociação dos 2 registos. Esta ação desencadeia uma mensagem de desassociação de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.
 
-
-![Fluxo de desassociação de_utentes](FlowPatientUnlink.png)
-
+<br>
+<img src="FlowPatientUnlink.png" alt="Fluxo de desassociação de utentes"/>
+<br>
 
 
 Para desassociação de utentes
 - MessageHeader.eventCoding
   - Para uma mensagem PATIENT_UNLINK é esperada uma resposta PATIENT_UNLINK_RESPONSE
+
 
 
 ### Eventos a comunicar nas mensagens
@@ -215,11 +219,6 @@ Para desassociação de utentes
 | Pesquisa de dados demograficos do utente          | QRY^A19           | PATIENT_DEMOGRAPHIC     |
 | Resposta pesquisa de dados demograficos do utente | ADR^A19           | PATIENT_DEMOGRAPHIC_RESPONSE |
 
-
-
+<br>
 Os eventos aqui apresentados têm igualmente em conta o standard HL7 v2.x e a documentação publica de especificação da SPMS, que está implementada em grande parte das instituições de prestação de cuidados de Saúde em particular nos Cuidados de Saúde Hospitalares. No caso do evento de atualização de utentes as mensagens HL7 v2 defenidas pela SPMS, conforme especificação publica, aplicam a mensagem e evento ADT^A08.
-
-
-
-
 
