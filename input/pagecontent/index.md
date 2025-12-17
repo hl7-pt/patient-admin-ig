@@ -88,7 +88,7 @@ Em FHIR não existe a definição de eventos para dar suporte a mensagens orient
 <tr class="odd">
 <td>Autor</td>
 <td>Liliana Correia</td>
-<td>Hl7 PT</td>
+<td></td>
 <td>lilianamsacorreia [at] gmail.com</td>
 </tr><tr class="even">
 <td>Colaborador</td>
