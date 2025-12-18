@@ -18,8 +18,10 @@ Tem como base o perfil [PatientAdministration Management](https://profiles.ihe.n
 
 O paradigma de mensagem FHIR permite manter a comunicação assáncrona de menagens e evoluir a comunicação para o Standard FHIR e ao mesmo tempo, usando ferramentas de conversão, manter a comunicação com os sistemas que mantém as integrações em HL7 v2 (Fig.1).  
 
-
-![Arquitetura de Paradigma de Messaging](messageParadigmSchema.png)  
+<br>
+<img src="messageParadigmSchema.png" alt="Arquitetura de Paradigma de Messaging"/>
+<br>
+ 
 
 
 Fig.1 -Fhir Messaging Paradigms Schema  
@@ -28,10 +30,9 @@ Fig.1 -Fhir Messaging Paradigms Schema
 
 O perfil IHE PatientAdministration Managament apresenta duas transações: *Patient Identity Management* e *Patient Enconter Management*. O âmbito desta IG é focado na transação *Patient Identity Management* (Fig.2) o qual inclui as operações que permitem fazer a gestão dos dados demográfios dos utentes.
 
-
-![Dominios do ADT](domainsAdt.png)  
-
-
+<br>
+<img src="domainsAdt.png" alt="Dominios do ADT"/>
+<br>
 
 Fig.2 - Atores da trasanção Gestão da Identidade do Utente  
 
@@ -72,8 +73,6 @@ Em FHIR não existe a definição de eventos para dar suporte a mensagens orient
 
 
 
-
-
 ### Autores e Colaboradores
 
 <table>
@@ -89,7 +88,7 @@ Em FHIR não existe a definição de eventos para dar suporte a mensagens orient
 <tr class="odd">
 <td>Autor</td>
 <td>Liliana Correia</td>
-<td> </td>
+<td></td>
 <td>lilianamsacorreia [at] gmail.com</td>
 </tr><tr class="even">
 <td>Colaborador</td>
@@ -113,3 +112,10 @@ Em FHIR não existe a definição de eventos para dar suporte a mensagens orient
 <td></td>
 </tr></tbody>
 </table>
+
+
+### Referências
+
+- [PatientAdministration Management](https://profiles.ihe.net/ITI/TF/Volume1/ch-14.html#14)
+- [Visita do utente](https://hl7-pt.github.io/workflow-ep-ig/)
+

@@ -1,3 +1,9 @@
+Esta Implementation Guide (IG) surge como resultado de um trabalho contínuo de análise e implementação de fluxos de integração em FHIR, no contexto da Gestão da Identidade do Utente, incorporando a experiência e o trabalho previamente desenvolvidos e implementados em HL7 v2.
+
+Ao longo deste processo, foi realizado um levantamento detalhado das regras de negócio, bem como da forma como os dados são representados e comunicados em FHIR. Este trabalho prevê, quando aplicável, uma etapa intermédia de comunicação em HL7 v2, embora a sua existência não seja obrigatória.
+
+A opção por representar o paradigma de Messaging como modelo de comunicação deve-se ao facto de este ser um dos mais utilizados em Portugal, bem como noutros países. No entanto, a especificação dos recursos definidos no âmbito da Gestão da Identidade do Utente é independente do paradigma de comunicação, podendo ser aplicada em diferentes cenários e modelos de interoperabilidade.
+
 ### Publicação
 
 Continuous Build: https://hl7-pt.github.io/patient-admin-ig/  

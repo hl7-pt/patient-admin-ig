@@ -55,17 +55,30 @@ Este CodeSystem inclui mapeamentos para eventos de diferentes domínios (ex: ges
 // ========================
 // Eventos específicos de urgencia
 // ========================
+
+* #EMERGENCY_ADMISSION "Admissão à urgência"
+  * ^definition = "Criação de um novo episodio de urgencia. HL7v2: ADT^A04."
+
+* #EMERGENCY_ADMISSION_RESPONSE "Resposta à Admissão à urgência"
+  * ^definition = "Resposta à criação de um novo episodio de urgencia. HL7v2: ACK^A04'."
+
+* #EMERGENCY_UPDATE "Atualização de dados de admissão do episodio de urgência"
+  * ^definition = "Atualização de dados do episódio de urgência. HL7v2: ADT^A08 com Action Code 'U'."
+
+* #EMERGENCY_UPDATE_RESPONSE "Resposta à atualização de dados de admissão do episodio de urgência"
+  * ^definition = "Resposta à atualização de dados de admissão do episódio de urgência. HL7v2: ACK^A08."
+
 * #EMERGENCY_UPDATE_TRIAGE "Atualização do episodio de urgência com a triagem realizada"
   * ^definition = "Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ADT^A08 com Action Code 'T'."
 
 * #EMERGENCY_UPDATE_TRIAGE_RESPONSE "Resposta à atualização do episodio de urgência com a triagem realizada"
-  * ^definition = "Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ADT^A08 com Action Code 'T'."
+  * ^definition = "Resposta Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ACK^A08."
 
 * #EMERGENCY_UPDATE_PATIENT_CALL "Atualização do episodio de urgência com chamada do utente"
   * ^definition = "Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ADT^A08 com Action Code 'CP'."
 
 * #EMERGENCY_UPDATE_PATIENT_CALL_RESPONSE "Resposta à atualização do episodio de urgência com chamada do utente"
-  * ^definition = "Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ADT^A08 com Action Code 'CP'."
+  * ^definition = "Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ACK^A08."
 
 
 
