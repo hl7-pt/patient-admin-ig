@@ -16,7 +16,7 @@ A mensagem que comunica a criação de um novo utente é uma ADT^A28. Os segment
   - MessageHeader.destination.name / MessageHeader.destination.endpoint -> MSH.5 (Aplicação destinatária)
   - MessageHeader.destination.receiver -> MSH.6 (Entidade destinatária)
   - MessageHeader.eventCoding => PATIENT_NEW -> MSH.9 = "ADT^A28" (Tipo Mensagem ^ Tipo Evento)
-  - MessageHeader.enterer => referencia para o recurso Practitioner -> EVN.5  (utilizador que executou a ação)
+  - MessageHeader.enterer => referência para o recurso Practitioner -> EVN.5  (utilizador que executou a ação)
 - Recurso Patient (PID, NK1, ROL e OBX)
   - Patient.identifier -> PID.3 (identificadores do utentes) e PID.18 (número do processo)
   - dados de identificação disponiveis
@@ -37,7 +37,7 @@ A mensagem que comunica a criação de um novo utente é uma ADT^A28. Os segment
   - MessageHeader.destination.name / MessageHeader.destination.endpoint -> MSH.5 (Aplicação destinatária)
   - MessageHeader.destination.receiver -> MSH.6 (Entidade destinatária)
   - MessageHeader.eventCoding => PATIENT_UPDATE -> MSH.9 = "ADT^A31" (Tipo Mensagem ^ Tipo Evento)*
-  - MessageHeader.enterer => referencia para o recurso Practitioner -> EVN.5  (utilizador que executou a ação)
+  - MessageHeader.enterer => referência para o recurso Practitioner -> EVN.5  (utilizador que executou a ação)
 - Recurso Patient (PID, NK1, ROL e OBX)
   - Patient.identifier -> PID.3 (identificadores do utentes) e PID.18 (número do processo)
   - dados de identificação disponiveis
@@ -60,7 +60,7 @@ A mensagem que comunica a criação de um novo utente é uma ADT^A28. Os segment
   - MessageHeader.destination.name / MessageHeader.destination.endpoint -> MSH.5 (Aplicação destinatária)
   - MessageHeader.destination.receiver -> MSH.6 (Entidade destinatária)
     - MessageHeader.eventCoding => PATIENT_MERGE -> MSH.9 = "ADT^A40" (Tipo Mensagem ^ Tipo Evento)*
-  - MessageHeader.enterer => referencia para o recurso Practitioner -> EVN.5  (utilizador que executou a ação)
+  - MessageHeader.enterer => referência para o recurso Practitioner -> EVN.5  (utilizador que executou a ação)
 - Recurso Patient principal (PID e MRG)
   - Patient.identifier -> PID.3 (identificadores do utentes) e PID.18 (número do processo)
   - dados de identificação disponiveis
@@ -77,7 +77,7 @@ A mensagem que comunica a criação de um novo utente é uma ADT^A28. Os segment
   - MessageHeader.destination.name / MessageHeader.destination.endpoint -> MSH.5 (Aplicação destinatária)
   - MessageHeader.destination.receiver -> MSH.6 (Entidade destinatária)
     - MessageHeader.eventCoding => PATIENT_MERGE -> MSH.9 = "ADT^A24" (Tipo Mensagem ^ Tipo Evento)*
-  - MessageHeader.enterer => referencia para o recurso Practitioner -> EVN.5  (utilizador que executou a ação)
+  - MessageHeader.enterer => referência para o recurso Practitioner -> EVN.5  (utilizador que executou a ação)
 - Recurso Patient principal (PID.1=1 (registo principal) | PID.1=2 (utente linkado))
   - Patient.identifier -> PID.3 (identificadores do utentes) e PID.18 (número do processo)
   - dados de identificação disponiveis
