@@ -16,25 +16,29 @@ Este guia fornece especificações técnicas utilizando o FHIR Versão 4B, e fun
 Em Portugal começam a existir várias implemetações em FHIR que mapeaiam as implementações de mensagens HL7v2.x para mensagens HL7 FHIR. Este IG pretende dar suporte a integrações em FHIR que implementam o paradigma de *FHIR Messaging*, fazendo a ponte entre as implementações que já existem em HL7v2.x e mensagens HL7 FHIR. 
 Tem como base o perfil [PatientAdministration Management](https://profiles.ihe.net/ITI/TF/Volume1/ch-14.html#14) da Estrutura Técnica de Infraestrutura de TI do IHE para a abordagem em HL7v2.x e que tem como atores *"Patient Demographics Supplier"* e *"Patient Demographics Consumer"*.
 
-O paradigma de mensagem FHIR permite manter a comunicação assáncrona de menagens e evoluir a comunicação para o Standard FHIR e ao mesmo tempo, usando ferramentas de conversão, manter a comunicação com os sistemas que mantém as integrações em HL7 v2 (Fig.1).  
+O paradigma de mensagem FHIR permite manter a comunicação assíncrona de mensagens e evoluir a comunicação para o Standard FHIR e ao mesmo tempo, usando ferramentas de conversão, manter a comunicação com os sistemas que mantém as integrações em HL7 v2 (Fig.1).  
 
-<br>
-<img src="messageParadigmSchema.png" alt="Arquitetura de Paradigma de Messaging"/>
-<br>
- 
+<div style="display:block; text-align:center; margin:1.5rem 0;">
+  <figure style="margin:0;">
+    <img src="messageParadigmSchema.png" alt="Arquitetura de Paradigma de Messaging" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
+    <!-- <figcaption>Fig.1 - FHIR Messaging Paradigms Schema</figcaption> -->
+  </figure>
+</div>
 
 
 Fig.1 -Fhir Messaging Paradigms Schema  
 
 
 
-O perfil IHE PatientAdministration Managament apresenta duas transações: *Patient Identity Management* e *Patient Enconter Management*. O âmbito desta IG é focado na transação *Patient Identity Management* (Fig.2) o qual inclui as operações que permitem fazer a gestão dos dados demográfios dos utentes.
+O perfil IHE PatientAdministration Management apresenta duas transações: *Patient Identity Management* e *Patient Enconter Management*. O âmbito desta IG é focado na transação *Patient Identity Management* (Fig.2) o qual inclui as operações que permitem fazer a gestão dos dados demográfios dos utentes.
 
-<br>
-<img src="domainsAdt.png" alt="Dominios do ADT"/>
-<br>
+<div style="display:block; text-align:center; margin:1.5rem 0;">
+  <figure style="margin:0;">
+    <img src="domainsAdt.png" alt="Domínios do ADT" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
+  </figure>
+</div>
 
-Fig.2 - Atores da trasanção Gestão da Identidade do Utente  
+Fig.2 - Atores da transação Gestão da Identidade do Utente  
 
 
 
