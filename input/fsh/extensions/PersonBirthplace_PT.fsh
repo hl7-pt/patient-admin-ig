@@ -1,5 +1,7 @@
 Extension: PTPersonBirthplace
 Id: birthplace-pt
+Title: "Birthplace Extension"
+Description: "Extensão para o local de nascimento do utente."
 Context: Patient
 
 * ^url = "http://example.com/fhir/hl7pt/StructureDefinition/birthplace-pt"

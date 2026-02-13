@@ -1,5 +1,7 @@
 Extension: PTCoverageReason
 Id: coverage-reason-pt
+Description: "Extensão para codigo do motivo de isenção do utente ."
+
 Context: Coverage
 
 * ^status = #active

@@ -1,5 +1,7 @@
 Extension: PTPersonOccupation
 Id: PersonOccupation-Pt
+Title: "PTPersonOccupation"
+Description: "Extensão para registo de ocupação do utente."
 Context: Patient
 
 * extension contains
