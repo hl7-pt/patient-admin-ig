@@ -174,9 +174,15 @@ pages:
   conversionFhirV2.md:
     title: Conversão de mensagens entre Standards
   examples.md:
-    title: Exemplos
+    title: Exemplos de mensagens
+#  patient_new_example.md:
+#    title: Novo utente
+#  patient_update_example.md:
+#    title: Atualização de utente
+#  patient_merge_example.md:
+#    title: Associação de utente
   downloads.md:
-    title: Downloads
+#    title: Downloads
   changes.xml:
     title: Histórico de Alterações
 
