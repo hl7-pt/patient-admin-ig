@@ -35,7 +35,7 @@ Os episódios de saúde estruturam e documentam as interações clínicas e admi
 
 Enquanto o recurso Patient foca os dados pessoais e demográficos do utente, o conceito de episódio de saúde organiza e contextualiza as interações específicas desse utente com o sistema de saúde.
 
-Em Portugal, a gestão administrativa dos dados dos utentes é assegurada pelo [Registo Nacional de Utentes](https://www.spms.min-saude.pt/2015/10/rnu) (RNU), tendo a missão de atuar como um MPI (_Master Patient Index_) para os aspetos administrativos / de identificação dos utentes.
+Em Portugal, a gestão administrativa dos dados dos utentes é assegurada pelo [Registo Nacional de Utentes](https://www.spms.min-saude.pt/2015/10/rnu) (RNU), ue atua como fonte autoritativa nacional para a identificação administrativa dos utentes no sistema de saúde..
 
 O RNU tem como principal objetivo garantir que cada cidadão possui um identificador único (NNU), assegurando uma identificação consistente e inequívoca em todas as instituições de saúde.
  Este registo centraliza e normaliza os dados administrativos, facilitando a interoperabilidade entre sistemas de informação hospitalar (HIS) e outras unidades de saúde.
