@@ -178,7 +178,7 @@ O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e
 
 
 Para fusão de utentes
-- MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
+- MessageHeader.eventCoding
     - Para uma mensagem PATIENT_MERGE é esperada uma resposta PATIENT_MERGE_RESPONSE
 
 ### Associação de identificação Utentes
