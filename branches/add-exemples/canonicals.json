@@ -1,0 +1,170 @@
+[
+  {
+    "id" : "cs-fhir-events",
+    "type" : "CodeSystem",
+    "url" : "http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events",
+    "version" : "1.0.0",
+    "name" : "CS_FHIREvents"
+  },
+  {
+    "id" : "hl7.fhir.pt.patient-admin-ig",
+    "type" : "ImplementationGuide",
+    "url" : "http://example.com/fhir/hl7pt/ImplementationGuide/hl7.fhir.pt.patient-admin-ig",
+    "version" : "1.0.0",
+    "name" : "ExampleIG"
+  },
+  {
+    "id" : "AddressNuts-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/AddressNuts-Pt",
+    "version" : "1.0.0",
+    "name" : "PTAddressNuts"
+  },
+  {
+    "id" : "BundleMessage-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/BundleMessage-Pt",
+    "version" : "1.0.0",
+    "name" : "PTBundleMessage"
+  },
+  {
+    "id" : "BundleSearchset-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/BundleSearchset-Pt",
+    "version" : "1.0.0",
+    "name" : "PTBundleSearchset"
+  },
+  {
+    "id" : "ContactIndicative-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/ContactIndicative-Pt",
+    "version" : "1.0.0",
+    "name" : "PTContactIndicative"
+  },
+  {
+    "id" : "Coverage-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/Coverage-Pt",
+    "version" : "1.0.0",
+    "name" : "PTCoverage"
+  },
+  {
+    "id" : "MessageHeader-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/MessageHeader-Pt",
+    "version" : "1.0.0",
+    "name" : "PTMessageHeader"
+  },
+  {
+    "id" : "Notes-pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/Notes-pt",
+    "version" : "1.0.0",
+    "name" : "PTNotes"
+  },
+  {
+    "id" : "Organization-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/Organization-Pt",
+    "version" : "1.0.0",
+    "name" : "PTOrganization"
+  },
+  {
+    "id" : "Patient-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/Patient-Pt",
+    "version" : "1.0.0",
+    "name" : "PTPatient"
+  },
+  {
+    "id" : "PatientEnrollmentCategoryPrimarycare-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/PatientEnrollmentCategoryPrimarycare-Pt",
+    "version" : "1.0.0",
+    "name" : "PTPatientEnrollmentCategoryPrimarycare"
+  },
+  {
+    "id" : "PatientPrimaryCarePeriod-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/PatientPrimaryCarePeriod-Pt",
+    "version" : "1.0.0",
+    "name" : "PTPatientPrimaryCarePeriod"
+  },
+  {
+    "id" : "PersonEducation-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/PersonEducation-Pt",
+    "version" : "1.0.0",
+    "name" : "PTPersonEducation"
+  },
+  {
+    "id" : "PersonOccupation-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/PersonOccupation-Pt",
+    "version" : "1.0.0",
+    "name" : "PTPersonOccupation"
+  },
+  {
+    "id" : "PersonRecordType-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/PersonRecordType-Pt",
+    "version" : "1.0.0",
+    "name" : "PTPersonRecordType"
+  },
+  {
+    "id" : "Practitioner-Pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/Practitioner-Pt",
+    "version" : "1.0.0",
+    "name" : "PTPractitioner"
+  },
+  {
+    "id" : "address-pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/address-pt",
+    "version" : "1.0.0",
+    "name" : "PTAddress"
+  },
+  {
+    "id" : "birthplace-pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/birthplace-pt",
+    "version" : "1.0.0",
+    "name" : "PTPersonBirthplace"
+  },
+  {
+    "id" : "coverage-reason-pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/coverage-reason-pt",
+    "version" : "1.0.0",
+    "name" : "PTCoverageReason"
+  },
+  {
+    "id" : "nationality-pt",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/hl7pt/StructureDefinition/nationality-pt",
+    "version" : "1.0.0",
+    "name" : "PTNationality"
+  },
+  {
+    "id" : "patient-identifier-type",
+    "type" : "ValueSet",
+    "url" : "http://example.com/fhir/hl7pt/ValueSet/patient-identifier-type",
+    "version" : "1.0.0",
+    "name" : "VS_PatientIdentifierType"
+  },
+  {
+    "id" : "practitioner-identifier-type",
+    "type" : "ValueSet",
+    "url" : "http://example.com/fhir/hl7pt/ValueSet/practitioner-identifier-type",
+    "version" : "1.0.0",
+    "name" : "VS_PractitionerIdentifierType"
+  },
+  {
+    "id" : "vs-patient-identity-events",
+    "type" : "ValueSet",
+    "url" : "http://example.com/fhir/hl7pt/ValueSet/vs-patient-identity-events",
+    "version" : "1.0.0",
+    "name" : "VS_PatientIdentityEvents"
+  }
+]

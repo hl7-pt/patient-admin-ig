@@ -1,0 +1,4 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+http://example.com/fhir/hl7pt/ValueSet/patient-identifier-type,1.0.0,active,,VS_PatientIdentifierType,Tipos de Identificadores de Paciente,"Conjunto de tipos válidos de identificadores para pacientes em Portugal.",,"THO (V2)"
+http://example.com/fhir/hl7pt/ValueSet/practitioner-identifier-type,1.0.0,active,,VS_PractitionerIdentifierType,Tipos de Identificadores de Profissionais,"Conjunto de tipos válidos de identificadores para profissionais em Portugal.","StructureDefinition/Practitioner-Pt","THO (V2)"
+http://example.com/fhir/hl7pt/ValueSet/vs-patient-identity-events,1.0.0,active,,VS_PatientIdentityEvents,Eventos FHIR para Gestão de Identidade de Utentes,"Eventos FHIR relacionados com a gestão da identidade de utentes.","StructureDefinition/MessageHeader-Pt","Internal"

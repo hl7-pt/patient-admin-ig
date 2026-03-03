@@ -1,0 +1,37 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://example.com/fhir/example/ValueSet/patient-identifier-type",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VS_PatientIdentifierType",
+      "title" : "Tipos de Identificadores de Paciente",
+      "description" : "Conjunto de tipos válidos de identificadores para pacientes em Portugal.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"]
+    },
+    {
+      "url" : "http://example.com/fhir/example/ValueSet/practitioner-identifier-type",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VS_PractitionerIdentifierType",
+      "title" : "Tipos de Identificadores de Profissionais",
+      "description" : "Conjunto de tipos válidos de identificadores para profissionais em Portugal.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+      "uses" : {
+      },
+      "StructureDefinition-Practitioner-Pt.html" : "PTPractitioner"
+    },
+    {
+      "url" : "http://example.com/fhir/example/ValueSet/vs-patient-identity-events",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "VS_PatientIdentityEvents",
+      "title" : "Eventos FHIR para Gestão de Identidade de Utentes",
+      "description" : "Eventos FHIR relacionados com a gestão da identidade de utentes.",
+      "systems" : ["http://example.com/fhir/example/CodeSystem/cs-fhir-events"],
+      "uses" : {
+      },
+      "StructureDefinition-MessageHeader-Pt.html" : "PTMessageHeader"
+    }
+  ]
+}

@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Especificação Funcional - HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1 v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/affiliate.css" rel="stylesheet"/>
+<!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/colors.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+  <a id="affiliate-logo" no-external="true" href="http://hl7.eu">
+    <img height="71" alt="Visit the HL7 affiliate website" src="assets/images/affiliate.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="30" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - STU1
+
+
+
+  <img alt="Portugal flag" src="assets/images/prt.svg" height="16" title="Portugal"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificação
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="fun_spec.html">Especificação Funcional</a>
+      </li>
+      <li>
+        <a href="tech_spec.html">Especificação Técnica</a>
+      </li>
+      <li>
+        <a href="conversionV2Fhir.html">Conversão HL7 v2 para FHIR</a>
+      </li>
+      <li>
+        <a href="conversionFhirV2.html">Conversão FHIR para HL7 v2</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefactos</a>
+  </li>
+  <li>
+    <a href="examples.html">Exemplos</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Histórico de Alterações</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Especificação Funcional</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1, publicado por HL7 Portugal. Este guia não é uma publicação autorizada; é a compilação contínua para a versão 1.0.0 construída pela FHIR (HL7&reg; FHIR&reg; Standard) CI Build. Esta versão é baseada no conteúdo atual de <a href='https://github.com/hl7-pt/patient-admin-ig/tree/master'>https://github.com/hl7-pt/patient-admin-ig/tree/master</a> e muda regularmente. Veja o <a href='http://example.com/fhir/hl7pt/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Especificação Funcional</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introdução" id="markdown-toc-introdução">Introdução</a></li>
+  <li><a href="#casos-de-uso" id="markdown-toc-casos-de-uso">Casos de Uso</a></li>
+  <li><a href="#workflow-de-processos" id="markdown-toc-workflow-de-processos">Workflow de processos</a></li>
+  <li><a href="#eventos-desencadeados-na-gestão-de-identidade-do-utente" id="markdown-toc-eventos-desencadeados-na-gestão-de-identidade-do-utente">Eventos desencadeados na Gestão de Identidade do Utente</a></li>
+  <li><a href="#estrutura-das-mensagens-fhir" id="markdown-toc-estrutura-das-mensagens-fhir">Estrutura das mensagens FHIR</a></li>
+  <li><a href="#criação-de-utente" id="markdown-toc-criação-de-utente">Criação de Utente</a></li>
+  <li><a href="#atualização-de-dados-do-utente" id="markdown-toc-atualização-de-dados-do-utente">Atualização de dados do Utente</a></li>
+  <li><a href="#fusão-de-identificação-de-utentes" id="markdown-toc-fusão-de-identificação-de-utentes">Fusão de identificação de Utentes</a></li>
+  <li><a href="#associação-de-identificação-utentes" id="markdown-toc-associação-de-identificação-utentes">Associação de identificação Utentes</a></li>
+  <li><a href="#desassociação-de-identificação-utentes" id="markdown-toc-desassociação-de-identificação-utentes">Desassociação de identificação Utentes</a></li>
+  <li><a href="#eventos-a-comunicar-nas-mensagens" id="markdown-toc-eventos-a-comunicar-nas-mensagens">Eventos a comunicar nas mensagens</a></li>
+</ul>
+
+</div>
+<h3 id="introdução">Introdução</h3>
+
+<h4 id="o-que-é-um-utente">O que é um Utente?</h4>
+
+<p>No sistema de saúde português, utente é o termo utilizado para designar qualquer pessoa que utiliza os serviços do Serviço Nacional de Saúde (SNS). Em outras palavras, é o equivalente a “paciente” ou “beneficiário” em outros contextos como o sistema de saúde privado, mas com um sentido mais amplo, já que inclui qualquer cidadão que recorra aos cuidados de saúde, independentemente de estar doente ou não.
+Assim, o utente é uma pessoa que recebe ou necessita de cuidados e está sob os cuidados de um sistema ou profissional de saúde, seja por prevenção de doenças e manutenção da saúde até o diagnóstico, tratamento e acompanhamento de condições agudas ou crónicas.</p>
+
+<p>Um utente é qualquer pessoa que necessita ou recebe cuidados de saúde, abrangendo desde ações de prevenção e promoção da saúde até ao diagnóstico, tratamento e acompanhamento de condições agudas ou crónicas, incluindo os indivíduos que procuram ativamente atendimento, como aqueles integrados em programas de vigilância ou prevenção.</p>
+
+<p>Os utentes são o elemento central dos sistemas de saúde, podendo interagir com estes em diferentes contextos, como consultas de rotina, episódios de urgência, internamentos, entre outros. A relação entre utente e profissional de saúde deve basear-se na confiança, ética e adaptação dos cuidados às necessidades individuais.
+No contexto digital, a identidade do utente é representada por dados demográficos e clínicos, organizados e partilhados entre sistemas, com o objetivo de melhorar a qualidade, segurança e eficiência dos cuidados prestados.</p>
+
+<p>No <em>standard</em> FHIR, o recurso <em>Patient</em> representa digitalmente o conceito de utente, permitindo a interoperabilidade de dados entre diferentes sistemas de informação e organizações. Este recurso inclui:</p>
+
+<ul>
+  <li>
+    <p>Dados básicos, como nome, data de nascimento, género e informações de contacto.</p>
+  </li>
+  <li>
+    <p>Identificadores únicos, como números de registo hospitalar ou o Número Nacional de Utente (NNU).</p>
+  </li>
+  <li>
+    <p>Informações adicionais opcionais, como estado civil, preferências linguísticas ou contactos de emergência.</p>
+  </li>
+  <li>
+    <p>Informação de natureza financeira, como condição face ao SNS, sub-sistemas de saúde associados, caracterização de situação económica</p>
+  </li>
+</ul>
+
+<p>Este recurso é essencial para garantir que os dados de saúde sejam corretamente associados à pessoa certa, promovendo segurança e continuidade do cuidado. Recomenda-se a utilização do Número Nacional do Utente (NNU) como identificador oficial. No entanto cada implementação tem a capacidade de definir o identificador oficial na troca de informações</p>
+
+<ul>
+  <li>
+    <p>O NNU deve ser utilizado como identificador oficial no recurso Patient e registado como identifier com use = official.</p>
+  </li>
+  <li>
+    <p>Identificadores internos como identifier com use = usual (e. g. numero sequencial do SONHO).</p>
+  </li>
+  <li>
+    <p>Identificadores temporários podem ser registados como use = temp e substituídos assim que o NNU estiver disponível.</p>
+  </li>
+</ul>
+
+<p>A ligação entre o utente e os episódios de saúde é fundamental para a administrativa e gestão clínica, sendo o utente é o ponto de origem de todos os episódios.</p>
+
+<p>Os episódios de saúde estruturam e documentam as interações clínicas e administrativas, oferecendo uma visão longitudinal e integrada do histórico do indivíduo e possibilitando cuidados centrados na pessoa.</p>
+
+<p>Enquanto o recurso Patient foca os dados pessoais e demográficos do utente, o conceito de episódio de saúde organiza e contextualiza as interações específicas desse utente com o sistema de saúde.</p>
+
+<p>Em Portugal, a gestão administrativa dos dados dos utentes é assegurada pelo <a href="https://www.spms.min-saude.pt/2015/10/rnu">Registo Nacional de Utentes</a> (RNU), tendo a missão de atuar como um MPI (<em>Master Patient Index</em>) para os aspetos administrativos / de identificação dos utentes.</p>
+
+<p>O RNU tem como principal objetivo garantir que cada cidadão possui um identificador único (NNU), assegurando uma identificação consistente e inequívoca em todas as instituições de saúde.
+ Este registo centraliza e normaliza os dados administrativos, facilitando a interoperabilidade entre sistemas de informação hospitalar (HIS) e outras unidades de saúde.</p>
+
+<p>O NNU é essencial para ligar episódios clínicos e administrativos de diferentes organizações, promovendo continuidade e qualidade no cuidado ao utente.tes sistemas de informação hospitalar (HIS) e unidades de saúde. Este identificador nacional é fundamental para ligar episódios clínicos e administrativos de diferentes organizações de saúde, promovendo continuidade e qualidade nos cuidados.</p>
+
+<p>No entanto, se o utente não está registado no RNU ou se não tem informação suficiente para validar o seu registo no RNU, o sistema ADT tem que proceder ao registo e manutenção dos dados desses utentes no sistema local, e mais tarde sendo possivel proceder à sincronização de dados com o RNU.</p>
+
+<p>Outro cenário possível, é o registo de utentes não identificados no sistema ADT, que ocorre quando não é possivel identificar utentes que dão entrada no hospital sem condições de se proceder à sua identificação. Este é um cenário particular da Urgencia Hospitalar.</p>
+
+<h3 id="casos-de-uso">Casos de Uso</h3>
+
+<p><em>O sr. Joaquim Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendido por médico.</em></p>
+
+<p><em>O funcionário administrativo do secretariado da Urgencia inicia o processo de criação de um novo utente para o Joaquim Silva, com base nas limitadas informações por ele fornecidas. Nesta fase, apenas estão disponíveis detalhes básicos sobre José Silva; sua data de nascimento. O endereço da residencia e número de telefone da residencia são desconhecidos. Utilizando o aplicativo de registo, o funcionário cria a identidade inicial do utente José Silva, e o sistema ADT garante que uma mensagem de Criação do Utente seja enviada para todas as aplicações que necessitam de ter cenhecimento do novo utente, com as informações pessoais disponíveis.</em></p>
+
+<p><em>Mais tarde nesse dia, são disponibilizadas informações pessoais mais detalhadas sobre o José Silva. O administrativo atualiza o registo de identidade da paciente no sistema ADT e este envia uma mensagem de Atualização do Paciente para refletir esses novos detalhes nos sistemas que necessitam destas informações.</em></p>
+
+<p><em>Uma semana depois, o funcionário recebe um pedido do Centro de Imagiologia para criar um perfil temporário de um paciente para Joaquim Manuel Santos Silva. Seguindo procedimentos padrão, o funcionário insere os dados no pedido de registo, com as informações disponiveis da identidade de  José Manuel Santos Silva. Após nova reconciliação, o funcionário atualiza os dados demográficos de José Manuel Santos Silva com o número nacional de utente para completar os dados de identificação do utente.</em></p>
+
+<p><em>Durante uma auditoria de rotina, o funcionário descobre que os dois registos de utente José Silva e José Manuel Santos Silva representam a mesma pessoa. Para resolver esta duplicação de registos, o funcionário associa a segunda identidade à identidade de José Silva criada anteriormente no sistema. Uma mensagem de associação de utentes é então comunicada a todas as aplicações anteriores, garantindo que todos os registos estejam atualizados e consistentes.</em></p>
+
+<h3 id="workflow-de-processos">Workflow de processos</h3>
+
+<p>O <strong>Diagrama de Sequência</strong> seguinte ilustra as interaçoes entre o sistema ADT e sistemas terceiros:</p>
+
+<div class="stu-figure">
+  <figure style="margin:0;">
+    <img src="PatientIdentityWorkflow.png" alt="Patient Identity Workflow" />
+  </figure>
+</div>
+
+<p>O fluxo representado tem em conta que os dados do utente poderão ser validados pelo serviço do Registo Nacional do Utente (RNU) e que essa é a fonte de verdade de dados do utente, e prevê que quando não é possivel encontrar ou validar o utente via RNU o administrativo tem que criar o utente localmente no sistema ADT.
+Do ponto de vista do sustema ADT o utente pode ser classificado em 3 categorias:</p>
+
+<ul>
+  <li>
+    <p>Utente validável pelo RNU -&gt; O utente possui NNU ou atributos que permitem validar o utente via RNU e quando é pesquisado no RNU é retornado resultado com sucesso. Os dados devolvidos pelo RNU permitem que os dados do utente sejam atualizados no sistema ADT. No entanto, se a pesquisa falha fica temporariamente não validado, mas mantém a condição de validável.</p>
+  </li>
+  <li>
+    <p>Utente não validável -&gt; O utente não possui NNU, ou os atributos existentes não permitem validar o utente via RNU.</p>
+  </li>
+  <li>
+    <p>Utente não identificado -&gt; Não existe identificação do utente que permita validar via RNU.</p>
+  </li>
+</ul>
+
+<h3 id="eventos-desencadeados-na-gestão-de-identidade-do-utente">Eventos desencadeados na Gestão de Identidade do Utente</h3>
+
+<p>As ações representadas no fluxo da gestão de identidade do utente são:</p>
+<ul>
+  <li>criação do utente</li>
+  <li>atualização de dados do utente</li>
+  <li>fusão de 2 registos do mesmo utente</li>
+  <li>cenário alternativo à fusão:
+    <ul>
+      <li>associação de 2 registos do mesmo utente</li>
+      <li>desassoaição de 2 registos de utentes</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Adicionalmente podem ser necessárias ações de pesquisa baseado no perfil IHE <a href="https://wiki.ihe.net/index.php/Patient_Demographics_Query">[PDQ] Patient Demographics Query</a> (NOTA=&gt; remeter para outra IG):</p>
+<ul>
+  <li>pesquisa de utente</li>
+  <li>pesquisa de dados demográficos do utente</li>
+</ul>
+
+<p>Seguindo o perfil “Gestão de Identidade do Utente” da Estrutura Técnica de Infraestrutura de TI do IHE, propomos uma uma abordagem de mapeamento entre as mensagens HL7v2.x e mensagens FHIR correspondentes sendo necessário para tal defenir um sistema de codificação de eventos para FHIR.</p>
+
+<h3 id="estrutura-das-mensagens-fhir">Estrutura das mensagens FHIR</h3>
+
+<p>Estando perante o paradigma de mensagens, de forma genérica, os recursos necessários à comunicação dos dados dos utentes são os representados no diagrama abaixo, e devem ser encapsulados num bundle que deve seguir as regras da arquitetura de <em>Messaging</em>. As mensagems Fhir geradas para estes eventos são sempre composta por um <em>bundle type="message"</em>, que vai agregar todos os recursos necessários, sendo obrigatório que o primeiro recurso da lista de recursos (<em>bundle.entry</em>) seja o recurso <em>MessageHeader</em>:</p>
+
+<p>O bundle tem como entradas os Recursos:</p>
+<ul>
+  <li>MessageHeader (Obrigatório ser o primeiro recurso do elemento <em>entry</em> do <em>bunle</em>)</li>
+  <li>Patient (Recurso principal da mensagem)</li>
+  <li>Coverage *</li>
+  <li>Organization *</li>
+  <li>Practitioner *</li>
+</ul>
+
+<div class="stu-figure">
+  <figure style="margin:0;">
+    <img src="FhirMessagePatientIdentityManagement.png" alt="FHIR Message Patient Identity Management" />
+  </figure>
+</div>
+
+<h3 id="criação-de-utente">Criação de Utente</h3>
+
+<p>O Administrativo cria um registo de um novo utente no sistema que pode ser por via RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de ceriação de novo utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.</p>
+
+<div class="stu-figure">
+  <figure style="margin:0;">
+    <img src="FlowPatientNew.png" alt="Flow Patient New" />
+  </figure>
+</div>
+
+<ul>
+  <li>MessageHeader.eventCoding
+    <ul>
+      <li>Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE</li>
+      <li>Para as mensagems de resposta é obrigatorio o envio do elemento MessageHeader.response</li>
+    </ul>
+  </li>
+  <li>Patient</li>
+  <li>Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)</li>
+  <li>Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)</li>
+  <li>Coverage (Sistema ou Subsistema de saúde/Motivos de isenção de taxas moderadoras/ Planos/Apólices de Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)</li>
+</ul>
+
+<h3 id="atualização-de-dados-do-utente">Atualização de dados do Utente</h3>
+
+<p>O Administrativo atualiza o registo de um utente existente no sistema. Esta atualização pode ser desencadeada por sincronização de dados com o RNU ou localmente no sistema ADT. Esta ação desencadeia uma mensagem de atualização de dados do utente para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.</p>
+
+<div class="stu-figure">
+  <figure style="margin:0;">
+    <img src="FlowPatientUpdate.png" alt="Flow Patient Update" />
+  </figure>
+</div>
+
+<ul>
+  <li>MessageHeader.eventCoding
+    <ul>
+      <li>Para uma mensagem PATIENT_UPDATE é esperada uma resposta PATIENT_UPDATE_RESPONSE</li>
+      <li>Para as mensagems de resposta é obrigatorio o envio do elemento MessageHeader.response</li>
+    </ul>
+  </li>
+  <li>Patient</li>
+  <li>Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)</li>
+  <li>Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)</li>
+  <li>Coverage (Sistema ou Subsistema de saúde/Motivos de isenção de taxas moderadoras/ Planos/Apólices de Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)</li>
+</ul>
+
+<h3 id="fusão-de-identificação-de-utentes">Fusão de identificação de Utentes</h3>
+
+<p>O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de fusão dos 2 registos num só. Esta ação desencadeia uma mensagem de fusão de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.</p>
+
+<div class="stu-figure">
+  <figure style="margin:0;">
+    <img src="FlowPatientMerge.png" alt="Flow Patient Merge" />
+  </figure>
+</div>
+
+<p>Para fusão de utentes</p>
+<ul>
+  <li>MessageHeader.eventCoding  (_Disponibilizar a relação com o evento do HL7 V2.x)
+    <ul>
+      <li>Para uma mensagem PATIENT_MERGE é esperada uma resposta PATIENT_MERGE_RESPONSE</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="associação-de-identificação-utentes">Associação de identificação Utentes</h3>
+<p>O Administrativo identifica 2 registos no sistema que pertencem o mesmo utente e procede à ação de <em>linkagem</em> dos 2 registos. Esta ação desencadeia uma mensagem de associação de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.</p>
+
+<div class="stu-figure">
+  <figure style="margin:0;">
+    <img src="FlowPatientLink.png" alt="Flow Patient Link" />
+  </figure>
+</div>
+
+<p>Para associação de utentes</p>
+<ul>
+  <li>MessageHeader.eventCoding
+    <ul>
+      <li>Para uma mensagem PATIENT_LINK é esperada uma resposta PATIENT_LINK_RESPONSE</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="desassociação-de-identificação-utentes">Desassociação de identificação Utentes</h3>
+    <p>O Administrativo identifica que 2 registos foram erradamente associados no sistema e procede à ação de desassociação dos 2 registos. Esta ação desencadeia uma mensagem de desassociação de utentes para o sistema externo. O sistema externo deve enviar uma resposta ao sistema ADT com o resultado do processamento aplicacional da mensagem, e com a identificação dos erros se não for processada com sucesso.</p>
+  </li>
+</ul>
+
+<div class="stu-figure">
+  <figure style="margin:0;">
+    <img src="FlowPatientUnlink.png" alt="Flow Patient Unlink" />
+  </figure>
+</div>
+
+<p>Para desassociação de utentes</p>
+<ul>
+  <li>MessageHeader.eventCoding
+    <ul>
+      <li>Para uma mensagem PATIENT_UNLINK é esperada uma resposta PATIENT_UNLINK_RESPONSE</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="eventos-a-comunicar-nas-mensagens">Eventos a comunicar nas mensagens</h3>
+
+<table class="table-bordered">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Mensagem^Trigger (HL7v2)</th>
+      <th>Evento Fhir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Criação de novo utente</td>
+      <td>ADT^A28</td>
+      <td>PATIENT_NEW</td>
+    </tr>
+    <tr>
+      <td>Resposta da criação novo utente</td>
+      <td>ACK^A28</td>
+      <td>PATIENT_NEW_RESPONSE</td>
+    </tr>
+    <tr>
+      <td>Atualização de dados do utente</td>
+      <td>ADT^A31 / ADT^A08</td>
+      <td>PATIENT_UPDATE</td>
+    </tr>
+    <tr>
+      <td>Resposta da atualização de dados do utente</td>
+      <td>ACK^A31 / ACK^A08</td>
+      <td>PATIENT_UPDATE_RESPONSE</td>
+    </tr>
+    <tr>
+      <td>Associação de utentes</td>
+      <td>ADT^A24</td>
+      <td>PATIENT_LINK</td>
+    </tr>
+    <tr>
+      <td>Resposta da associação de utentes</td>
+      <td>ACK^A24</td>
+      <td>PATIENT_LINK_RESPONSE</td>
+    </tr>
+    <tr>
+      <td>Desassociação de utentes</td>
+      <td>ADT^A37</td>
+      <td>PATIENT_UNLINK</td>
+    </tr>
+    <tr>
+      <td>Resposta da desassociação de utentes</td>
+      <td>ACK^A37</td>
+      <td>PATIENT_UNLINK_RESPONSE</td>
+    </tr>
+    <tr>
+      <td>Fusão de utentes</td>
+      <td>ADT^A40</td>
+      <td>PATIENT_MERGE</td>
+    </tr>
+    <tr>
+      <td>Resposta da fusão de utentes</td>
+      <td>ACK^A40</td>
+      <td>PATIENT_MERGE_RESPONSE</td>
+    </tr>
+    <tr>
+      <td>Pesquisa de utente</td>
+      <td>QBP^Q22</td>
+      <td>PATIENT_SEARCH</td>
+    </tr>
+    <tr>
+      <td>Resposta da pesquisa de utente</td>
+      <td>RSP^K22</td>
+      <td>PATIENT_SEARCH_RESPONSE</td>
+    </tr>
+    <tr>
+      <td>Pesquisa de dados demograficos do utente</td>
+      <td>QRY^A19</td>
+      <td>PATIENT_DEMOGRAPHIC</td>
+    </tr>
+    <tr>
+      <td>Resposta pesquisa de dados demograficos do utente</td>
+      <td>ADR^A19</td>
+      <td>PATIENT_DEMOGRAPHIC_RESPONSE</td>
+    </tr>
+  </tbody>
+</table>
+<p>Tabela 3 - Subconjunto de eventos nas mensagens FHIR de Gestão de Identidade do Utente</p>
+
+<p>Os eventos aqui apresentados têm igualmente em conta o standard HL7 v2.x e a documentação pública de especificação da SPMS, que está implementada em grande parte das instituições de prestação de cuidados de Saúde em particular nos Cuidados de Saúde Hospitalares. No caso do evento de atualização de utentes as mensagens HL7 v2 defenidas pela SPMS, conforme especificação publica, aplicam a mensagem e evento ADT^A08.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.pt">HL7 Portugal</a>.  Package hl7.fhir.pt.patient-admin-ig#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 13, 2026 20:27+0000">2026-02-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

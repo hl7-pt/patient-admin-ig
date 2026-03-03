@@ -1,0 +1,727 @@
+{
+  "package": "hl7.fhir.pt.patient-admin-ig",
+  "version": "1.0.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "PT",
+  "extensions": [
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/AddressCountry-Pt",
+      "title": "PTAddressCountry",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/AddressCounty-Pt",
+      "title": "PTAddressCounty",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/AddressMunicipality-Pt",
+      "title": "PTAddressMunicipality",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/AddressNuts-Pt",
+      "title": "PTAddressNuts",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept",
+        "CodeableConcept",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/AddressParish-Pt",
+      "title": "PTAddressParish",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/AddressType-Pt",
+      "title": "PTAddressType",
+      "types": [
+        "Coding"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/ContactIndicative-Pt",
+      "title": "PTContactIndicative",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/CoverageReason-Pt",
+      "title": "PTCoverageReason",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/Nationality",
+      "title": "PTNationality",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean",
+        "string"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/Notes-pt",
+      "title": "PTNotes",
+      "types": [
+        "Annotation"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/PatientEnrollmentCategoryPrimarycare-Pt",
+      "title": "PTPatientEnrollmentCategoryPrimarycare",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/PatientPrimaryCarePeriod-Pt",
+      "title": "PTPatientPrimaryCarePeriod",
+      "types": [
+        "Period"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/PersonBirthplace-Pt",
+      "title": "PTPersonBirthplace",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/PersonEducation-Pt",
+      "title": "PTPersonEducation",
+      "types": [
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/PersonOccupation-Pt",
+      "title": "PTPersonOccupation",
+      "types": [
+        "CodeableConcept",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/PersonRecordType-Pt",
+      "title": "PTPersonRecordType",
+      "types": [
+        "boolean"
+      ]
+    }
+  ],
+  "profiles": {
+    "Bundle": [
+      {
+        "url": "http://example.com/fhir/example/StructureDefinition/BundleMessage-Pt",
+        "title": "PTBundleMessage"
+      },
+      {
+        "url": "http://example.com/fhir/example/StructureDefinition/BundleSearchset-Pt",
+        "title": "PTBundleSearchset"
+      }
+    ],
+    "Coverage": [
+      {
+        "url": "http://example.com/fhir/example/StructureDefinition/Coverage-Pt",
+        "title": "PTCoverage"
+      }
+    ],
+    "MessageHeader": [
+      {
+        "url": "http://example.com/fhir/example/StructureDefinition/MessageHeader-Pt",
+        "title": "PTMessageHeader"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://example.com/fhir/example/StructureDefinition/Organization-Pt",
+        "title": "PTOrganization"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://example.com/fhir/example/StructureDefinition/Patient-Pt",
+        "title": "PTPatient"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://example.com/fhir/example/StructureDefinition/Practitioner-Pt",
+        "title": "PTPractitioner"
+      }
+    ]
+  },
+  "usage": {
+    "http://eexample.com/fhir/hl7pt/extensions/nationality": [
+      "Bundle.entry.resource"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/AddressCountry-Pt": [
+      "Extension",
+      "Patient.address",
+      "Patient.contact.address"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/AddressCounty-Pt": [
+      "Extension",
+      "Patient.address",
+      "Patient.contact.address"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/AddressMunicipality-Pt": [
+      "Extension",
+      "Patient.address",
+      "Patient.contact.address"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/AddressParish-Pt": [
+      "Extension",
+      "Patient.address",
+      "Patient.contact.address"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/CoverageReason-Pt": [
+      "Coverage"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/Nationality": [
+      "Patient"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/Notes-pt": [
+      "Patient"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/PatientPrimaryCarePeriod-Pt": [
+      "Patient.generalPractitioner"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/PersonBirthplace-Pt": [
+      "Patient"
+    ],
+    "http://example.com/fhir/hl7pt/extensions/birthplace": [
+      "Bundle.entry.resource"
+    ],
+    "http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2": [
+      "Bundle.entry.resource.address",
+      "Bundle.entry.resource.contact.address"
+    ],
+    "http://example.com/fhir/hl7pt/extensions/nationality": [
+      "Bundle.entry.resource"
+    ],
+    "http://example.pt/fhir/hl7pt/extensions/birthplace": [
+      "Bundle.entry.resource"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "http://spms.min-saude.pt/fhir/iop/extensions/nationality": [
+      "Bundle.entry.resource"
+    ],
+    "notes": [
+      "Bundle.entry.resource"
+    ]
+  }
+}

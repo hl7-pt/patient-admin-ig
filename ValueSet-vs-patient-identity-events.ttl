@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.com/fhir/hl7pt/ValueSet/vs-patient-identity-events> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-patient-identity-events"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ValueSet vs-patient-identity-events</b></p><a name=\"vs-patient-identity-events\"> </a><a name=\"hcvs-patient-identity-events\"> </a><ul><li>Include estes códigos, tal como definidos em <a href=\"CodeSystem-cs-fhir-events.html\"><code>http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> versão ?1.0.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_NEW\">PATIENT_NEW</a></td><td>Criação de novo utente</td><td>Evento FHIR que representa a criação de um novo utente.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_NEW_RESPONSE\">PATIENT_NEW_RESPONSE</a></td><td>Resposta da criação de novo utente</td><td>Resposta FHIR à criação de um novo utente.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_UPDATE\">PATIENT_UPDATE</a></td><td>Atualização de dados do utente</td><td>Evento FHIR que representa a atualização de dados do utente.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_UPDATE_RESPONSE\">PATIENT_UPDATE_RESPONSE</a></td><td>Resposta da atualização de dados do utente</td><td>Resposta FHIR à atualização de dados do utente.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_MERGE\">PATIENT_MERGE</a></td><td>Fusão de utentes</td><td>Evento FHIR que representa a fusão de dois ou mais utentes.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_MERGE_RESPONSE\">PATIENT_MERGE_RESPONSE</a></td><td>Resposta da fusão de utentes</td><td>Resposta FHIR à fusão de utentes.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_LINK\">PATIENT_LINK</a></td><td>Associação de registos de identificações de utente</td><td>Evento FHIR que representa a associação (link) de utentes.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_LINK_RESPONSE\">PATIENT_LINK_RESPONSE</a></td><td>Resposta da associação de utentes</td><td>Resposta FHIR à associação de utentes.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_UNLINK\">PATIENT_UNLINK</a></td><td>Desassociação de utentes</td><td>Evento FHIR que representa a desassociação (unlink) de utentes.</td></tr><tr><td><a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_UNLINK_RESPONSE\">PATIENT_UNLINK_RESPONSE</a></td><td>Resposta da desassociação de utentes</td><td>Resposta FHIR à desassociação de utentes.</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://example.com/fhir/hl7pt/ValueSet/vs-patient-identity-events"^^xsd:anyURI ;
+     fhir:l <http://example.com/fhir/hl7pt/ValueSet/vs-patient-identity-events>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "VS_PatientIdentityEvents"] ; # 
+  fhir:title [ fhir:v "Eventos FHIR para Gestão de Identidade de Utentes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-02-13T20:27:46+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Portugal"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Portugal" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.pt" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@hl7.pt" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "HL7 Portugal" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "geral@hl7.pt" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Eventos FHIR relacionados com a gestão da identidade de utentes."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PT" ] ;
+       fhir:display [ fhir:v "Portugal" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events"^^xsd:anyURI ;
+         fhir:l <http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "PATIENT_NEW" ] ;
+         fhir:display [ fhir:v "Criação de novo utente" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_NEW_RESPONSE" ] ;
+         fhir:display [ fhir:v "Resposta da criação de novo utente" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_UPDATE" ] ;
+         fhir:display [ fhir:v "Atualização de dados do utente" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_UPDATE_RESPONSE" ] ;
+         fhir:display [ fhir:v "Resposta da atualização de dados do utente" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_MERGE" ] ;
+         fhir:display [ fhir:v "Fusão de utentes" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_MERGE_RESPONSE" ] ;
+         fhir:display [ fhir:v "Resposta da fusão de utentes" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_LINK" ] ;
+         fhir:display [ fhir:v "Associação de registos de identificações de utente" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_LINK_RESPONSE" ] ;
+         fhir:display [ fhir:v "Resposta da associação de utentes" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_UNLINK" ] ;
+         fhir:display [ fhir:v "Desassociação de utentes" ]
+       ] [
+         fhir:code [ fhir:v "PATIENT_UNLINK_RESPONSE" ] ;
+         fhir:display [ fhir:v "Resposta da desassociação de utentes" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

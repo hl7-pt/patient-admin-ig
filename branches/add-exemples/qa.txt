@@ -1,0 +1,152 @@
+ExampleIG : Validation Results
+=========================================
+
+err = 0, warn = 67, info = 22
+IG Publisher Version: 2.0.28
+Generated Mon Dec 08 20:15:33 UTC 2025. FHIR version 4.0.1 for hl7.fhir.pt.patient-admin-ig#1.0.0 (canonical = http://example.com/fhir/hl7pt)
+ Build Errors : 0 / 19 / 0
+ /github/workspace/fsh-generated/resources/Bundle-patient-link : 0 / 10 / 15
+ /github/workspace/fsh-generated/resources/Bundle-patient-new : 0 / 8 / 14
+ /github/workspace/fsh-generated/resources/Bundle-patient-update : 0 / 11 / 15
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-fhir-events : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-hl7.fhir.pt.patient-admin-ig : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-AddressNuts-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-BundleMessage-Pt : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-BundleSearchset-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ContactIndicative-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Coverage-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-MessageHeader-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Notes-pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Organization-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Patient-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PatientEnrollmentCategoryPrimarycare-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PatientPrimaryCarePeriod-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PersonEducation-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PersonOccupation-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PersonRecordType-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Practitioner-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-address-pt : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-birthplace-pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-coverage-reason-pt : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-nationality-pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-patient-identifier-type : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/ValueSet-practitioner-identifier-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-patient-identity-events : 0 / 0 / 1
+</table>
+== n/a ==
+WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/BundleSearchset-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AddressNuts-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/ContactIndicative-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/coverage-reason-pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/Notes-pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PatientEnrollmentCategoryPrimarycare-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PatientPrimaryCarePeriod-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/birthplace-pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PersonEducation-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PersonOccupation-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PersonRecordType-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/patient-link.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/patient-new.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/patient-update.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/Bundle-patient-link.json ==
+WARNING: Bundle/patient-link: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.destination[0].endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/EXTERNALSYSTEM'
+WARNING: Bundle/patient-link: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.source.endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/ADT'
+INFORMATION: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.meta.security[0].display: 'Normal' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-Confidentiality has no Display Names for the language pt-PT
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://www.iso.org/iso-3166-country-codes.html' could not be found, so the code cannot be validated
+INFORMATION: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[0].value.ofType(Coding).system: Não foi possível encontrar uma definição para o CodeSystem 'http://spms.min-saude.pt/rnu/extensions/address-types', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.ine.pt' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+INFORMATION: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.meta.security[0].display: 'Normal' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-Confidentiality has no Display Names for the language pt-PT
+WARNING: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://www.iso.org/iso-3166-country-codes.html' could not be found, so the code cannot be validated
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[0].value.ofType(Coding).system: Não foi possível encontrar uma definição para o CodeSystem 'http://spms.min-saude.pt/rnu/extensions/address-types', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.maritalStatus.coding[0].display: 'Married' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-MaritalStatus has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[0].relationship[0].coding[0].display: 'Father' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[1].relationship[0].coding[0].display: 'Mother' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[2].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+== fsh-generated/resources/Bundle-patient-new.json ==
+WARNING: Bundle/patient-new: Bundle.entry[0].resource/*MessageHeader/8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32*/.destination[0].endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/EXTERNALSYSTEM'
+WARNING: Bundle/patient-new: Bundle.entry[0].resource/*MessageHeader/8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32*/.source.endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/ADT'
+INFORMATION: Bundle/patient-new: Bundle.entry[1].resource/*Patient/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021*/.meta.security[0].display: 'Normal' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-Confidentiality has no Display Names for the language pt-PT
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://www.iso.org/iso-3166-country-codes.html' could not be found, so the code cannot be validated
+INFORMATION: Bundle/patient-new: Bundle.entry[1].resource/*Patient/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021*/.address[0].extension[0].extension[0].value.ofType(Coding).system: Não foi possível encontrar uma definição para o CodeSystem 'http://spms.min-saude.pt/rnu/extensions/address-types', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.ine.pt' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021*/.address[0].extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+INFORMATION: Bundle/patient-new: Bundle.entry[1].resource/*Patient/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021*/.contact[0].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+WARNING: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://example.org/SONHO' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07*/.type.coding[0].system: A definition for CodeSystem 'http://spms.min-saude.pt/rnu/systemcodes/coverage-type' could not be found, so the code cannot be validated
+INFORMATION: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07*/.type: Nenhuma das codificações fornecidas faz parte do conjunto de valores 'Coverage Type and Self-Pay Codes' (http://hl7.org/fhir/ValueSet/coverage-type|4.0.1), pelo que se recomenda que uma codificação provenha deste conjunto de valores (códigos = http://spms.min-saude.pt/rnu/systemcodes/coverage-type#BU)
+INFORMATION: Bundle/patient-new: Bundle.entry[9]: A entrada 'urn:uuid:91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07' não pode ser acedida através da passagem para a frente a partir do MessageHeader. Verificar se esta entrada deve ser incluída (necessária para processar a mensagem)
+== fsh-generated/resources/Bundle-patient-update.json ==
+WARNING: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d1*/.destination[0].endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/EXTERNALSYSTEM'
+WARNING: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d1*/.destination[0].receiver: A referência URN não está contida localmente no pacote urn:uuid:70cfff33-ebcb-4f99-9bf5-c560575295d8
+WARNING: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d1*/.sender: A referência URN não está contida localmente no pacote urn:uuid:70cfff33-ebcb-4f99-9bf5-c560575295d8
+WARNING: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d1*/.source.endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/ADT'
+INFORMATION: Bundle/patient-update: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37e*/.meta.security[0].display: 'Normal' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-Confidentiality has no Display Names for the language pt-PT
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37e*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://www.iso.org/iso-3166-country-codes.html' could not be found, so the code cannot be validated
+INFORMATION: Bundle/patient-update: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37e*/.address[0].extension[0].extension[0].value.ofType(Coding).system: Não foi possível encontrar uma definição para o CodeSystem 'http://spms.min-saude.pt/rnu/extensions/address-types', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37e*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.ine.pt' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37e*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37e*/.address[0].extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37e*/.address[0].extension[0].extension[4].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'https://www.iso.org/iso-3166-country-codes.html', pelo que o código não pode ser validado
+INFORMATION: Bundle/patient-update: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37e*/.contact[0].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+WARNING: Bundle/patient-update: Bundle.entry[3].resource/*Coverage/8d71060c-92da-35e9-a62e-576973141ccb*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://example.org/SONHO' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-update: Bundle.entry[3].resource/*Coverage/8d71060c-92da-35e9-a62e-576973141ccb*/.type.coding[0].system: A definition for CodeSystem 'http://spms.min-saude.pt/rnu/systemcodes/coverage-type' could not be found, so the code cannot be validated
+INFORMATION: Bundle/patient-update: Bundle.entry[3].resource/*Coverage/8d71060c-92da-35e9-a62e-576973141ccb*/.type: Nenhuma das codificações fornecidas faz parte do conjunto de valores 'Coverage Type and Self-Pay Codes' (http://hl7.org/fhir/ValueSet/coverage-type|4.0.1), pelo que se recomenda que uma codificação provenha deste conjunto de valores (códigos = http://spms.min-saude.pt/rnu/systemcodes/coverage-type#BU)
+INFORMATION: Bundle/patient-update: Bundle: Não é possível encontrar 'urn:uuid:70cfff33-ebcb-4f99-9bf5-c560575295d8' no pacote (Bundle.entry[0].resource.destination[0].receiver)
+INFORMATION: Bundle/patient-update: Bundle.entry[9]: A entrada 'urn:uuid:8d71060c-92da-35e9-a62e-576973141ccb' não pode ser acedida através da passagem para a frente a partir do MessageHeader. Verificar se esta entrada deve ser incluída (necessária para processar a mensagem)
+== fsh-generated/resources/CodeSystem-cs-fhir-events.json ==
+== fsh-generated/resources/ImplementationGuide-hl7.fhir.pt.patient-admin-ig.json ==
+== fsh-generated/resources/StructureDefinition-AddressNuts-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/AddressNuts-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-BundleMessage-Pt.json ==
+INFORMATION: StructureDefinition/BundleMessage-Pt: StructureDefinition.snapshot.element[4].binding.extension[0]: O extensão http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 está obsoleto
+WARNING: StructureDefinition/BundleMessage-Pt: StructureDefinition: Bundle é rotulado como um tipo abstrato, mas não foram encontrados descendentes concretos (verificar definições - isto é normalmente um erro, a menos que as definições concretas estejam noutro pacote)
+== fsh-generated/resources/StructureDefinition-BundleSearchset-Pt.json ==
+WARNING: StructureDefinition/BundleSearchset-Pt: StructureDefinition: Bundle é rotulado como um tipo abstrato, mas não foram encontrados descendentes concretos (verificar definições - isto é normalmente um erro, a menos que as definições concretas estejam noutro pacote)
+== fsh-generated/resources/StructureDefinition-ContactIndicative-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/ContactIndicative-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Coverage-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/Coverage-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-MessageHeader-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/MessageHeader-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-Notes-pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/Notes-pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Organization-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/Organization-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-Patient-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/Patient-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-PatientEnrollmentCategoryPrimarycare-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/PatientEnrollmentCategoryPrimarycare-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PatientPrimaryCarePeriod-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/PatientPrimaryCarePeriod-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PersonEducation-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/PersonEducation-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PersonOccupation-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/PersonOccupation-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PersonRecordType-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/PersonRecordType-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Practitioner-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/Practitioner-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-address-pt.json ==
+== fsh-generated/resources/StructureDefinition-birthplace-pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/hl7pt/StructureDefinition/birthplace-pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-coverage-reason-pt.json ==
+== fsh-generated/resources/StructureDefinition-nationality-pt.json ==
+WARNING: StructureDefinition/nationality-pt: StructureDefinition.context[0]: Rever o tipo de extensão para nationality-pt: o contexto de Patient parece ser um elemento simples, pelo que o tipo de contexto deve ser "element" e não "fhirpath"
+== fsh-generated/resources/ValueSet-patient-identifier-type.json ==
+WARNING: ValueSet/patient-identifier-type: ValueSet.compose.include[0]: Existem várias correspondências potenciais diferentes para o url 'http://terminology.hl7.org/CodeSystem/v2-0203'. Pode ser uma boa ideia corrigir para a versão correta para reduzir a probabilidade de uma versão errada ser selecionada por um implementador/implementador, ou usar o [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Usando a versão '5.0.0', versões encontradas: 4.0.0 (from hl7.terminology.r4#6.2.0), 5.0.0 (from hl7.terminology.r4#7.0.0). Sugestão de correção: alterar a referência canónica de 'http://terminology.hl7.org/CodeSystem/v2-0203' para 'http://terminology.hl7.org/CodeSystem/v2-0203|5.0.0'
+INFORMATION: ValueSet/patient-identifier-type: ValueSet.compose.include[0].concept[1]: Wrong Display Name 'Birth Certificate' for http://terminology.hl7.org/CodeSystem/v2-0203#BCFN. Valid display is 'Birth Certificate File Number' (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
+== fsh-generated/resources/ValueSet-practitioner-identifier-type.json ==
+WARNING: ValueSet/practitioner-identifier-type: ValueSet.compose.include[0]: Existem várias correspondências potenciais diferentes para o url 'http://terminology.hl7.org/CodeSystem/v2-0203'. Pode ser uma boa ideia corrigir para a versão correta para reduzir a probabilidade de uma versão errada ser selecionada por um implementador/implementador, ou usar o [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Usando a versão '5.0.0', versões encontradas: 4.0.0 (from hl7.terminology.r4#6.2.0), 5.0.0 (from hl7.terminology.r4#7.0.0). Sugestão de correção: alterar a referência canónica de 'http://terminology.hl7.org/CodeSystem/v2-0203' para 'http://terminology.hl7.org/CodeSystem/v2-0203|5.0.0'
+== fsh-generated/resources/ValueSet-vs-patient-identity-events.json ==

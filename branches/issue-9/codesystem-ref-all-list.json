@@ -1,0 +1,302 @@
+{
+  "codeSystems" : [{
+    "url" : "http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CS_FHIREvents",
+    "title" : "FHIR Events CodeSystem",
+    "description" : "Código dos eventos FHIR relacionados com transações baseadas em mensagens HL7v2.\nEste CodeSystem inclui mapeamentos para eventos de diferentes domínios (ex: gestão de utentes, emergência, etc.).",
+    "uses" : {
+    },
+    "ValueSet-vs-patient-identity-events.html" : "Eventos FHIR para Gestão de Identidade de Utentes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/address-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AddressType",
+    "title" : "AddressType",
+    "description" : "The type of an address (physical / postal).",
+    "oids" : ["2.16.840.1.113883.4.642.4.70"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-address-type.html" : "AddressType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/address-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AddressUse",
+    "title" : "AddressUse",
+    "description" : "The use of an address.",
+    "oids" : ["2.16.840.1.113883.4.642.4.68"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-address-use.html" : "AddressUse"
+  },
+  {
+    "url" : "http://hl7.org/fhir/administrative-gender",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.2"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-administrative-gender.html" : "AdministrativeGender"
+  },
+  {
+    "url" : "http://hl7.org/fhir/bundle-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "BundleType",
+    "title" : "BundleType",
+    "description" : "Indicates the purpose of a bundle - how it is intended to be used.",
+    "oids" : ["2.16.840.1.113883.4.642.4.621"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-bundle-type.html" : "BundleType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/fm-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "FinancialResourceStatusCodes",
+    "title" : "Financial Resource Status Codes",
+    "description" : "This value set includes Status codes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.593"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-fm-status.html" : "Financial Resource Status Codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/http-verb",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "HTTPVerb",
+    "title" : "HTTPVerb",
+    "description" : "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
+    "oids" : ["2.16.840.1.113883.4.642.4.625"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb"
+  },
+  {
+    "url" : "http://hl7.org/fhir/identifier-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "IdentifierUse",
+    "title" : "IdentifierUse",
+    "description" : "Identifies the purpose for this identifier, if known .",
+    "oids" : ["2.16.840.1.113883.4.642.4.58"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-identifier-use.html" : "IdentifierUse"
+  },
+  {
+    "url" : "http://hl7.org/fhir/link-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "LinkType",
+    "description" : "The type of link between this patient resource and another patient resource.",
+    "oids" : ["2.16.840.1.113883.4.642.4.424"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-link-type.html" : "LinkType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/resource-types",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ResourceType",
+    "title" : "ResourceType",
+    "description" : "One of the resource types defined as part of this version of FHIR.",
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/response-code",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ResponseType",
+    "title" : "ResponseType",
+    "description" : "The kind of response to a message.",
+    "oids" : ["2.16.840.1.113883.4.642.4.381"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-response-code.html" : "ResponseType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/search-entry-mode",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "SearchEntryMode",
+    "title" : "SearchEntryMode",
+    "description" : "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+    "oids" : ["2.16.840.1.113883.4.642.4.623"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-search-entry-mode.html" : "SearchEntryMode"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
+    "version" : "1.0.0",
+    "status" : "draft",
+    "name" : "ContactEntityType",
+    "title" : "Contact entity type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1129"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-contactentity-type.html" : "Contact entity type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/coverage-class",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "CoverageClassCodes",
+    "title" : "Coverage Class Codes",
+    "description" : "This value set includes Coverage Class codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1147"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-coverage-class.html" : "Coverage Class Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/coverage-copay-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "CoverageCopayTypeCodes",
+    "title" : "Coverage Copay Type Codes",
+    "description" : "This value set includes sample Coverage Copayment Type codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1149"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-coverage-copay-type.html" : "Coverage Copay Type Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/coverage-selfpay",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "CoverageSelfPayCodes",
+    "title" : "Coverage SelfPay Codes",
+    "description" : "This value set includes Coverage SelfPay codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1148"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-coverage-type.html" : "Coverage Type and Self-Pay Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleCoverageFinancialExceptionCodes",
+    "title" : "Example Coverage Financial Exception Codes",
+    "description" : "This value set includes Example Coverage Financial Exception Codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1329"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-coverage-financial-exception.html" : "Example Coverage Financial Exception Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleMessageReasonCodes",
+    "title" : "Example Message Reason Codes",
+    "description" : "Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1122"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-message-reason-encounter.html" : "Example Message Reason Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/organization-type",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "OrganizationType",
+    "title" : "Organization type",
+    "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1128"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-organization-type.html" : "Organization type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "SubscriberRelationshipCodes",
+    "title" : "SubscriberPolicyholder Relationship Codes",
+    "description" : "This value set includes codes for the relationship between the Subscriber and the Beneficiary (insured/covered party/patient).",
+    "oids" : ["2.16.840.1.113883.4.642.1.1386"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-subscriber-relationship.html" : "SubscriberPolicyholder Relationship Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ContactRole2",
+    "title" : "contactRole2",
+    "description" : "Code system of concepts which specify a relationship role that the next of kin/associated parties plays with regard to the patient. Also used in referrals, for example, it may be necessary to identify the contact representative at the clinic that sent a referral. Used in HL7 Version 2 messaging in the NK1 and CTD segments after 2.5, when it replace 2.16.840.1.113883.18.57.",
+    "oids" : ["2.16.840.1.113883.18.58"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html" : "Patient Contact Relationship "
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "IdentifierType",
+    "title" : "identifierType",
+    "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
+    "oids" : ["2.16.840.1.113883.18.108"],
+    "uses" : {
+    },
+    "ValueSet-patient-identifier-type.html" : "Tipos de Identificadores de Paciente",
+    "ValueSet-practitioner-identifier-type.html" : "Tipos de Identificadores de Profissionais",
+    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "MaritalStatus",
+    "title" : "MaritalStatus",
+    "description" : "\\* \\* \\* No description supplied \\* \\* \\*\r\n\r\n*Open Issue:* The specific meanings of these codes can vary somewhat by jurisdiction and implementation so caution should be used when determining equivalency.\r\n\r\n*Open Issue:* fixing and completion of the hierarchy and proper good definitions of all the concepts is badly needed.",
+    "oids" : ["2.16.840.1.113883.5.2"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "NullFlavor",
+    "title" : "NullFlavor",
+    "description" : "A collection of codes specifying why a valid value is not present.",
+    "oids" : ["2.16.840.1.113883.5.1008"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
+  },
+  {
+    "url" : "urn:ietf:bcp:47",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "Ietf3066",
+    "title" : "Tags for the Identification of Languages",
+    "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+    "oids" : ["2.16.840.1.113883.6.121"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
+  }]
+}

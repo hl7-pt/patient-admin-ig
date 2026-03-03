@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-fhir-events"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: CodeSystem cs-fhir-events</b></p><a name="cs-fhir-events"> </a><a name="hccs-fhir-events"> </a><p>Este case-sensitive sistema de código <code>http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events</code> define o seguinte códigos:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style="white-space:nowrap">PATIENT_NEW<a name="cs-fhir-events-PATIENT_NEW"> </a></td><td>Criação de novo utente</td><td>Evento FHIR que representa a criação de um novo utente.</td></tr><tr><td style="white-space:nowrap">PATIENT_NEW_RESPONSE<a name="cs-fhir-events-PATIENT_NEW_RESPONSE"> </a></td><td>Resposta da criação de novo utente</td><td>Resposta FHIR à criação de um novo utente.</td></tr><tr><td style="white-space:nowrap">PATIENT_UPDATE<a name="cs-fhir-events-PATIENT_UPDATE"> </a></td><td>Atualização de dados do utente</td><td>Evento FHIR que representa a atualização de dados do utente.</td></tr><tr><td style="white-space:nowrap">PATIENT_UPDATE_RESPONSE<a name="cs-fhir-events-PATIENT_UPDATE_RESPONSE"> </a></td><td>Resposta da atualização de dados do utente</td><td>Resposta FHIR à atualização de dados do utente.</td></tr><tr><td style="white-space:nowrap">PATIENT_LINK<a name="cs-fhir-events-PATIENT_LINK"> </a></td><td>Associação de registos de identificações de utente</td><td>Evento FHIR que representa a associação (link) de utentes.</td></tr><tr><td style="white-space:nowrap">PATIENT_LINK_RESPONSE<a name="cs-fhir-events-PATIENT_LINK_RESPONSE"> </a></td><td>Resposta da associação de utentes</td><td>Resposta FHIR à associação de utentes.</td></tr><tr><td style="white-space:nowrap">PATIENT_UNLINK<a name="cs-fhir-events-PATIENT_UNLINK"> </a></td><td>Desassociação de utentes</td><td>Evento FHIR que representa a desassociação (unlink) de utentes.</td></tr><tr><td style="white-space:nowrap">PATIENT_UNLINK_RESPONSE<a name="cs-fhir-events-PATIENT_UNLINK_RESPONSE"> </a></td><td>Resposta da desassociação de utentes</td><td>Resposta FHIR à desassociação de utentes.</td></tr><tr><td style="white-space:nowrap">PATIENT_MERGE<a name="cs-fhir-events-PATIENT_MERGE"> </a></td><td>Fusão de utentes</td><td>Evento FHIR que representa a fusão de dois ou mais utentes.</td></tr><tr><td style="white-space:nowrap">PATIENT_MERGE_RESPONSE<a name="cs-fhir-events-PATIENT_MERGE_RESPONSE"> </a></td><td>Resposta da fusão de utentes</td><td>Resposta FHIR à fusão de utentes.</td></tr><tr><td style="white-space:nowrap">PATIENT_SEARCH<a name="cs-fhir-events-PATIENT_SEARCH"> </a></td><td>Pesquisa de utente</td><td>Evento FHIR que representa a pesquisa de utentes no sistema.</td></tr><tr><td style="white-space:nowrap">PATIENT_SEARCH_RESPONSE<a name="cs-fhir-events-PATIENT_SEARCH_RESPONSE"> </a></td><td>Resposta à pesquisa de utente</td><td>Resposta FHIR à pesquisa de utentes no sistema.</td></tr><tr><td style="white-space:nowrap">EMERGENCY_UPDATE_TRIAGE<a name="cs-fhir-events-EMERGENCY_UPDATE_TRIAGE"> </a></td><td>Atualização do episodio de urgência com a triagem realizada</td><td>Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ADT^A08 com Action Code 'T'.</td></tr><tr><td style="white-space:nowrap">EMERGENCY_UPDATE_TRIAGE_RESPONSE<a name="cs-fhir-events-EMERGENCY_UPDATE_TRIAGE_RESPONSE"> </a></td><td>Resposta à atualização do episodio de urgência com a triagem realizada</td><td>Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ADT^A08 com Action Code 'T'.</td></tr><tr><td style="white-space:nowrap">EMERGENCY_UPDATE_PATIENT_CALL<a name="cs-fhir-events-EMERGENCY_UPDATE_PATIENT_CALL"> </a></td><td>Atualização do episodio de urgência com chamada do utente</td><td>Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ADT^A08 com Action Code 'CP'.</td></tr><tr><td style="white-space:nowrap">EMERGENCY_UPDATE_PATIENT_CALL_RESPONSE<a name="cs-fhir-events-EMERGENCY_UPDATE_PATIENT_CALL_RESPONSE"> </a></td><td>Resposta à atualização do episodio de urgência com chamada do utente</td><td>Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ADT^A08 com Action Code 'CP'.</td></tr></table></div>
+  </text>
+  <url value="http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events"/>
+  <version value="1.0.0"/>
+  <name value="CS_FHIREvents"/>
+  <title value="FHIR Events CodeSystem"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-12-08T20:13:42+00:00"/>
+  <publisher value="HL7 Portugal"/>
+  <contact>
+    <name value="HL7 Portugal"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.pt"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.pt"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7 Portugal"/>
+    <telecom>
+      <system value="email"/>
+      <value value="geral@hl7.pt"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Código dos eventos FHIR relacionados com transações baseadas em mensagens HL7v2.&#xA;Este CodeSystem inclui mapeamentos para eventos de diferentes domínios (ex: gestão de utentes, emergência, etc.)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PT"/>
+      <display value="Portugal"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="16"/>
+  <concept>
+    <code value="PATIENT_NEW"/>
+    <display value="Criação de novo utente"/>
+    <definition value="Evento FHIR que representa a criação de um novo utente."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_NEW_RESPONSE"/>
+    <display value="Resposta da criação de novo utente"/>
+    <definition value="Resposta FHIR à criação de um novo utente."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_UPDATE"/>
+    <display value="Atualização de dados do utente"/>
+    <definition value="Evento FHIR que representa a atualização de dados do utente."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_UPDATE_RESPONSE"/>
+    <display value="Resposta da atualização de dados do utente"/>
+    <definition value="Resposta FHIR à atualização de dados do utente."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_LINK"/>
+    <display value="Associação de registos de identificações de utente"/>
+    <definition value="Evento FHIR que representa a associação (link) de utentes."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_LINK_RESPONSE"/>
+    <display value="Resposta da associação de utentes"/>
+    <definition value="Resposta FHIR à associação de utentes."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_UNLINK"/>
+    <display value="Desassociação de utentes"/>
+    <definition value="Evento FHIR que representa a desassociação (unlink) de utentes."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_UNLINK_RESPONSE"/>
+    <display value="Resposta da desassociação de utentes"/>
+    <definition value="Resposta FHIR à desassociação de utentes."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_MERGE"/>
+    <display value="Fusão de utentes"/>
+    <definition value="Evento FHIR que representa a fusão de dois ou mais utentes."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_MERGE_RESPONSE"/>
+    <display value="Resposta da fusão de utentes"/>
+    <definition value="Resposta FHIR à fusão de utentes."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_SEARCH"/>
+    <display value="Pesquisa de utente"/>
+    <definition value="Evento FHIR que representa a pesquisa de utentes no sistema."/>
+  </concept>
+  <concept>
+    <code value="PATIENT_SEARCH_RESPONSE"/>
+    <display value="Resposta à pesquisa de utente"/>
+    <definition value="Resposta FHIR à pesquisa de utentes no sistema."/>
+  </concept>
+  <concept>
+    <code value="EMERGENCY_UPDATE_TRIAGE"/>
+    <display value="Atualização do episodio de urgência com a triagem realizada"/>
+    <definition value="Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ADT^A08 com Action Code 'T'."/>
+  </concept>
+  <concept>
+    <code value="EMERGENCY_UPDATE_TRIAGE_RESPONSE"/>
+    <display value="Resposta à atualização do episodio de urgência com a triagem realizada"/>
+    <definition value="Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ADT^A08 com Action Code 'T'."/>
+  </concept>
+  <concept>
+    <code value="EMERGENCY_UPDATE_PATIENT_CALL"/>
+    <display value="Atualização do episodio de urgência com chamada do utente"/>
+    <definition value="Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ADT^A08 com Action Code 'CP'."/>
+  </concept>
+  <concept>
+    <code value="EMERGENCY_UPDATE_PATIENT_CALL_RESPONSE"/>
+    <display value="Resposta à atualização do episodio de urgência com chamada do utente"/>
+    <definition value="Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ADT^A08 com Action Code 'CP'."/>
+  </concept>
+</CodeSystem>

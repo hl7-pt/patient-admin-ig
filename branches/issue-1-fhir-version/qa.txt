@@ -1,0 +1,405 @@
+ExampleIG : Validation Results
+=========================================
+
+err = 148, warn = 157, info = 27
+IG Publisher Version: 2.0.27
+Generated Wed Dec 03 08:17:46 UTC 2025. FHIR version 4.0.1 for hl7.fhir.pt.patient-admin-ig#1.0.0 (canonical = http://example.com/fhir/example)
+ Build Errors : 0 / 26 / 0
+ /github/workspace/fsh-generated/resources/Bundle-patient-link : 4 / 12 / 15
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-fhir-events : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-hl7.fhir.pt.patient-admin-ig : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-AddressCountry-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-AddressCounty-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-AddressMunicipality-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-AddressNuts-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-AddressParish-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-AddressType-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-BundleMessage-Pt : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-BundleSearchset-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ContactIndicative-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Coverage-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-CoverageReason-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-MessageHeader-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Nationality : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Notes-pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Organization-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Patient-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PatientEnrollmentCategoryPrimarycare-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PatientPrimaryCarePeriod-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PersonBirthplace-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PersonEducation-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PersonOccupation-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-PersonRecordType-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Practitioner-Pt : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-patient-identifier-type : 1 / 1 / 2
+ /github/workspace/fsh-generated/resources/ValueSet-practitioner-identifier-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-patient-identity-events : 0 / 1 / 1
+ /github/workspace/input/examples/BundlePatientMerge : 35 / 28 / 10
+ /github/workspace/input/examples/BundlePatientNew : 53 / 32 / 14
+ /github/workspace/input/examples/BundlePatientUpdate : 55 / 33 / 14
+</table>
+== n/a ==
+WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/BundleSearchset-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AddressCountry-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AddressCounty-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AddressMunicipality-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AddressNuts-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AddressParish-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AddressType-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/ContactIndicative-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/CoverageReason-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/Nationality.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/Notes-pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PatientEnrollmentCategoryPrimarycare-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PatientPrimaryCarePeriod-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PersonBirthplace-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PersonEducation-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PersonOccupation-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/PersonRecordType-Pt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/patient-link.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/patient-merge.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/patient-new.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/patient-update.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/Bundle-patient-link.json ==
+INFORMATION: Bundle/patient-link: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.event.ofType(Coding): Não foi possível encontrar uma definição para o CodeSystem 'http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.destination[0].endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/EXTERNALSYSTEM'
+WARNING: Bundle/patient-link: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.source.endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/ADT'
+INFORMATION: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.meta.security[0].display: 'Normal' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-Confidentiality has no Display Names for the language pt-PT
+ERROR: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0]: Não foi possível encontrar a extensão http://spms.min-saude.pt/fhir/iop/extensions/nationality, pelo que não é permitida aqui
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].url: Não foi possível encontrar uma definição para o valor URL 'http://spms.min-saude.pt/fhir/iop/extensions/nationality'
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://www.iso.org/iso-3166-country-codes.html' could not be found, so the code cannot be validated
+ERROR: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2, pelo que não é permitida aqui
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://spms.min-saude.pt/rnu/extensions/address-types' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.ine.pt' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+INFORMATION: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.link[0].other: Detalhes para Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6 que correspondem ao perfil http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.meta.security[0].display: 'Normal' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-Confidentiality has no Display Names for the language pt-PT
+ERROR: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/nationality, pelo que não é permitida aqui
+WARNING: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://www.iso.org/iso-3166-country-codes.html' could not be found, so the code cannot be validated
+ERROR: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2, pelo que não é permitida aqui
+WARNING: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[0].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.maritalStatus.coding[0].display: 'Married' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-MaritalStatus has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[0].relationship[0].coding[0].display: 'Father' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[1].relationship[0].coding[0].display: 'Mother' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[2].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-link: Bundle: Não é possível encontrar 'http://example.org/fhir/Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8' no pacote (Bundle.entry[0].resource.destination[0].receiver)
+== fsh-generated/resources/CodeSystem-cs-fhir-events.json ==
+== fsh-generated/resources/ImplementationGuide-hl7.fhir.pt.patient-admin-ig.json ==
+== fsh-generated/resources/StructureDefinition-AddressCountry-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/AddressCountry-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-AddressCounty-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/AddressCounty-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-AddressMunicipality-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/AddressMunicipality-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-AddressNuts-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/AddressNuts-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-AddressParish-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/AddressParish-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-AddressType-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/AddressType-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-BundleMessage-Pt.json ==
+INFORMATION: StructureDefinition/BundleMessage-Pt: StructureDefinition.snapshot.element[4].binding.extension[0]: O extensão http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 está obsoleto
+WARNING: StructureDefinition/BundleMessage-Pt: StructureDefinition: Bundle é rotulado como um tipo abstrato, mas não foram encontrados descendentes concretos (verificar definições - isto é normalmente um erro, a menos que as definições concretas estejam noutro pacote)
+== fsh-generated/resources/StructureDefinition-BundleSearchset-Pt.json ==
+WARNING: StructureDefinition/BundleSearchset-Pt: StructureDefinition: Bundle é rotulado como um tipo abstrato, mas não foram encontrados descendentes concretos (verificar definições - isto é normalmente um erro, a menos que as definições concretas estejam noutro pacote)
+== fsh-generated/resources/StructureDefinition-ContactIndicative-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/ContactIndicative-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Coverage-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/Coverage-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-CoverageReason-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/CoverageReason-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-MessageHeader-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/MessageHeader-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-Nationality.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/Nationality'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Notes-pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/Notes-pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Organization-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/Organization-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-Patient-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/Patient-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-PatientEnrollmentCategoryPrimarycare-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/PatientEnrollmentCategoryPrimarycare-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PatientPrimaryCarePeriod-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/PatientPrimaryCarePeriod-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PersonBirthplace-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/PersonBirthplace-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PersonEducation-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/PersonEducation-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PersonOccupation-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/PersonOccupation-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PersonRecordType-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/PersonRecordType-Pt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Practitioner-Pt.json ==
+WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/Practitioner-Pt'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/ValueSet-patient-identifier-type.json ==
+WARNING: ValueSet/patient-identifier-type: ValueSet.compose.include[0]: Existem várias correspondências potenciais diferentes para o url 'http://terminology.hl7.org/CodeSystem/v2-0203'. Pode ser uma boa ideia corrigir para a versão correta para reduzir a probabilidade de uma versão errada ser selecionada por um implementador/implementador, ou usar o [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Usando a versão '5.0.0', versões encontradas: 4.0.0, 5.0.0. Sugestão de correção: alterar a referência canónica de 'http://terminology.hl7.org/CodeSystem/v2-0203' para 'http://terminology.hl7.org/CodeSystem/v2-0203|5.0.0'
+INFORMATION: ValueSet/patient-identifier-type: ValueSet.compose.include[0].concept[1]: Wrong Display Name 'Birth Certificate' for http://terminology.hl7.org/CodeSystem/v2-0203#BCFN. Valid display is 'Birth Certificate File Number' (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
+ERROR: ValueSet/patient-identifier-type: ValueSet.compose.include[0].concept[6]: O código 'HMR' não é válido no sistema http://terminology.hl7.org/CodeSystem/v2-0203 (Código desconhecido 'HMR' no CodeSystem 'http://terminology.hl7.org/CodeSystem/v2-0203' versão '5.0.0')
+== fsh-generated/resources/ValueSet-practitioner-identifier-type.json ==
+WARNING: ValueSet/practitioner-identifier-type: ValueSet.compose.include[0]: Existem várias correspondências potenciais diferentes para o url 'http://terminology.hl7.org/CodeSystem/v2-0203'. Pode ser uma boa ideia corrigir para a versão correta para reduzir a probabilidade de uma versão errada ser selecionada por um implementador/implementador, ou usar o [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Usando a versão '5.0.0', versões encontradas: 4.0.0, 5.0.0. Sugestão de correção: alterar a referência canónica de 'http://terminology.hl7.org/CodeSystem/v2-0203' para 'http://terminology.hl7.org/CodeSystem/v2-0203|5.0.0'
+== fsh-generated/resources/ValueSet-vs-patient-identity-events.json ==
+WARNING: ValueSet/vs-patient-identity-events: ValueSet: Os conjuntos de valores publicados DEVERÃO estar em conformidade com o perfil ShareableValueSet, que diz que o elemento ValueSet.experimental é obrigatório, mas não está presente
+== input/examples/BundlePatientMerge.json ==
+INFORMATION: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.event.ofType(Coding): Não foi possível encontrar uma definição para o CodeSystem 'http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events', pelo que o código não pode ser validado
+WARNING: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.destination[0].endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/EXTERNALSYSTEM'
+ERROR: Bundle/patient-merge: Bundle.entry[0]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.destination[0].receiver: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.destination[0].receiver: Não é possível resolver o recurso com a referência 'Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8'
+ERROR: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.sender: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.sender: Não é possível resolver o recurso com a referência 'Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8'
+ERROR: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.enterer: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+WARNING: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.source.endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/ADT'
+ERROR: Bundle/patient-merge: Bundle.entry[0].resource/*MessageHeader/96af02f3-5a9c-4220-8f62-ece462f2b4d3*/.focus[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+INFORMATION: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.meta.security[0].display: 'Normal' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-Confidentiality has no Display Names for the language pt-PT
+ERROR: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0]: Não foi possível encontrar a extensão http://spms.min-saude.pt/fhir/iop/extensions/nationality, pelo que não é permitida aqui
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].url: Não foi possível encontrar uma definição para o valor URL 'http://spms.min-saude.pt/fhir/iop/extensions/nationality'
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://www.iso.org/iso-3166-country-codes.html' could not be found, so the code cannot be validated
+ERROR: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[0]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[0].system: Não foi possível encontrar uma definição para o valor URL 'ADT'
+ERROR: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[1]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[1].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[2]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[2].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[3]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[3].system: Não foi possível encontrar uma definição para o valor URL 'AT'
+ERROR: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2, pelo que não é permitida aqui
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://spms.min-saude.pt/rnu/extensions/address-types' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.ine.pt' could not be found, so the code cannot be validated
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].line[0]: o valor não deve começar ou terminar com espaço em branco ' Rua De Casa, N.2 Ançã'
+INFORMATION: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+ERROR: Bundle/patient-merge: Bundle.entry[1]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-merge: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.link[0].other: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+INFORMATION: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.meta.security[0].display: 'Normal' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-Confidentiality has no Display Names for the language pt-PT
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/nationality, pelo que não é permitida aqui
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://www.iso.org/iso-3166-country-codes.html' could not be found, so the code cannot be validated
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[0]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[0].system: Não foi possível encontrar uma definição para o valor URL 'ADT'
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[1]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[1].system: Não foi possível encontrar uma definição para o valor URL 'RNU'
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[2]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[2].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[3]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[3].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[4]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.identifier[4].system: Não foi possível encontrar uma definição para o valor URL 'IRN'
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2, pelo que não é permitida aqui
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[0].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.address[0].line[0]: o valor não deve começar ou terminar com espaço em branco ' Rua Dr Manuel Da Cruz Junior 128 Moradia 14 Samouco'
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.maritalStatus.coding[0].display: Nome de apresentação errado 'Casado' para http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M. Não foram encontrados nomes de apresentação válidos para a(s) língua(s) 'pt-PT'. A apresentação predefinida é 'Married'
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[0].relationship[0].coding[0].code: Código desconhecido 'FTH' no CodeSystem 'http://terminology.hl7.org/CodeSystem/v2-0131' versão '2.0.0'
+ERROR: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[1].relationship[0].coding[0].code: Código desconhecido 'MTH' no CodeSystem 'http://terminology.hl7.org/CodeSystem/v2-0131' versão '2.0.0'
+INFORMATION: Bundle/patient-merge: Bundle.entry[2].resource/*Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6*/.contact[2].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+ERROR: Bundle/patient-merge: Bundle.entry[3].resource/*Practitioner/cc5416a2-8697-3367-bba8-eec87f189664*/.identifier[0]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[3].resource/*Practitioner/cc5416a2-8697-3367-bba8-eec87f189664*/.identifier[0].system: Não foi possível encontrar uma definição para o valor URL 'ADT'
+ERROR: Bundle/patient-merge: Bundle.entry[3].resource/*Practitioner/cc5416a2-8697-3367-bba8-eec87f189664*/.identifier[1]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-merge: Bundle.entry[3].resource/*Practitioner/cc5416a2-8697-3367-bba8-eec87f189664*/.identifier[1].system: Não foi possível encontrar uma definição para o valor URL 'RHV'
+ERROR: Bundle/patient-merge: Bundle.entry[1].resource.focus[0]: Encontrou 4 correspondências para 'Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d' no pacote (MessageHeader Data)
+ERROR: Bundle/patient-merge: Bundle: Encontrou 4 correspondências para 'Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8' no pacote (Bundle.entry[0].resource.destination[0].receiver)
+ERROR: Bundle/patient-merge: Bundle: Encontrou 4 correspondências para 'Practitioner/cc5416a2-8697-3367-bba8-eec87f189664' no pacote (Bundle.entry[0].resource.enterer)
+ERROR: Bundle/patient-merge: Bundle: Encontrou 4 correspondências para 'Patient/17fafe5f-6ce2-3190-8eb0-9d2e80a4cbf6' no pacote (Bundle.entry[1].resource.link[0].other)
+WARNING: Bundle/patient-merge: Bundle.entry[2]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-merge: Bundle.entry[3]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-merge: Bundle.entry[4]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+ERROR: Bundle/patient-merge: Bundle.entry[0]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-merge: Bundle.entry[1]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-merge: Bundle.entry[2]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-merge: Bundle.entry[3]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+== input/examples/BundlePatientNew.json ==
+INFORMATION: Bundle/patient-new: Bundle.entry[0].resource/*MessageHeader/a8648ba8-095b-4970-9f5b-f351d82b8a58*/.event.ofType(Coding): Não foi possível encontrar uma definição para o CodeSystem 'http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[0].resource/*MessageHeader/a8648ba8-095b-4970-9f5b-f351d82b8a58*/.destination[0].endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/EXTERNALSYSTEM'
+ERROR: Bundle/patient-new: Bundle.entry[0]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[0].resource/*MessageHeader/a8648ba8-095b-4970-9f5b-f351d82b8a58*/.destination[0].receiver: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[0].resource/*MessageHeader/a8648ba8-095b-4970-9f5b-f351d82b8a58*/.sender: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+WARNING: Bundle/patient-new: Bundle.entry[0].resource/*MessageHeader/a8648ba8-095b-4970-9f5b-f351d82b8a58*/.source.endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/ADT'
+ERROR: Bundle/patient-new: Bundle.entry[0].resource/*MessageHeader/a8648ba8-095b-4970-9f5b-f351d82b8a58*/.focus[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/birthplace, pelo que não é permitida aqui
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].extension[0].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[1]: Não foi possível encontrar a extensão http://eexample.com/fhir/hl7pt/extensions/nationality, pelo que não é permitida aqui
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.extension[2]: Extension.url deve ser um URL absoluto
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[0]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[0].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[1]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[1].system: Não foi possível encontrar uma definição para o valor URL 'SEF'
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[2]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[2].system: Não foi possível encontrar uma definição para o valor URL 'AT'
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[3]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[3].system: Não foi possível encontrar uma definição para o valor URL 'SS'
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[4]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.identifier[4].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2, pelo que não é permitida aqui
+INFORMATION: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[0].value.ofType(Coding): Não foi possível encontrar uma definição para o CodeSystem 'http://spms.min-saude.pt/rnu/extensions/address-types', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.address[0].extension[0].extension[3].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://www.ine.pt' could not be found, so the code cannot be validated
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.maritalStatus.coding[0].display: Nome de apresentação errado 'Casado' para http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M. Não foram encontrados nomes de apresentação válidos para a(s) língua(s) 'pt-PT'. A apresentação predefinida é 'Married'
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].address.extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2, pelo que não é permitida aqui
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].address.extension[0].extension[0].value.ofType(Coding): Coding.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].address.extension[0].extension[0].value.ofType(Coding).system: Não foi possível encontrar uma definição para o valor URL 'V2'
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].address.extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].address.extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[0].address.extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+INFORMATION: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[2].relationship[0].coding[0].display: 'Self' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[3].relationship[0].coding[0].display: 'father' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.contact[4].relationship[0].coding[0].display: 'mother' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+ERROR: Bundle/patient-new: Bundle.entry[1]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.generalPractitioner[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.generalPractitioner[1]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[1].resource/*Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d*/.managingOrganization: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[2].resource/*Practitioner/f8c0c968-6328-35cd-9333-08b1a494967f*/.identifier[0]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[2].resource/*Practitioner/f8c0c968-6328-35cd-9333-08b1a494967f*/.identifier[0].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-new: Bundle.entry[2].resource/*Practitioner/f8c0c968-6328-35cd-9333-08b1a494967f*/.identifier[1]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[2].resource/*Practitioner/f8c0c968-6328-35cd-9333-08b1a494967f*/.identifier[1].system: Não foi possível encontrar uma definição para o valor URL 'RHV'
+ERROR: Bundle/patient-new: Bundle.entry[3]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/87f702c0-808b-4f24-8830-fbf6edef1afa*/.beneficiary: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/87f702c0-808b-4f24-8830-fbf6edef1afa*/.beneficiary.identifier: Identifier.system deve ser uma referência absoluta e não uma referência local
+ERROR: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/87f702c0-808b-4f24-8830-fbf6edef1afa*/.beneficiary.identifier.system: Os valores URI não podem ter espaços em branco('ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO')
+WARNING: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/87f702c0-808b-4f24-8830-fbf6edef1afa*/.beneficiary.identifier.system: Não foi possível encontrar uma definição para o valor URL 'ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO'
+ERROR: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/87f702c0-808b-4f24-8830-fbf6edef1afa*/.payor[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/87f702c0-808b-4f24-8830-fbf6edef1afa*/.payor[0]: Não é possível resolver o recurso com a referência 'Organization/f1cf7567-92e6-3df8-9406-39892836a36b'
+ERROR: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/87f702c0-808b-4f24-8830-fbf6edef1afa*/.payor[0].identifier: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[3].resource/*Coverage/87f702c0-808b-4f24-8830-fbf6edef1afa*/.payor[0].identifier.system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-new: Bundle.entry[4]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[4].resource/*Coverage/e78e5ad2-1580-4c30-a44d-318538f88e40*/.beneficiary: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[4].resource/*Coverage/e78e5ad2-1580-4c30-a44d-318538f88e40*/.beneficiary.identifier: Identifier.system deve ser uma referência absoluta e não uma referência local
+ERROR: Bundle/patient-new: Bundle.entry[4].resource/*Coverage/e78e5ad2-1580-4c30-a44d-318538f88e40*/.beneficiary.identifier.system: Os valores URI não podem ter espaços em branco('SEGURANCA SOCIAL')
+WARNING: Bundle/patient-new: Bundle.entry[4].resource/*Coverage/e78e5ad2-1580-4c30-a44d-318538f88e40*/.beneficiary.identifier.system: Não foi possível encontrar uma definição para o valor URL 'SEGURANCA SOCIAL'
+ERROR: Bundle/patient-new: Bundle.entry[4].resource/*Coverage/e78e5ad2-1580-4c30-a44d-318538f88e40*/.payor[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-new: Bundle.entry[4].resource/*Coverage/e78e5ad2-1580-4c30-a44d-318538f88e40*/.payor[0]: Não é possível resolver o recurso com a referência 'Organization/7a14a1a7-349c-3da4-8347-351a03cfb320'
+ERROR: Bundle/patient-new: Bundle.entry[4].resource/*Coverage/e78e5ad2-1580-4c30-a44d-318538f88e40*/.payor[0].identifier: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-new: Bundle.entry[4].resource/*Coverage/e78e5ad2-1580-4c30-a44d-318538f88e40*/.payor[0].identifier.system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-new: Bundle.entry[1].resource.focus[0]: Encontrou 8 correspondências para 'Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d' no pacote (MessageHeader Data)
+ERROR: Bundle/patient-new: Bundle: Encontrou 8 correspondências para 'Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8' no pacote (Bundle.entry[0].resource.destination[0].receiver)
+ERROR: Bundle/patient-new: Bundle: Encontrou 8 correspondências para 'Practitioner/598fe4e3-dfb7-394f-b94c-1b0502ca3d1c' no pacote (Bundle.entry[1].resource.generalPractitioner[0])
+ERROR: Bundle/patient-new: Bundle: Encontrou 8 correspondências para 'Organization/86db4073-1bcb-3791-a7da-3675bdeb5177' no pacote (Bundle.entry[1].resource.generalPractitioner[1])
+ERROR: Bundle/patient-new: Bundle: Encontrou 8 correspondências para 'Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8' no pacote (Bundle.entry[1].resource.managingOrganization)
+ERROR: Bundle/patient-new: Bundle: Encontrou 8 correspondências para 'Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d' no pacote (Bundle.entry[3].resource.beneficiary)
+ERROR: Bundle/patient-new: Bundle: Encontrou 8 correspondências para 'Organization/f1cf7567-92e6-3df8-9406-39892836a36b' no pacote (Bundle.entry[3].resource.payor[0])
+ERROR: Bundle/patient-new: Bundle: Encontrou 8 correspondências para 'Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d' no pacote (Bundle.entry[4].resource.beneficiary)
+ERROR: Bundle/patient-new: Bundle: Encontrou 8 correspondências para 'Organization/7a14a1a7-349c-3da4-8347-351a03cfb320' no pacote (Bundle.entry[4].resource.payor[0])
+WARNING: Bundle/patient-new: Bundle.entry[2]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-new: Bundle.entry[3]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-new: Bundle.entry[4]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-new: Bundle.entry[5]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-new: Bundle.entry[6]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-new: Bundle.entry[7]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-new: Bundle.entry[8]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+ERROR: Bundle/patient-new: Bundle.entry[0]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-new: Bundle.entry[1]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-new: Bundle.entry[2]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-new: Bundle.entry[3]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-new: Bundle.entry[4]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-new: Bundle.entry[5]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-new: Bundle.entry[6]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-new: Bundle.entry[7]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+== input/examples/BundlePatientUpdate.json ==
+INFORMATION: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/c003f928-d3f8-4d60-85b0-47aa3b6447c2*/.event.ofType(Coding): Não foi possível encontrar uma definição para o CodeSystem 'http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/c003f928-d3f8-4d60-85b0-47aa3b6447c2*/.destination[0].endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/EXTERNALSYSTEM'
+ERROR: Bundle/patient-update: Bundle.entry[0]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/c003f928-d3f8-4d60-85b0-47aa3b6447c2*/.destination[0].receiver: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/c003f928-d3f8-4d60-85b0-47aa3b6447c2*/.sender: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/c003f928-d3f8-4d60-85b0-47aa3b6447c2*/.enterer: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+WARNING: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/c003f928-d3f8-4d60-85b0-47aa3b6447c2*/.source.endpoint: Não foi possível encontrar uma definição para o valor URL 'DEV/ADT'
+ERROR: Bundle/patient-update: Bundle.entry[0].resource/*MessageHeader/c003f928-d3f8-4d60-85b0-47aa3b6447c2*/.focus[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[0]: Não foi possível encontrar a extensão http://example.pt/fhir/hl7pt/extensions/birthplace, pelo que não é permitida aqui
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[0].extension[0].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[0].url: Não foi possível encontrar uma definição para o valor URL 'http://example.pt/fhir/hl7pt/extensions/birthplace'
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[1]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/nationality, pelo que não é permitida aqui
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.extension[2]: Extension.url deve ser um URL absoluto
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[0]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[0].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[1]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[1].system: Não foi possível encontrar uma definição para o valor URL 'RNU'
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[2]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[2].system: Não foi possível encontrar uma definição para o valor URL 'IRN'
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[3]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[3].system: Não foi possível encontrar uma definição para o valor URL 'AT'
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[4]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.identifier[4].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.address[0].extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2, pelo que não é permitida aqui
+INFORMATION: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.address[0].extension[0].extension[0].value.ofType(Coding): Não foi possível encontrar uma definição para o CodeSystem 'http://spms.min-saude.pt/rnu/extensions/address-types', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.address[0].extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.address[0].extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.address[0].extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.maritalStatus.coding[0].display: Nome de apresentação errado 'Casado' para http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M. Não foram encontrados nomes de apresentação válidos para a(s) língua(s) 'pt-PT'. A apresentação predefinida é 'Married'
+INFORMATION: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[0].relationship[0].coding[0].display: 'family member' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[0].address.extension[0]: Não foi possível encontrar a extensão http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2, pelo que não é permitida aqui
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[0].address.extension[0].extension[0].value.ofType(Coding): Coding.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[0].address.extension[0].extension[0].value.ofType(Coding).system: Não foi possível encontrar uma definição para o valor URL 'V2'
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[0].address.extension[0].extension[1].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[0].address.extension[0].extension[2].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+WARNING: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[0].address.extension[0].extension[3].value.ofType(CodeableConcept).coding[0]: Não foi possível encontrar uma definição para o CodeSystem 'http://www.ine.pt', pelo que o código não pode ser validado
+INFORMATION: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[2].relationship[0].coding[0].display: 'father' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+INFORMATION: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.contact[3].relationship[0].coding[0].display: 'mother' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-RoleCode has no Display Names for the language pt-PT
+ERROR: Bundle/patient-update: Bundle.entry[1]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.generalPractitioner[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.generalPractitioner[1]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[1].resource/*Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02*/.managingOrganization: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[3].resource/*Practitioner/7f6ffaa6-bb0b-3080-97b6-2254211691b5*/.identifier[0]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[3].resource/*Practitioner/7f6ffaa6-bb0b-3080-97b6-2254211691b5*/.identifier[0].system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-update: Bundle.entry[3].resource/*Practitioner/7f6ffaa6-bb0b-3080-97b6-2254211691b5*/.identifier[1]: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[3].resource/*Practitioner/7f6ffaa6-bb0b-3080-97b6-2254211691b5*/.identifier[1].system: Não foi possível encontrar uma definição para o valor URL 'RHV'
+ERROR: Bundle/patient-update: Bundle.entry[6]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[6].resource/*Coverage/5b9d4a7a-1823-4998-9d16-216fcc05a5b3*/.beneficiary: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[6].resource/*Coverage/5b9d4a7a-1823-4998-9d16-216fcc05a5b3*/.beneficiary.identifier: Identifier.system deve ser uma referência absoluta e não uma referência local
+ERROR: Bundle/patient-update: Bundle.entry[6].resource/*Coverage/5b9d4a7a-1823-4998-9d16-216fcc05a5b3*/.beneficiary.identifier.system: Os valores URI não podem ter espaços em branco('ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO')
+WARNING: Bundle/patient-update: Bundle.entry[6].resource/*Coverage/5b9d4a7a-1823-4998-9d16-216fcc05a5b3*/.beneficiary.identifier.system: Não foi possível encontrar uma definição para o valor URL 'ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO'
+ERROR: Bundle/patient-update: Bundle.entry[6].resource/*Coverage/5b9d4a7a-1823-4998-9d16-216fcc05a5b3*/.payor[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[6].resource/*Coverage/5b9d4a7a-1823-4998-9d16-216fcc05a5b3*/.payor[0]: Não é possível resolver o recurso com a referência 'Organization/f1cf7567-92e6-3df8-9406-39892836a36b'
+ERROR: Bundle/patient-update: Bundle.entry[6].resource/*Coverage/5b9d4a7a-1823-4998-9d16-216fcc05a5b3*/.payor[0].identifier: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[6].resource/*Coverage/5b9d4a7a-1823-4998-9d16-216fcc05a5b3*/.payor[0].identifier.system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-update: Bundle.entry[7]: Entrada de pacote sem fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[7].resource/*Coverage/4b270fef-9033-46fc-b36a-aac2b87422dd*/.beneficiary: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[7].resource/*Coverage/4b270fef-9033-46fc-b36a-aac2b87422dd*/.beneficiary.identifier: Identifier.system deve ser uma referência absoluta e não uma referência local
+ERROR: Bundle/patient-update: Bundle.entry[7].resource/*Coverage/4b270fef-9033-46fc-b36a-aac2b87422dd*/.beneficiary.identifier.system: Os valores URI não podem ter espaços em branco('ADSE - SNS')
+WARNING: Bundle/patient-update: Bundle.entry[7].resource/*Coverage/4b270fef-9033-46fc-b36a-aac2b87422dd*/.beneficiary.identifier.system: Não foi possível encontrar uma definição para o valor URL 'ADSE - SNS'
+ERROR: Bundle/patient-update: Bundle.entry[7].resource/*Coverage/4b270fef-9033-46fc-b36a-aac2b87422dd*/.payor[0]: A Referência Relativa aparece dentro do Bundle cuja entrada não tem um fullUrl
+ERROR: Bundle/patient-update: Bundle.entry[7].resource/*Coverage/4b270fef-9033-46fc-b36a-aac2b87422dd*/.payor[0]: Não é possível resolver o recurso com a referência 'Organization/0040e52f-85c7-3d99-b3dd-4c6431285d30'
+ERROR: Bundle/patient-update: Bundle.entry[7].resource/*Coverage/4b270fef-9033-46fc-b36a-aac2b87422dd*/.payor[0].identifier: Identifier.system deve ser uma referência absoluta e não uma referência local
+WARNING: Bundle/patient-update: Bundle.entry[7].resource/*Coverage/4b270fef-9033-46fc-b36a-aac2b87422dd*/.payor[0].identifier.system: Não foi possível encontrar uma definição para o valor URL 'SONHO'
+ERROR: Bundle/patient-update: Bundle.entry[1].resource.focus[0]: Encontrou 8 correspondências para 'Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02' no pacote (MessageHeader Data)
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8' no pacote (Bundle.entry[0].resource.destination[0].receiver)
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Practitioner/7f6ffaa6-bb0b-3080-97b6-2254211691b5' no pacote (Bundle.entry[0].resource.enterer)
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Practitioner/598fe4e3-dfb7-394f-b94c-1b0502ca3d1c' no pacote (Bundle.entry[1].resource.generalPractitioner[0])
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Organization/86db4073-1bcb-3791-a7da-3675bdeb5177' no pacote (Bundle.entry[1].resource.generalPractitioner[1])
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8' no pacote (Bundle.entry[1].resource.managingOrganization)
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02' no pacote (Bundle.entry[6].resource.beneficiary)
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Organization/f1cf7567-92e6-3df8-9406-39892836a36b' no pacote (Bundle.entry[6].resource.payor[0])
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02' no pacote (Bundle.entry[7].resource.beneficiary)
+ERROR: Bundle/patient-update: Bundle: Encontrou 8 correspondências para 'Organization/0040e52f-85c7-3d99-b3dd-4c6431285d30' no pacote (Bundle.entry[7].resource.payor[0])
+WARNING: Bundle/patient-update: Bundle.entry[2]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-update: Bundle.entry[3]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-update: Bundle.entry[4]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-update: Bundle.entry[5]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-update: Bundle.entry[6]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-update: Bundle.entry[7]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+WARNING: Bundle/patient-update: Bundle.entry[8]: A entrada  não é acessível através de ligações (para a frente ou para trás) a partir do MessageHeader, pelo que a sua presença deve ser revista (é necessária para processar a mensagem?)
+ERROR: Bundle/patient-update: Bundle.entry[0]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-update: Bundle.entry[1]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-update: Bundle.entry[2]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-update: Bundle.entry[3]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-update: Bundle.entry[4]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-update: Bundle.entry[5]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-update: Bundle.entry[6]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada
+ERROR: Bundle/patient-update: Bundle.entry[7]: Exceto para transacções e lotes, cada entrada num Bundle deve ter um fullUrl que é a identidade do recurso na entrada

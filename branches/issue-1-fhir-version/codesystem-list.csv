@@ -1,0 +1,2 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://example.com/fhir/example/CodeSystem/cs-fhir-events,1.0.0,active,,CS_FHIREvents,FHIR Events CodeSystem,"Código dos eventos FHIR relacionados com transações baseadas em mensagens HL7v2. Este CodeSystem inclui mapeamentos para eventos de diferentes domínios (ex: gestão de utentes, emergência, etc.).",

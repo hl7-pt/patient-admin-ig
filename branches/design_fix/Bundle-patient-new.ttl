@@ -1,0 +1,527 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.com/fhir/hl7pt/Bundle/patient-new> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "patient-new"] ; # 
+  fhir:type [ fhir:v "message"] ; # 
+  fhir:timestamp [ fhir:v "2025-10-24T14:16:30.035+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32"^^xsd:anyURI ;
+       fhir:l <urn:uuid:8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32>
+     ] ;
+     fhir:resource ( <urn:uuid:8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021"^^xsd:anyURI ;
+       fhir:l <urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021>
+     ] ;
+     fhir:resource ( <urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5"^^xsd:anyURI ;
+       fhir:l <urn:uuid:5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5>
+     ] ;
+     fhir:resource ( <urn:uuid:5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07"^^xsd:anyURI ;
+       fhir:l <urn:uuid:91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07>
+     ] ;
+     fhir:resource ( <urn:uuid:91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:6b3e55bb-98c4-4dbd-a45f-dc941f093e5e"^^xsd:anyURI ;
+       fhir:l <urn:uuid:6b3e55bb-98c4-4dbd-a45f-dc941f093e5e>
+     ] ;
+     fhir:resource ( <urn:uuid:6b3e55bb-98c4-4dbd-a45f-dc941f093e5e> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:0f4cfb73-91ea-43a7-bb84-1b0c2419837f"^^xsd:anyURI ;
+       fhir:l <urn:uuid:0f4cfb73-91ea-43a7-bb84-1b0c2419837f>
+     ] ;
+     fhir:resource ( <urn:uuid:0f4cfb73-91ea-43a7-bb84-1b0c2419837f> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1"^^xsd:anyURI ;
+       fhir:l <urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1>
+     ] ;
+     fhir:resource ( <urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96"^^xsd:anyURI ;
+       fhir:l <urn:uuid:3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96>
+     ] ;
+     fhir:resource ( <urn:uuid:3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96> )
+  ] ) . # 
+
+<urn:uuid:8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32> a fhir:MessageHeader ;
+  fhir:id [ fhir:v "8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: MessageHeader 8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32</b></p><a name=\"8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32\"> </a><a name=\"hc8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32\"> </a><p><b>event</b>: <a href=\"CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_NEW\">FHIR Events CodeSystem: PATIENT_NEW</a> (Criação de novo utente)</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td>EXTERNAL SYSTEM</td><td>DEV/EXTERNALSYSTEM</td><td><a href=\"Bundle-patient-new.html#urn-uuid-e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1\">Unidade Local de Saúde Dev</a></td></tr></table><p><b>sender</b>: <a href=\"Bundle-patient-new.html#urn-uuid-e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1\">Unidade Local de Saúde Dev</a></p><p><b>enterer</b>: <a href=\"Bundle-patient-new.html#urn-uuid-5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5\">Practitioner: identifier = Numero interno do profissional: 5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5 (use: usual, ),Numero mecanográfico do profissional: 30047 (use: official, )</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td>ADT</td><td>DEV/ADT</td></tr></table><p><b>focus</b>: <a href=\"Bundle-patient-new.html#urn-uuid-2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021\">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:event [
+     a fhir:Coding ;
+     fhir:system [
+       fhir:v "http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events"^^xsd:anyURI ;
+       fhir:l <http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events>
+     ] ;
+     fhir:code [ fhir:v "PATIENT_NEW" ] ;
+     fhir:display [ fhir:v "Criação de novo utente" ]
+  ] ; # 
+  fhir:destination ( [
+     fhir:name [ fhir:v "EXTERNAL SYSTEM" ] ;
+     fhir:endpoint [
+       fhir:v "DEV/EXTERNALSYSTEM"^^xsd:anyURI ;
+       fhir:l <http://example.com/fhir/hl7pt/DEV/EXTERNALSYSTEM>
+     ] ;
+     fhir:receiver [
+       fhir:l <urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1> ;
+       fhir:reference [ fhir:v "urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1" ] ;
+       fhir:display [ fhir:v "Unidade Local de Saúde Dev" ]
+     ]
+  ] ) ; # 
+  fhir:sender [
+     fhir:l <urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1> ;
+     fhir:reference [ fhir:v "urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1" ] ;
+     fhir:display [ fhir:v "Unidade Local de Saúde Dev" ]
+  ] ; # 
+  fhir:enterer [
+     fhir:l <urn:uuid:5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5> ;
+     fhir:reference [ fhir:v "urn:uuid:5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5" ]
+  ] ; # 
+  fhir:source [
+     fhir:name [ fhir:v "ADT" ] ;
+     fhir:endpoint [
+       fhir:v "DEV/ADT"^^xsd:anyURI ;
+       fhir:l <http://example.com/fhir/hl7pt/DEV/ADT>
+     ]
+  ] ; # 
+  fhir:focus ( [
+     fhir:l <urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021> ;
+     fhir:reference [ fhir:v "urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021" ]
+  ] ) . # 
+
+<urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021> a fhir:Patient ;
+  fhir:id [ fhir:v "2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-Confidentiality>
+       ] ;
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Patient 2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021</b></p><a name=\"2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021\"> </a><a name=\"hc2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Etiqueta de segurança: Normal (Pormenores: Confidentiality código N = 'Normal')</p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"O registo está ativo\">Ativo:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Estado conhecido do doente\">Falecido:</td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>Identificador sequencial do utente na entidade/b4d3104a-7d7d-4fc0-a61b-3547836fb84c (utilização: usual, )</li><li>Número do processo/18015692 (utilização: official, )</li><li>Número de identificação fiscal/254781369 (utilização: official, )</li><li>Passport number/589471XS (utilização: official, )</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Formas de contactar o doente\">Detalhes do contacto</td><td colspan=\"3\"><ul><li>ph: 265842987</li><li>ph: 915469872(Mobile)</li><li><a href=\"mailto:li@email.com\">li@email.com</a></li><li>Rua De Casa, N.2 Ançã 3060-009 (billing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Contacto nomeado: Self\">Self:</td><td colspan=\"3\"><ul><li>Lilia Jose Teste Alves (Official)</li><li>ph: 265842987</li><li>ph: 915469872(Mobile)</li><li><a href=\"mailto:li@email.com\">li@email.com</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ligações para doentes\">Ligações:</td><td colspan=\"3\"><ul><li>Médico de clínica geral: <a href=\"Bundle-patient-new.html#urn-uuid-0f4cfb73-91ea-43a7-bb84-1b0c2419837f\">Practitioner Ana Torres </a></li><li>Médico de clínica geral: <a href=\"Bundle-patient-new.html#urn-uuid-3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96\">Organization USF DEV</a></li><li>Organização de gestão: <a href=\"Bundle-patient-new.html#urn-uuid-e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1\">Organization ULS DEV</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Represents the patient's nationality\"><a href=\"StructureDefinition-nationality-pt.html\">Nationality Extension</a></td><td colspan=\"3\"><span title=\"Códigos:{https://www.iso.org/iso-3166-country-codes.html PT}\">Portugal</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://example.com/fhir/hl7pt/StructureDefinition/nationality-pt"^^xsd:anyURI ;
+       fhir:l <http://example.com/fhir/hl7pt/StructureDefinition/nationality-pt>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://www.iso.org/iso-3166-country-codes.html"^^xsd:anyURI ;
+           fhir:l <https://www.iso.org/iso-3166-country-codes.html>
+         ] ;
+         fhir:code [ fhir:v "PT" ] ;
+         fhir:display [ fhir:v "Portugal" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PI" ] ;
+         fhir:display [ fhir:v "Patient internal identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "Identificador sequencial do utente na entidade" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://example.org/ADT"^^xsd:anyURI ;
+       fhir:l <http://example.org/ADT>
+     ] ;
+     fhir:value [ fhir:v "b4d3104a-7d7d-4fc0-a61b-3547836fb84c" ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PI" ] ;
+         fhir:display [ fhir:v "Patient internal identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "Identificador sequencial do utente na entidade" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://example.org/SONHO"^^xsd:anyURI ;
+       fhir:l <http://example.org/SONHO>
+     ] ;
+     fhir:value [ fhir:v "404066" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "MR" ] ;
+         fhir:display [ fhir:v "Medical record number" ]
+       ] ) ;
+       fhir:text [ fhir:v "Número do processo" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://example.org/SONHO"^^xsd:anyURI ;
+       fhir:l <http://example.org/SONHO>
+     ] ;
+     fhir:value [ fhir:v "18015692" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "TAX" ] ;
+         fhir:display [ fhir:v "Tax ID number" ]
+       ] ) ;
+       fhir:text [ fhir:v "Número de identificação fiscal" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://example.org/AT"^^xsd:anyURI ;
+       fhir:l <http://example.org/AT>
+     ] ;
+     fhir:value [ fhir:v "254781369" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PPN" ] ;
+         fhir:display [ fhir:v "Passport Number" ]
+       ] ) ;
+       fhir:text [ fhir:v "Passport number" ]
+     ] ;
+     fhir:value [ fhir:v "589471XS" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Alves" ] ;
+     fhir:given ( [ fhir:v "Lilia" ] [ fhir:v "Jose Teste" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "265842987" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "915469872" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "li@email.com" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1995-10-09"^^xsd:date] ; # 
+  fhir:deceased [
+     a fhir:Boolean ;
+     fhir:v false
+  ] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "address-type-pt"^^xsd:anyURI ;
+           fhir:l fhir:address-type-pt
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "http://spms.min-saude.pt/rnu/extensions/address-types"^^xsd:anyURI ;
+             fhir:l <http://spms.min-saude.pt/rnu/extensions/address-types>
+           ] ;
+           fhir:code [ fhir:v "MA" ] ;
+           fhir:display [ fhir:v "Main Address" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "parish-pt"^^xsd:anyURI ;
+           fhir:l fhir:parish-pt
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://www.ine.pt"^^xsd:anyURI ;
+               fhir:l <http://www.ine.pt>
+             ] ;
+             fhir:code [ fhir:v "060201" ]
+           ] )
+         ]
+       ] [
+         fhir:url [
+           fhir:v "municipality-pt"^^xsd:anyURI ;
+           fhir:l fhir:municipality-pt
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://www.ine.pt"^^xsd:anyURI ;
+               fhir:l <http://www.ine.pt>
+             ] ;
+             fhir:code [ fhir:v "0602" ]
+           ] )
+         ]
+       ] [
+         fhir:url [
+           fhir:v "county-pt"^^xsd:anyURI ;
+           fhir:l fhir:county-pt
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://www.ine.pt"^^xsd:anyURI ;
+               fhir:l <http://www.ine.pt>
+             ] ;
+             fhir:code [ fhir:v "06" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://example.com/fhir/hl7pt/StructureDefinition/address-pt"^^xsd:anyURI ;
+         fhir:l <http://example.com/fhir/hl7pt/StructureDefinition/address-pt>
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "billing" ] ;
+     fhir:line ( [ fhir:v "Rua De Casa, N.2 Ançã" ] ) ;
+     fhir:postalCode [ fhir:v "3060-009" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+         ] ;
+         fhir:code [ fhir:v "ONESELF" ] ;
+         fhir:display [ fhir:v "Self" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:use [ fhir:v "official" ] ;
+       fhir:family [ fhir:v "Alves" ] ;
+       fhir:given ( [ fhir:v "Lilia" ] [ fhir:v "Jose Teste" ] )
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "265842987" ] ;
+       fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+     ] [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "915469872" ] ;
+       fhir:use [ fhir:v "mobile" ] ;
+       fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "li@email.com" ] ;
+       fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+     ] )
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:l <urn:uuid:0f4cfb73-91ea-43a7-bb84-1b0c2419837f> ;
+     fhir:reference [ fhir:v "urn:uuid:0f4cfb73-91ea-43a7-bb84-1b0c2419837f" ]
+  ] [
+     fhir:l <urn:uuid:3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96> ;
+     fhir:reference [ fhir:v "urn:uuid:3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:l <urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1> ;
+     fhir:reference [ fhir:v "urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1" ]
+  ] . # 
+
+<urn:uuid:5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5> a fhir:Practitioner ;
+  fhir:id [ fhir:v "5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Practitioner 5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5</b></p><a name=\"5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5\"> </a><a name=\"hc5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5\"> </a><p><b>identifier</b>: Numero interno do profissional/5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5 (utilização: usual, ), Numero mecanográfico do profissional/30047 (utilização: official, )</p><p><b>active</b>: true</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "EI" ] ;
+         fhir:display [ fhir:v "Employee number" ]
+       ] ) ;
+       fhir:text [ fhir:v "Numero interno do profissional" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://example.org/ADT"^^xsd:anyURI ;
+       fhir:l <http://example.org/ADT>
+     ] ;
+     fhir:value [ fhir:v "5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "EI" ] ;
+         fhir:display [ fhir:v "Employee number" ]
+       ] ) ;
+       fhir:text [ fhir:v "Numero mecanográfico do profissional" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://example.org/RHV"^^xsd:anyURI ;
+       fhir:l <http://example.org/RHV>
+     ] ;
+     fhir:value [ fhir:v "30047" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] . # 
+
+<urn:uuid:91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07> a fhir:Coverage ;
+  fhir:id [ fhir:v "91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Coverage_91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Coverage 91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07</b></p><a name=\"91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07\"> </a><a name=\"hc91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07\"> </a><p><b>PTCoverageReason</b>: <span title=\"Códigos:{http://example.org/SONHO 705}\">Insuficiencia Económica</span></p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Códigos:{http://spms.min-saude.pt/rnu/systemcodes/coverage-type BU}\">Beneficio do utente</span></p><p><b>beneficiary</b>: <a href=\"Bundle-patient-new.html#urn-uuid-2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021\">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))</a></p><p><b>period</b>: 2024-12-08 00:00:00+0000 --&gt; (em curso)</p><p><b>payor</b>: <a href=\"Bundle-patient-new.html#urn-uuid-6b3e55bb-98c4-4dbd-a45f-dc941f093e5e\">Organization Serviço Nacional de Saúde</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://example.com/fhir/hl7pt/StructureDefinition/coverage-reason-pt"^^xsd:anyURI ;
+       fhir:l <http://example.com/fhir/hl7pt/StructureDefinition/coverage-reason-pt>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://example.org/SONHO"^^xsd:anyURI ;
+           fhir:l <http://example.org/SONHO>
+         ] ;
+         fhir:code [ fhir:v "705" ] ;
+         fhir:display [ fhir:v "Insuficiencia Económica" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://spms.min-saude.pt/rnu/systemcodes/coverage-type"^^xsd:anyURI ;
+         fhir:l <http://spms.min-saude.pt/rnu/systemcodes/coverage-type>
+       ] ;
+       fhir:code [ fhir:v "BU" ] ;
+       fhir:display [ fhir:v "Beneficio do utente" ]
+     ] )
+  ] ; # 
+  fhir:beneficiary [
+     fhir:l <urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021> ;
+     fhir:reference [ fhir:v "urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-12-08T00:00:00+00:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:l <urn:uuid:6b3e55bb-98c4-4dbd-a45f-dc941f093e5e> ;
+     fhir:reference [ fhir:v "urn:uuid:6b3e55bb-98c4-4dbd-a45f-dc941f093e5e" ]
+  ] ) . # 
+
+<urn:uuid:6b3e55bb-98c4-4dbd-a45f-dc941f093e5e> a fhir:Organization ;
+  fhir:id [ fhir:v "6b3e55bb-98c4-4dbd-a45f-dc941f093e5e"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_6b3e55bb-98c4-4dbd-a45f-dc941f093e5e\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Organization 6b3e55bb-98c4-4dbd-a45f-dc941f093e5e</b></p><a name=\"6b3e55bb-98c4-4dbd-a45f-dc941f093e5e\"> </a><a name=\"hc6b3e55bb-98c4-4dbd-a45f-dc941f093e5e\"> </a><p><b>identifier</b>: <code>http://example.org/SONHO</code>/935601 (utilização: usual, )</p><p><b>active</b>: true</p><p><b>name</b>: Serviço Nacional de Saúde</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [
+       fhir:v "http://example.org/SONHO"^^xsd:anyURI ;
+       fhir:l <http://example.org/SONHO>
+     ] ;
+     fhir:value [ fhir:v "935601" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name [ fhir:v "Serviço Nacional de Saúde"] . # 
+
+<urn:uuid:0f4cfb73-91ea-43a7-bb84-1b0c2419837f> a fhir:Practitioner ;
+  fhir:id [ fhir:v "0f4cfb73-91ea-43a7-bb84-1b0c2419837f"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_0f4cfb73-91ea-43a7-bb84-1b0c2419837f\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Practitioner 0f4cfb73-91ea-43a7-bb84-1b0c2419837f</b></p><a name=\"0f4cfb73-91ea-43a7-bb84-1b0c2419837f\"> </a><a name=\"hc0f4cfb73-91ea-43a7-bb84-1b0c2419837f\"> </a><p><b>active</b>: true</p><p><b>name</b>: Ana Torres </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Torres" ] ;
+     fhir:given ( [ fhir:v "Ana" ] )
+  ] ) . # 
+
+<urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1> a fhir:Organization ;
+  fhir:id [ fhir:v "e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Organization e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1</b></p><a name=\"e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1\"> </a><a name=\"hce10c7e4f-6c49-4ee3-a6dd-71e5b70230c1\"> </a><p><b>identifier</b>: <code>http://example.org/SONHO</code>/454321 (utilização: usual, )</p><p><b>active</b>: true</p><p><b>name</b>: ULS DEV</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [
+       fhir:v "http://example.org/SONHO"^^xsd:anyURI ;
+       fhir:l <http://example.org/SONHO>
+     ] ;
+     fhir:value [ fhir:v "454321" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name [ fhir:v "ULS DEV"] . # 
+
+<urn:uuid:3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96> a fhir:Organization ;
+  fhir:id [ fhir:v "3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Organization 3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96</b></p><a name=\"3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96\"> </a><a name=\"hc3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96\"> </a><p><b>identifier</b>: <code>http://example.org/SONHO</code>/454321 (utilização: usual, )</p><p><b>active</b>: true</p><p><b>name</b>: USF DEV</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [
+       fhir:v "http://example.org/SONHO"^^xsd:anyURI ;
+       fhir:l <http://example.org/SONHO>
+     ] ;
+     fhir:value [ fhir:v "454321" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name [ fhir:v "USF DEV"] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="patient-update"/>
+  <type value="message"/>
+  <timestamp value="2025-10-24T12:55:36.839+01:00"/>
+  <entry>
+    <resource>
+      <MessageHeader>
+        <id value="c003f928-d3f8-4d60-85b0-47aa3b6447c2"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MessageHeader_c003f928-d3f8-4d60-85b0-47aa3b6447c2"> </a><p class="res-header-id"><b>Narrativa gerada: MessageHeader c003f928-d3f8-4d60-85b0-47aa3b6447c2</b></p><a name="c003f928-d3f8-4d60-85b0-47aa3b6447c2"> </a><a name="hcc003f928-d3f8-4d60-85b0-47aa3b6447c2"> </a><p><b>event</b>: cs-fhir-events: PATIENT_UPDATE (Atualização de dados do utente)</p><h3>Destinations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style="display: none">*</td><td>EXTERNAL SYSTEM</td><td>DEV/EXTERNALSYSTEM</td><td><a href="Bundle-patient-new.html#Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8">Unidade Local de Saúde Dev</a></td></tr></table><p><b>sender</b>: <a href="Bundle-patient-new.html#Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8">Unidade Local de Saúde Dev</a></p><p><b>enterer</b>: <a href="Bundle-patient-update.html#Practitioner_7f6ffaa6-bb0b-3080-97b6-2254211691b5">Practitioner PIS TESTES </a></p><h3>Sources</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Endpoint</b></td></tr><tr><td style="display: none">*</td><td>ADT</td><td>DEV/ADT</td></tr></table><p><b>focus</b>: <a href="Bundle-patient-update.html#Patient_f0fcf351-df4e-3678-ae9b-b6fc4e2dee02">ANA CATARINA CARVALHO PAULINO (official) Female, DoB: 1950-09-11 ( Identificador sequencial do utente na entidade: 1884)</a></p></div>
+        </text>
+        <eventCoding>
+          <system value="http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events"/>
+          <code value="PATIENT_UPDATE"/>
+          <display value="Atualização de dados do utente"/>
+        </eventCoding>
+        <destination>
+          <name value="EXTERNAL SYSTEM"/>
+          <endpoint value="DEV/EXTERNALSYSTEM"/>
+          <receiver>
+            <reference value="Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8"/>
+            <display value="Unidade Local de Saúde Dev"/>
+          </receiver>
+        </destination>
+        <sender>
+          <reference value="Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8"/>
+          <display value="Unidade Local de Saúde Dev"/>
+        </sender>
+        <enterer>
+          <reference value="Practitioner/7f6ffaa6-bb0b-3080-97b6-2254211691b5"/>
+        </enterer>
+        <source>
+          <name value="ADT"/>
+          <endpoint value="DEV/ADT"/>
+        </source>
+        <focus>
+          <reference value="Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02"/>
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="f0fcf351-df4e-3678-ae9b-b6fc4e2dee02"/>
+        <meta>
+          <lastUpdated value="2025-10-24T12:55:15.000+01:00"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_f0fcf351-df4e-3678-ae9b-b6fc4e2dee02"> </a><p class="res-header-id"><b>Narrativa gerada: Patient f0fcf351-df4e-3678-ae9b-b6fc4e2dee02</b></p><a name="f0fcf351-df4e-3678-ae9b-b6fc4e2dee02"> </a><a name="hcf0fcf351-df4e-3678-ae9b-b6fc4e2dee02"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Última atualização: 2025-10-24 12:55:15+0100</p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">ANA CATARINA CARVALHO PAULINO (official) Female, DoB: 1950-09-11 ( Identificador sequencial do utente na entidade: 1884)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Estado conhecido do doente">Falecido:</td><td>false</td><td style="background-color: #f3f5da" title="Estado civil conhecido do doente">Estado civil:</td><td colspan="3"><span title="Códigos:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}">Casado</span></td></tr><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li>Número nacional de utente/382404836</li><li>Número de identificação civil/5645556</li><li>Número de identificação fiscal/124325555</li><li>Número do processo/99007246</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Formas de contactar o doente">Detalhes do contacto</td><td colspan="3"><ul><li>ph: 210987988(Home)</li><li>ph: 911345654(Mobile)</li><li><a href="mailto:ana@email.com">ana@email.com</a></li><li>RUA PROF PINTO CORREIA 10 R C DTO SANTAREM 2000-013 PT (home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Contacto nomeado: family member">family member:</td><td colspan="3"><ul><li>CASA PARA CORREIO </li><li>RUA DO CORREIO N.º1 AMÊNDOA 6120-156 PT </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Contacto nomeado: Emergency Contact">Emergency Contact:</td><td colspan="3"><ul><li>MARIA </li><li>RUA DA AJUDA ABADE DE NEIVA 4750-006 PT </li><li>ph: 911112112(Mobile)</li><li><a href="mailto:MAE@EMAIL.COM">MAE@EMAIL.COM</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Contacto nomeado: father">father:</td><td colspan="3"><ul><li>ANIBAL JOSE RIBEIRO </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Contacto nomeado: mother">mother:</td><td colspan="3"><ul><li>DELFINA ROSA GOMES </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ligações para doentes">Ligações:</td><td colspan="3"><ul><li>Médico de clínica geral: <a href="Bundle-patient-new.html#Practitioner_598fe4e3-dfb7-394f-b94c-1b0502ca3d1c">Practitioner FILIPE CASTRO </a></li><li>Médico de clínica geral: <a href="Bundle-patient-new.html#Organization_86db4073-1bcb-3791-a7da-3675bdeb5177">Organization: identifier = 3110300 (use: official, )</a></li><li>Organização de gestão: <a href="Bundle-patient-new.html#Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8">Organization Unidade Local de Saúde Dev</a></li></ul></td></tr></table></div>
+        </text>
+        <extension url="http://example.pt/fhir/hl7pt/extensions/birthplace">
+          <extension url="country">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://www.ine.pt"/>
+                <code value="PT"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="county">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://www.ine.pt"/>
+                <code value="14"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="municipality">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://www.ine.pt"/>
+                <code value="1414"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="parish">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://www.ine.pt"/>
+                <code value="141408"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://example.com/fhir/hl7pt/extensions/nationality">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://www.ine.pt"/>
+              <code value="PT"/>
+              <display value="PORTUGAL"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="notes">
+          <valueAnnotation>
+            <text value="notas relativas ao utente ex.Invisual"/>
+          </valueAnnotation>
+        </extension>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PI"/>
+              <display value="Patient internal identifier"/>
+            </coding>
+            <text value="Identificador sequencial do utente na entidade"/>
+          </type>
+          <system value="SONHO"/>
+          <value value="1884"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="HC"/>
+              <display value="Health Card Number"/>
+            </coding>
+            <text value="Número nacional de utente"/>
+          </type>
+          <system value="RNU"/>
+          <value value="382404836"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="CZ"/>
+              <display value="Citizenship Card"/>
+            </coding>
+            <text value="Número de identificação civil"/>
+          </type>
+          <system value="IRN"/>
+          <value value="5645556"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="TAX"/>
+              <display value="Tax ID number"/>
+            </coding>
+            <text value="Número de identificação fiscal"/>
+          </type>
+          <system value="AT"/>
+          <value value="124325555"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MR"/>
+              <display value="Medical record number"/>
+            </coding>
+            <text value="Número do processo"/>
+          </type>
+          <system value="SONHO"/>
+          <value value="99007246"/>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <family value="CARVALHO PAULINO"/>
+          <given value="ANA"/>
+          <given value="CATARINA"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="210987988"/>
+          <use value="home"/>
+          <rank value="1"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="911345654"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="ana@email.com"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1950-09-11"/>
+        <deceasedBoolean value="false"/>
+        <address>
+          <extension url="http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2">
+            <extension url="address-type">
+              <valueCoding>
+                <system value="http://spms.min-saude.pt/rnu/extensions/address-types"/>
+                <code value="MA"/>
+                <display value="Main Address"/>
+              </valueCoding>
+            </extension>
+            <extension url="county">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://www.ine.pt"/>
+                  <code value="14"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension url="municipality">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://www.ine.pt"/>
+                  <code value="1416"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension url="parish">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://www.ine.pt"/>
+                  <code value="141612"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </extension>
+          <use value="home"/>
+          <type value="both"/>
+          <line value="RUA PROF PINTO CORREIA 10 R C DTO"/>
+          <line value="SANTAREM"/>
+          <district value="SANTAREM"/>
+          <postalCode value="2000-013"/>
+          <country value="PT"/>
+        </address>
+        <maritalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+            <code value="M"/>
+            <display value="Casado"/>
+          </coding>
+        </maritalStatus>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+              <code value="FAMMEMB"/>
+              <display value="family member"/>
+            </coding>
+          </relationship>
+          <name>
+            <family value="CORREIO"/>
+            <given value="CASA"/>
+            <given value="PARA"/>
+          </name>
+          <address>
+            <extension url="http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2">
+              <extension url="address-type">
+                <valueCoding>
+                  <system value="V2"/>
+                  <code value="C"/>
+                  <display value="Current Or Temporary"/>
+                </valueCoding>
+              </extension>
+              <extension url="county">
+                <valueCodeableConcept>
+                  <coding>
+                    <system value="http://www.ine.pt"/>
+                    <code value="14"/>
+                  </coding>
+                </valueCodeableConcept>
+              </extension>
+              <extension url="municipality">
+                <valueCodeableConcept>
+                  <coding>
+                    <system value="http://www.ine.pt"/>
+                    <code value="1413"/>
+                  </coding>
+                </valueCodeableConcept>
+              </extension>
+              <extension url="parish">
+                <valueCodeableConcept>
+                  <coding>
+                    <system value="http://www.ine.pt"/>
+                    <code value="141302"/>
+                  </coding>
+                </valueCodeableConcept>
+              </extension>
+            </extension>
+            <type value="postal"/>
+            <line value="RUA DO CORREIO N.º1"/>
+            <city value="AMÊNDOA"/>
+            <district value="SANTAREM"/>
+            <postalCode value="6120-156"/>
+            <country value="PT"/>
+          </address>
+        </contact>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+              <code value="C"/>
+              <display value="Emergency Contact"/>
+            </coding>
+          </relationship>
+          <name>
+            <given value="MARIA"/>
+          </name>
+          <telecom>
+            <system value="phone"/>
+            <value value="911112112"/>
+            <use value="mobile"/>
+          </telecom>
+          <telecom>
+            <system value="email"/>
+            <value value="MAE@EMAIL.COM"/>
+          </telecom>
+          <address>
+            <line value="RUA DA AJUDA"/>
+            <city value="ABADE DE NEIVA"/>
+            <district value="BRAGA"/>
+            <postalCode value="4750-006"/>
+            <country value="PT"/>
+          </address>
+        </contact>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+              <code value="FTH"/>
+              <display value="father"/>
+            </coding>
+          </relationship>
+          <name>
+            <family value="RIBEIRO"/>
+            <given value="ANIBAL"/>
+            <given value="JOSE"/>
+          </name>
+        </contact>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+              <code value="MTH"/>
+              <display value="mother"/>
+            </coding>
+          </relationship>
+          <name>
+            <family value="GOMES"/>
+            <given value="DELFINA"/>
+            <given value="ROSA"/>
+          </name>
+        </contact>
+        <generalPractitioner>
+          <reference value="Practitioner/598fe4e3-dfb7-394f-b94c-1b0502ca3d1c"/>
+        </generalPractitioner>
+        <generalPractitioner>
+          <reference value="Organization/86db4073-1bcb-3791-a7da-3675bdeb5177"/>
+        </generalPractitioner>
+        <managingOrganization>
+          <reference value="Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8"/>
+        </managingOrganization>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Organization>
+        <id value="70cfff33-ebcb-4f99-9bf5-c560575295d8"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8"> </a><p class="res-header-id"><b>Narrativa gerada: Organization 70cfff33-ebcb-4f99-9bf5-c560575295d8</b></p><a name="70cfff33-ebcb-4f99-9bf5-c560575295d8"> </a><a name="hc70cfff33-ebcb-4f99-9bf5-c560575295d8"> </a><p><b>active</b>: true</p><p><b>name</b>: Unidade Local de Saúde</p></div>
+        </text>
+        <active value="true"/>
+        <name value="Unidade Local de Saúde"/>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Practitioner>
+        <id value="7f6ffaa6-bb0b-3080-97b6-2254211691b5"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_7f6ffaa6-bb0b-3080-97b6-2254211691b5"> </a><p class="res-header-id"><b>Narrativa gerada: Practitioner 7f6ffaa6-bb0b-3080-97b6-2254211691b5</b></p><a name="7f6ffaa6-bb0b-3080-97b6-2254211691b5"> </a><a name="hc7f6ffaa6-bb0b-3080-97b6-2254211691b5"> </a><p><b>identifier</b>: Numero interno do profissional/2953 (utilização: usual, ), Numero mecanográfico do profissional/112 (utilização: official, )</p><p><b>name</b>: PIS TESTES </p></div>
+        </text>
+        <identifier>
+          <use value="usual"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="EI"/>
+              <display value="Employee number"/>
+            </coding>
+            <text value="Numero interno do profissional"/>
+          </type>
+          <system value="SONHO"/>
+          <value value="2953"/>
+        </identifier>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="EI"/>
+              <display value="Employee number"/>
+            </coding>
+            <text value="Numero mecanográfico do profissional"/>
+          </type>
+          <system value="RHV"/>
+          <value value="112"/>
+        </identifier>
+        <name>
+          <family value="TESTES"/>
+          <given value="PIS"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Practitioner>
+        <id value="598fe4e3-dfb7-394f-b94c-1b0502ca3d1c"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_598fe4e3-dfb7-394f-b94c-1b0502ca3d1c"> </a><p class="res-header-id"><b>Narrativa gerada: Practitioner 598fe4e3-dfb7-394f-b94c-1b0502ca3d1c</b></p><a name="598fe4e3-dfb7-394f-b94c-1b0502ca3d1c"> </a><a name="hc598fe4e3-dfb7-394f-b94c-1b0502ca3d1c"> </a><p><b>name</b>: MARIA SANTOS </p></div>
+        </text>
+        <name>
+          <family value="SANTOS"/>
+          <given value="MARIA"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Organization>
+        <id value="86db4073-1bcb-3791-a7da-3675bdeb5177"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_86db4073-1bcb-3791-a7da-3675bdeb5177"> </a><p class="res-header-id"><b>Narrativa gerada: Organization 86db4073-1bcb-3791-a7da-3675bdeb5177</b></p><a name="86db4073-1bcb-3791-a7da-3675bdeb5177"> </a><a name="hc86db4073-1bcb-3791-a7da-3675bdeb5177"> </a><p><b>identifier</b>: 2010105 (utilização: official, )</p><p><b>active</b>: true</p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <value value="2010105"/>
+        </identifier>
+        <active value="true"/>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Coverage>
+        <id value="5b9d4a7a-1823-4998-9d16-216fcc05a5b3"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Coverage_5b9d4a7a-1823-4998-9d16-216fcc05a5b3"> </a><p class="res-header-id"><b>Narrativa gerada: Coverage 5b9d4a7a-1823-4998-9d16-216fcc05a5b3</b></p><a name="5b9d4a7a-1823-4998-9d16-216fcc05a5b3"> </a><a name="hc5b9d4a7a-1823-4998-9d16-216fcc05a5b3"> </a><p><b>status</b>: Active</p><p><b>beneficiary</b>: <a href="Bundle-patient-update.html#Patient_f0fcf351-df4e-3678-ae9b-b6fc4e2dee02">ANA CATARINA CARVALHO PAULINO (official) Female, DoB: 1950-09-11 ( Identificador sequencial do utente na entidade: 1884)</a></p><p><b>period</b>: ?? --&gt; 2016-06-16 00:00:00+0100</p><p><b>payor</b>: <a href="Organization/f1cf7567-92e6-3df8-9406-39892836a36b">ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO</a></p></div>
+        </text>
+        <status value="active"/>
+        <beneficiary>
+          <reference value="Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02"/>
+          <identifier>
+            <system value="ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO"/>
+            <value value="015809870CA"/>
+          </identifier>
+        </beneficiary>
+        <period>
+          <end value="2016-06-16T00:00:00+01:00"/>
+        </period>
+        <payor>
+          <reference value="Organization/f1cf7567-92e6-3df8-9406-39892836a36b"/>
+          <identifier>
+            <system value="SONHO"/>
+            <value value="910005"/>
+          </identifier>
+          <display value="ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO"/>
+        </payor>
+      </Coverage>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Coverage>
+        <id value="4b270fef-9033-46fc-b36a-aac2b87422dd"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Coverage_4b270fef-9033-46fc-b36a-aac2b87422dd"> </a><p class="res-header-id"><b>Narrativa gerada: Coverage 4b270fef-9033-46fc-b36a-aac2b87422dd</b></p><a name="4b270fef-9033-46fc-b36a-aac2b87422dd"> </a><a name="hc4b270fef-9033-46fc-b36a-aac2b87422dd"> </a><p><b>status</b>: Active</p><p><b>beneficiary</b>: <a href="Bundle-patient-update.html#Patient_f0fcf351-df4e-3678-ae9b-b6fc4e2dee02">ANA CATARINA CARVALHO PAULINO (official) Female, DoB: 1950-09-11 ( Identificador sequencial do utente na entidade: 1884)</a></p><p><b>period</b>: ?? --&gt; 2012-09-11 00:00:00+0100</p><p><b>payor</b>: <a href="Organization/0040e52f-85c7-3d99-b3dd-4c6431285d30">ADSE - SNS</a></p></div>
+        </text>
+        <status value="active"/>
+        <beneficiary>
+          <reference value="Patient/f0fcf351-df4e-3678-ae9b-b6fc4e2dee02"/>
+          <identifier>
+            <system value="ADSE - SNS"/>
+            <value value="015809870CA"/>
+          </identifier>
+        </beneficiary>
+        <period>
+          <end value="2012-09-11T00:00:00+01:00"/>
+        </period>
+        <payor>
+          <reference value="Organization/0040e52f-85c7-3d99-b3dd-4c6431285d30"/>
+          <identifier>
+            <system value="SONHO"/>
+            <value value="935640"/>
+          </identifier>
+          <display value="ADSE - SNS"/>
+        </payor>
+      </Coverage>
+    </resource>
+  </entry>
+</Bundle>

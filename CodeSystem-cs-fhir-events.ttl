@@ -1,0 +1,141 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-fhir-events"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem cs-fhir-events</b></p><a name=\"cs-fhir-events\"> </a><a name=\"hccs-fhir-events\"> </a><p>Este case-sensitive sistema de código <code>http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style=\"white-space:nowrap\">PATIENT_NEW<a name=\"cs-fhir-events-PATIENT_NEW\"> </a></td><td>Criação de novo utente</td><td>Evento FHIR que representa a criação de um novo utente.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_NEW_RESPONSE<a name=\"cs-fhir-events-PATIENT_NEW_RESPONSE\"> </a></td><td>Resposta da criação de novo utente</td><td>Resposta FHIR à criação de um novo utente.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_UPDATE<a name=\"cs-fhir-events-PATIENT_UPDATE\"> </a></td><td>Atualização de dados do utente</td><td>Evento FHIR que representa a atualização de dados do utente.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_UPDATE_RESPONSE<a name=\"cs-fhir-events-PATIENT_UPDATE_RESPONSE\"> </a></td><td>Resposta da atualização de dados do utente</td><td>Resposta FHIR à atualização de dados do utente.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_LINK<a name=\"cs-fhir-events-PATIENT_LINK\"> </a></td><td>Associação de registos de identificações de utente</td><td>Evento FHIR que representa a associação (link) de utentes.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_LINK_RESPONSE<a name=\"cs-fhir-events-PATIENT_LINK_RESPONSE\"> </a></td><td>Resposta da associação de utentes</td><td>Resposta FHIR à associação de utentes.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_UNLINK<a name=\"cs-fhir-events-PATIENT_UNLINK\"> </a></td><td>Desassociação de utentes</td><td>Evento FHIR que representa a desassociação (unlink) de utentes.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_UNLINK_RESPONSE<a name=\"cs-fhir-events-PATIENT_UNLINK_RESPONSE\"> </a></td><td>Resposta da desassociação de utentes</td><td>Resposta FHIR à desassociação de utentes.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_MERGE<a name=\"cs-fhir-events-PATIENT_MERGE\"> </a></td><td>Fusão de utentes</td><td>Evento FHIR que representa a fusão de dois ou mais utentes.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_MERGE_RESPONSE<a name=\"cs-fhir-events-PATIENT_MERGE_RESPONSE\"> </a></td><td>Resposta da fusão de utentes</td><td>Resposta FHIR à fusão de utentes.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_SEARCH<a name=\"cs-fhir-events-PATIENT_SEARCH\"> </a></td><td>Pesquisa de utente</td><td>Evento FHIR que representa a pesquisa de utentes no sistema.</td></tr><tr><td style=\"white-space:nowrap\">PATIENT_SEARCH_RESPONSE<a name=\"cs-fhir-events-PATIENT_SEARCH_RESPONSE\"> </a></td><td>Resposta à pesquisa de utente</td><td>Resposta FHIR à pesquisa de utentes no sistema.</td></tr><tr><td style=\"white-space:nowrap\">EMERGENCY_ADMISSION<a name=\"cs-fhir-events-EMERGENCY_ADMISSION\"> </a></td><td>Admissão à urgência</td><td>Criação de um novo episodio de urgencia. HL7v2: ADT^A04.</td></tr><tr><td style=\"white-space:nowrap\">EMERGENCY_ADMISSION_RESPONSE<a name=\"cs-fhir-events-EMERGENCY_ADMISSION_RESPONSE\"> </a></td><td>Resposta à Admissão à urgência</td><td>Resposta à criação de um novo episodio de urgencia. HL7v2: ACK^A04'.</td></tr><tr><td style=\"white-space:nowrap\">EMERGENCY_UPDATE<a name=\"cs-fhir-events-EMERGENCY_UPDATE\"> </a></td><td>Atualização de dados de admissão do episodio de urgência</td><td>Atualização de dados do episódio de urgência. HL7v2: ADT^A08 com Action Code 'U'.</td></tr><tr><td style=\"white-space:nowrap\">EMERGENCY_UPDATE_RESPONSE<a name=\"cs-fhir-events-EMERGENCY_UPDATE_RESPONSE\"> </a></td><td>Resposta à atualização de dados de admissão do episodio de urgência</td><td>Resposta à atualização de dados de admissão do episódio de urgência. HL7v2: ACK^A08.</td></tr><tr><td style=\"white-space:nowrap\">EMERGENCY_UPDATE_TRIAGE<a name=\"cs-fhir-events-EMERGENCY_UPDATE_TRIAGE\"> </a></td><td>Atualização do episodio de urgência com a triagem realizada</td><td>Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ADT^A08 com Action Code 'T'.</td></tr><tr><td style=\"white-space:nowrap\">EMERGENCY_UPDATE_TRIAGE_RESPONSE<a name=\"cs-fhir-events-EMERGENCY_UPDATE_TRIAGE_RESPONSE\"> </a></td><td>Resposta à atualização do episodio de urgência com a triagem realizada</td><td>Resposta Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ACK^A08.</td></tr><tr><td style=\"white-space:nowrap\">EMERGENCY_UPDATE_PATIENT_CALL<a name=\"cs-fhir-events-EMERGENCY_UPDATE_PATIENT_CALL\"> </a></td><td>Atualização do episodio de urgência com chamada do utente</td><td>Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ADT^A08 com Action Code 'CP'.</td></tr><tr><td style=\"white-space:nowrap\">EMERGENCY_UPDATE_PATIENT_CALL_RESPONSE<a name=\"cs-fhir-events-EMERGENCY_UPDATE_PATIENT_CALL_RESPONSE\"> </a></td><td>Resposta à atualização do episodio de urgência com chamada do utente</td><td>Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ACK^A08.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events"^^xsd:anyURI ;
+     fhir:l <http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "CS_FHIREvents"] ; # 
+  fhir:title [ fhir:v "FHIR Events CodeSystem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-02-13T20:27:46+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Portugal"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Portugal" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.pt" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@hl7.pt" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "HL7 Portugal" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "geral@hl7.pt" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Código dos eventos FHIR relacionados com transações baseadas em mensagens HL7v2.\nEste CodeSystem inclui mapeamentos para eventos de diferentes domínios (ex: gestão de utentes, emergência, etc.)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PT" ] ;
+       fhir:display [ fhir:v "Portugal" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "20"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "PATIENT_NEW" ] ;
+     fhir:display [ fhir:v "Criação de novo utente" ] ;
+     fhir:definition [ fhir:v "Evento FHIR que representa a criação de um novo utente." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_NEW_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta da criação de novo utente" ] ;
+     fhir:definition [ fhir:v "Resposta FHIR à criação de um novo utente." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_UPDATE" ] ;
+     fhir:display [ fhir:v "Atualização de dados do utente" ] ;
+     fhir:definition [ fhir:v "Evento FHIR que representa a atualização de dados do utente." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_UPDATE_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta da atualização de dados do utente" ] ;
+     fhir:definition [ fhir:v "Resposta FHIR à atualização de dados do utente." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_LINK" ] ;
+     fhir:display [ fhir:v "Associação de registos de identificações de utente" ] ;
+     fhir:definition [ fhir:v "Evento FHIR que representa a associação (link) de utentes." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_LINK_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta da associação de utentes" ] ;
+     fhir:definition [ fhir:v "Resposta FHIR à associação de utentes." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_UNLINK" ] ;
+     fhir:display [ fhir:v "Desassociação de utentes" ] ;
+     fhir:definition [ fhir:v "Evento FHIR que representa a desassociação (unlink) de utentes." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_UNLINK_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta da desassociação de utentes" ] ;
+     fhir:definition [ fhir:v "Resposta FHIR à desassociação de utentes." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_MERGE" ] ;
+     fhir:display [ fhir:v "Fusão de utentes" ] ;
+     fhir:definition [ fhir:v "Evento FHIR que representa a fusão de dois ou mais utentes." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_MERGE_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta da fusão de utentes" ] ;
+     fhir:definition [ fhir:v "Resposta FHIR à fusão de utentes." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_SEARCH" ] ;
+     fhir:display [ fhir:v "Pesquisa de utente" ] ;
+     fhir:definition [ fhir:v "Evento FHIR que representa a pesquisa de utentes no sistema." ]
+  ] [
+     fhir:code [ fhir:v "PATIENT_SEARCH_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta à pesquisa de utente" ] ;
+     fhir:definition [ fhir:v "Resposta FHIR à pesquisa de utentes no sistema." ]
+  ] [
+     fhir:code [ fhir:v "EMERGENCY_ADMISSION" ] ;
+     fhir:display [ fhir:v "Admissão à urgência" ] ;
+     fhir:definition [ fhir:v "Criação de um novo episodio de urgencia. HL7v2: ADT^A04." ]
+  ] [
+     fhir:code [ fhir:v "EMERGENCY_ADMISSION_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta à Admissão à urgência" ] ;
+     fhir:definition [ fhir:v "Resposta à criação de um novo episodio de urgencia. HL7v2: ACK^A04'." ]
+  ] [
+     fhir:code [ fhir:v "EMERGENCY_UPDATE" ] ;
+     fhir:display [ fhir:v "Atualização de dados de admissão do episodio de urgência" ] ;
+     fhir:definition [ fhir:v "Atualização de dados do episódio de urgência. HL7v2: ADT^A08 com Action Code 'U'." ]
+  ] [
+     fhir:code [ fhir:v "EMERGENCY_UPDATE_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta à atualização de dados de admissão do episodio de urgência" ] ;
+     fhir:definition [ fhir:v "Resposta à atualização de dados de admissão do episódio de urgência. HL7v2: ACK^A08." ]
+  ] [
+     fhir:code [ fhir:v "EMERGENCY_UPDATE_TRIAGE" ] ;
+     fhir:display [ fhir:v "Atualização do episodio de urgência com a triagem realizada" ] ;
+     fhir:definition [ fhir:v "Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ADT^A08 com Action Code 'T'." ]
+  ] [
+     fhir:code [ fhir:v "EMERGENCY_UPDATE_TRIAGE_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta à atualização do episodio de urgência com a triagem realizada" ] ;
+     fhir:definition [ fhir:v "Resposta Atualização de dados do episódio de urgência durante a fase de triagem. HL7v2: ACK^A08." ]
+  ] [
+     fhir:code [ fhir:v "EMERGENCY_UPDATE_PATIENT_CALL" ] ;
+     fhir:display [ fhir:v "Atualização do episodio de urgência com chamada do utente" ] ;
+     fhir:definition [ fhir:v "Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ADT^A08 com Action Code 'CP'." ]
+  ] [
+     fhir:code [ fhir:v "EMERGENCY_UPDATE_PATIENT_CALL_RESPONSE" ] ;
+     fhir:display [ fhir:v "Resposta à atualização do episodio de urgência com chamada do utente" ] ;
+     fhir:definition [ fhir:v "Atualização de dados do episódio de urgência na fase de chamada do utente. HL7v2: ACK^A08." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

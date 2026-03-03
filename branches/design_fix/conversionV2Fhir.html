@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Conversão de mensagens entre Standards - HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1 v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/affiliate.css" rel="stylesheet"/>
+<!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/colors.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+  <a id="affiliate-logo" no-external="true" href="http://hl7.eu">
+    <img height="71" alt="Visit the HL7 affiliate website" src="assets/images/affiliate.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="30" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - STU1
+
+
+
+  <img alt="Portugal flag" src="assets/images/prt.svg" height="16" title="Portugal"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificação
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="fun_spec.html">Especificação Funcional</a>
+      </li>
+      <li>
+        <a href="tech_spec.html">Especificação Técnica</a>
+      </li>
+      <li>
+        <a href="conversionV2Fhir.html">Conversão HL7 v2 para FHIR</a>
+      </li>
+      <li>
+        <a href="conversionFhirV2.html">Conversão FHIR para HL7 v2</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefactos</a>
+  </li>
+  <li>
+    <a href="examples.html">Exemplos</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Histórico de Alterações</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Conversão de mensagens entre Standards</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1, publicado por HL7 Portugal. Este guia não é uma publicação autorizada; é a compilação contínua para a versão 1.0.0 construída pela FHIR (HL7&reg; FHIR&reg; Standard) CI Build. Esta versão é baseada no conteúdo atual de <a href='https://github.com/hl7-pt/patient-admin-ig/tree/design_fix'>https://github.com/hl7-pt/patient-admin-ig/tree/design_fix</a> e muda regularmente. Veja o <a href='http://example.com/fhir/hl7pt/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Conversão de mensagens entre Standards</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#hl7-v2-para-fhir" id="markdown-toc-hl7-v2-para-fhir">HL7 v2 para FHIR</a>    <ul>
+      <li><a href="#criação-de-novo-utente" id="markdown-toc-criação-de-novo-utente">Criação de Novo Utente</a></li>
+      <li><a href="#atulização-de-dados-do-utente" id="markdown-toc-atulização-de-dados-do-utente">Atulização de dados do Utente</a></li>
+      <li><a href="#fusao-de-dados-do-utente" id="markdown-toc-fusao-de-dados-do-utente">Fusao de dados do Utente</a></li>
+      <li><a href="#associação-de-dados-do-utente" id="markdown-toc-associação-de-dados-do-utente">Associação de dados do Utente</a></li>
+      <li><a href="#deassociação-de-dados-do-utente" id="markdown-toc-deassociação-de-dados-do-utente">Deassociação de dados do Utente</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h2 id="hl7-v2-para-fhir">HL7 v2 para FHIR</h2>
+
+<p>Muitas ddas implementações exigem que seja realizado a conversão entre mensagens HL7 v2 e mensagens FHIR em ambos os sentidos. Apesar de existir alguma informação de conversão entre HL7 v2 e FHIR, no sentido de FHIR para HL7 v2 nem por isso. Esta secção pretende dar uma orientação para que em implementaçãoes que necessitem de mapeamento de mensagens entre os dois standards em ambos os sentidos haja um entendimento comum.</p>
+
+<h3 id="criação-de-novo-utente">Criação de Novo Utente</h3>
+
+<p>A mensagem que comunica a criação de um novo utente é uma ADT^A28. Os segmentos e os campos relevantes para este evento são:</p>
+
+<ul>
+  <li>MSH (Recurso MessageHeader)
+    <ul>
+      <li>Aplicação de envio (MessageHeader.source)</li>
+      <li>Entidade emissora (MessageHeader.sender)</li>
+      <li>Aplicação destinatária (MessageHeader.destination.name / MessageHeader.destination.endpoint)</li>
+      <li>Entidade destinatária (MessageHeader.destination.receiver)</li>
+      <li>Tipo Mensagem ^ Tipo Evento (MessageHeader.eventCoding =&gt; PATIENT_NEW)</li>
+    </ul>
+  </li>
+  <li>EVN
+    <ul>
+      <li>dados do evento
+        <ul>
+          <li>data hora do evento (eventualmente necessário para algumas implementações como data/hora de updated)</li>
+          <li>utilizador que executou a ação  (MessageHeader.enterer =&gt; referencia para o recurso Practitioner)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>PID (Recurso Patient)
+    <ul>
+      <li>identificadores do utentes</li>
+      <li>dados de identificação disponiveis</li>
+    </ul>
+  </li>
+  <li>ZID (Recurso Coverage)
+    <ul>
+      <li>dados relativos a isenções associadas ao utente (Coverage.type)</li>
+    </ul>
+  </li>
+  <li>ROL
+    <ul>
+      <li>Dados do medico de familia e centro de saúde do utente</li>
+    </ul>
+  </li>
+  <li>NK1 (Recurso Patient)
+    <ul>
+      <li>dados de contactos de pessoas relacionadas (Patient.contact)</li>
+    </ul>
+  </li>
+  <li>IN1 / IN2 (Recurso Coverage)
+    <ul>
+      <li>dados relativos a entidades responsáveis associadas ao utente (Coverage.payor)</li>
+    </ul>
+  </li>
+  <li>OBX (Recurso Patient)
+    <ul>
+      <li>observações associadas ao registo do utente (Patient.extension("notes"))</li>
+    </ul>
+  </li>
+  <li>PV1
+    <ul>
+      <li>algumas mensagens poderão vir com PV1.2 ="N" indicando que não há informação relativa a episódio, pelo que não é criado qualquer recurso para este segmento.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="atulização-de-dados-do-utente">Atulização de dados do Utente</h3>
+
+<p>A mensagem que comunica a atualização de dados do utente é uma ADT^A31. Algumas implementações, nomeadamente no contexto de Portugal, as que trocam dados com o SONHO via LIGHt, será ser uma ADT^A08 na qual vem o segmento PV1 com o campo PV1.2 = "N". Os segmentos e os campos relevantes para este evento são:</p>
+
+<ul>
+  <li>MSH (Recurso MessageHeader)
+    <ul>
+      <li>Aplicação de envio (MessageHeader.source)</li>
+      <li>Entidade emissora (MessageHeader.sender)</li>
+      <li>Aplicação destinatária (MessageHeader.destination.name / MessageHeader.destination.endpoint)</li>
+      <li>Entidade destinatária (MessageHeader.destination.receiver)</li>
+      <li>Tipo Mensagem ^ Tipo Evento (MessageHeader.eventCoding =&gt; PATIENT_UPDATE)</li>
+    </ul>
+  </li>
+  <li>EVN
+    <ul>
+      <li>dados do evento
+        <ul>
+          <li>data hora do evento (eventualmente necessário para algumas implementações como data/hora de updated)</li>
+          <li>utilizador que executou a ação  (MessageHeader.enterer =&gt; referencia para o recurso Practitioner)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>PID (Recurso Patient)
+    <ul>
+      <li>identificadores do utentes</li>
+      <li>dados de identificação disponiveis</li>
+    </ul>
+  </li>
+  <li>ZID (Recurso Coverage)
+    <ul>
+      <li>dados relativos a isenções associadas ao utente (Coverage.type)</li>
+    </ul>
+  </li>
+  <li>ROL
+    <ul>
+      <li>Dados do medico de familia e centro de saúde do utente</li>
+    </ul>
+  </li>
+  <li>NK1 (Recurso Patient)
+    <ul>
+      <li>dados de contactos de pessoas relacionadas (Patient.contact)</li>
+    </ul>
+  </li>
+  <li>IN1 / IN2 (Recurso Coverage)
+    <ul>
+      <li>dados relativos a entidades responsáveis associadas ao utente (Coverage.payor)</li>
+    </ul>
+  </li>
+  <li>OBX (Recurso Patient)
+    <ul>
+      <li>observações associadas ao registo do utente (Patient.extension("notes"))</li>
+    </ul>
+  </li>
+  <li>PV1
+    <ul>
+      <li>algumas mensagens poderão vir com PV1.2 ="N" indicando que não há informação relativa a episódio, pelo que não é criado qualquer recurso para este segmento.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="fusao-de-dados-do-utente">Fusao de dados do Utente</h3>
+
+<p>A mensagem que comunica a fusão de 2 registos do mesmo utente é uma ADT^A40. Os segmentos e os campos relevantes para este evento são:</p>
+
+<ul>
+  <li>MSH (Recurso MessageHeader)
+    <ul>
+      <li>Aplicação de envio (MessageHeader.source)</li>
+      <li>Entidade emissora (MessageHeader.sender)</li>
+      <li>Aplicação destinatária (MessageHeader.destination.name / MessageHeader.destination.endpoint)</li>
+      <li>Entidade destinatária (MessageHeader.destination.receiver)</li>
+      <li>Tipo Mensagem ^ Tipo Evento (MessageHeader.eventCoding =&gt; PATIENT_MERGE)</li>
+    </ul>
+  </li>
+  <li>EVN
+    <ul>
+      <li>dados do evento
+        <ul>
+          <li>data hora do evento (eventualmente necessário para algumas implementações como data/hora de updated)</li>
+          <li>utilizador que executou a ação  (MessageHeader.enterer =&gt; referencia para o recurso Practitioner)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>PID (Recurso Patient principal)
+    <ul>
+      <li>identificadores do utentes</li>
+      <li>dados de identificação disponiveis</li>
+    </ul>
+  </li>
+  <li>PD1 (Recurso Patient principal)
+    <ul>
+      <li>este segmento vem com a informação de confidencialidade dos dados (Patient.meta.security)</li>
+    </ul>
+  </li>
+  <li>MRG (Recurso Patient)
+    <ul>
+      <li>este segemento é mapeado para um segundo recurso Patient que vai ser referenciado no recurso:
+        <ul>
+          <li>Patient.link.other(Patient (2º))</li>
+          <li>Patient.link.type = replaces</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="associação-de-dados-do-utente">Associação de dados do Utente</h3>
+
+<p>A mensagem que comunica a associação de 2 registos do mesmo utente é uma ADT^A24. Os segmentos e os campos relevantes para este evento são:</p>
+
+<ul>
+  <li>MSH (Recurso MessageHeader)
+    <ul>
+      <li>Aplicação de envio (MessageHeader.source)</li>
+      <li>Entidade emissora (MessageHeader.sender)</li>
+      <li>Aplicação destinatária (MessageHeader.destination.name / MessageHeader.destination.endpoint)</li>
+      <li>Entidade destinatária (MessageHeader.destination.receiver)</li>
+      <li>Tipo Mensagem ^ Tipo Evento (MessageHeader.eventCoding =&gt; PATIENT_LINK)</li>
+    </ul>
+  </li>
+  <li>EVN
+    <ul>
+      <li>dados do evento
+        <ul>
+          <li>data hora do evento (eventualmente necessário para algumas implementações como data/hora de updated)</li>
+          <li>utilizador que executou a ação  (MessageHeader.enterer =&gt; referencia para o recurso Practitioner)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>PID (Recurso Patient principal)
+    <ul>
+      <li>identificadores do utentes</li>
+      <li>dados de identificação disponiveis</li>
+    </ul>
+  </li>
+  <li>PD1 (Recurso Patient principal)
+    <ul>
+      <li>este segmento vem com a informação de confidencialidade dos dados (Patient.meta.security)</li>
+    </ul>
+  </li>
+  <li>MRG (Recurso Patient)
+    <ul>
+      <li>este segemento é mapeado para um segundo recurso Patient que vai ser referenciado no recurso:
+        <ul>
+          <li>Patient.link.other(Patient (2º))</li>
+          <li>Patient.link.type = replaces</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="deassociação-de-dados-do-utente">Deassociação de dados do Utente</h3>
+
+<p>A mensagem que comunica a atualização de dados do utente é uma ADT^A37. Os segmentos e os campos relevantes para este evento são:</p>
+
+<ul>
+  <li>MSH (Recurso MessageHeader e Recurso Bundle)
+    <ul>
+      <li>Aplicação de envio (MessageHeader.source)</li>
+      <li>Entidade emissora (MessageHeader.sender)</li>
+      <li>Aplicação destinatária (MessageHeader.destination.name / MessageHeader.destination.endpoint)</li>
+      <li>Entidade destinatária (MessageHeader.destination.receiver)</li>
+      <li>Data/hora (Bundle.timestamp)</li>
+      <li>Tipo Mensagem ^ Tipo Evento (MessageHeader.eventCoding =&gt; PATIENT_UNLINK)</li>
+    </ul>
+  </li>
+  <li>EVN
+    <ul>
+      <li>dados do evento
+        <ul>
+          <li>data hora do evento (eventualmente necessário para algumas implementações como data/hora de updated)</li>
+          <li>utilizador que executou a ação  (MessageHeader.enterer =&gt; referencia para o recurso Practitioner)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>PID (Recurso Patient principal)
+    <ul>
+      <li>identificadores do utentes</li>
+      <li>dados de identificação disponiveis</li>
+    </ul>
+  </li>
+  <li>PD1 (Recurso Patient principal)
+    <ul>
+      <li>este segmento vem com a informação de confidencialidade dos dados (Patient.meta.security)</li>
+    </ul>
+  </li>
+  <li>MRG (Recurso Patient)
+    <ul>
+      <li>este segemento é mapeado para um segundo recurso Patient que vai ser referenciado no recurso:
+        <ul>
+          <li>Patient.link.other(Patient (2º))</li>
+          <li>Patient.link.type = seealso</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.pt">HL7 Portugal</a>.  Package hl7.fhir.pt.patient-admin-ig#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Feb 1, 2026 11:20+0000">2026-02-01</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

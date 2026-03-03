@@ -1,0 +1,10 @@
+{
+  "codeSystems" : [{
+    "url" : "http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CS_FHIREvents",
+    "title" : "FHIR Events CodeSystem",
+    "description" : "Código dos eventos FHIR relacionados com transações baseadas em mensagens HL7v2.\nEste CodeSystem inclui mapeamentos para eventos de diferentes domínios (ex: gestão de utentes, emergência, etc.)."
+  }]
+}

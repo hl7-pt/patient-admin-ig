@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-patient-identity-events"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: ValueSet vs-patient-identity-events</b></p><a name="vs-patient-identity-events"> </a><a name="hcvs-patient-identity-events"> </a><ul><li>Include estes códigos, tal como definidos em <a href="CodeSystem-cs-fhir-events.html"><code>http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> versão &#x1F4E6;1.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_NEW">PATIENT_NEW</a></td><td>Criação de novo utente</td><td>Evento FHIR que representa a criação de um novo utente.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_NEW_RESPONSE">PATIENT_NEW_RESPONSE</a></td><td>Resposta da criação de novo utente</td><td>Resposta FHIR à criação de um novo utente.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_UPDATE">PATIENT_UPDATE</a></td><td>Atualização de dados do utente</td><td>Evento FHIR que representa a atualização de dados do utente.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_UPDATE_RESPONSE">PATIENT_UPDATE_RESPONSE</a></td><td>Resposta da atualização de dados do utente</td><td>Resposta FHIR à atualização de dados do utente.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_MERGE">PATIENT_MERGE</a></td><td>Fusão de utentes</td><td>Evento FHIR que representa a fusão de dois ou mais utentes.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_MERGE_RESPONSE">PATIENT_MERGE_RESPONSE</a></td><td>Resposta da fusão de utentes</td><td>Resposta FHIR à fusão de utentes.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_LINK">PATIENT_LINK</a></td><td>Associação de registos de identificações de utente</td><td>Evento FHIR que representa a associação (link) de utentes.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_LINK_RESPONSE">PATIENT_LINK_RESPONSE</a></td><td>Resposta da associação de utentes</td><td>Resposta FHIR à associação de utentes.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_UNLINK">PATIENT_UNLINK</a></td><td>Desassociação de utentes</td><td>Evento FHIR que representa a desassociação (unlink) de utentes.</td></tr><tr><td><a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_UNLINK_RESPONSE">PATIENT_UNLINK_RESPONSE</a></td><td>Resposta da desassociação de utentes</td><td>Resposta FHIR à desassociação de utentes.</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://example.com/fhir/hl7pt/ValueSet/vs-patient-identity-events"/>
+  <version value="1.0.0"/>
+  <name value="VS_PatientIdentityEvents"/>
+  <title value="Eventos FHIR para Gestão de Identidade de Utentes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-02-01T11:20:10+00:00"/>
+  <publisher value="HL7 Portugal"/>
+  <contact>
+    <name value="HL7 Portugal"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.pt"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.pt"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7 Portugal"/>
+    <telecom>
+      <system value="email"/>
+      <value value="geral@hl7.pt"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Eventos FHIR relacionados com a gestão da identidade de utentes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PT"/>
+      <display value="Portugal"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events"/>
+      <concept>
+        <code value="PATIENT_NEW"/>
+        <display value="Criação de novo utente"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_NEW_RESPONSE"/>
+        <display value="Resposta da criação de novo utente"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_UPDATE"/>
+        <display value="Atualização de dados do utente"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_UPDATE_RESPONSE"/>
+        <display value="Resposta da atualização de dados do utente"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_MERGE"/>
+        <display value="Fusão de utentes"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_MERGE_RESPONSE"/>
+        <display value="Resposta da fusão de utentes"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_LINK"/>
+        <display value="Associação de registos de identificações de utente"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_LINK_RESPONSE"/>
+        <display value="Resposta da associação de utentes"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_UNLINK"/>
+        <display value="Desassociação de utentes"/>
+      </concept>
+      <concept>
+        <code value="PATIENT_UNLINK_RESPONSE"/>
+        <display value="Resposta da desassociação de utentes"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

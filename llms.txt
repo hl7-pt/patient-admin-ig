@@ -1,0 +1,58 @@
+# hl7.fhir.pt.patient-admin-ig#1.0.0: HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1
+
+## Pages
+
+* [Inicio](index.md)
+* [Exemplos de mensagens](examples.md)
+* [Conversão de mensagens entre Standards](conversionFhirV2.md)
+* [Especificação Funcional](fun_spec.md)
+* [Artifacts Summary](artifacts.md)
+* [Downloads](downloads.md)
+* [Conversão de mensagens entre Standards](conversionV2Fhir.md)
+* [Especificação Técnica](tech_spec.md)
+* [Histórico de Alterações](changes.md)
+
+## Resources
+
+### CodeSystems
+
+* [FHIR Events CodeSystem](CodeSystem-cs-fhir-events.md)
+
+### ValueSets
+
+* [Tipos de Identificadores de Paciente](ValueSet-patient-identifier-type.md)
+* [Tipos de Identificadores de Profissionais](ValueSet-practitioner-identifier-type.md)
+* [Eventos FHIR para Gestão de Identidade de Utentes](ValueSet-vs-patient-identity-events.md)
+
+### Resource Profiles
+
+* [PTBundleMessage](StructureDefinition-BundleMessage-Pt.md)
+* [PTCoverage](StructureDefinition-Coverage-Pt.md)
+* [PTMessageHeader](StructureDefinition-MessageHeader-Pt.md)
+* [PTOrganization](StructureDefinition-Organization-Pt.md)
+* [PTPatient](StructureDefinition-Patient-Pt.md)
+* [PTPractitioner](StructureDefinition-Practitioner-Pt.md)
+
+### Extensions
+
+* [PTContactIndicative](StructureDefinition-ContactIndicative-Pt.md)
+* [PTNotes](StructureDefinition-Notes-pt.md)
+* [PTPatientEnrollmentCategoryPrimarycare](StructureDefinition-PatientEnrollmentCategoryPrimarycare-Pt.md)
+* [PTPatientPrimaryCarePeriod](StructureDefinition-PatientPrimaryCarePeriod-Pt.md)
+* [PTPersonEducation](StructureDefinition-PersonEducation-Pt.md)
+* [PTPersonOccupation](StructureDefinition-PersonOccupation-Pt.md)
+* [PTPersonRecordType](StructureDefinition-PersonRecordType-Pt.md)
+* [Endereço estruturado PT](StructureDefinition-address-pt.md)
+* [Birthplace Extension](StructureDefinition-birthplace-pt.md)
+* [PTCoverageReason](StructureDefinition-coverage-reason-pt.md)
+* [Nationality Extension](StructureDefinition-nationality-pt.md)
+
+### ImplementationGuides
+
+* [HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1](index.md)
+
+### Examples
+
+* [patient-link (Bundle)](Bundle-patient-link.md)
+* [patient-new (Bundle)](Bundle-patient-new.md)
+* [patient-update (Bundle)](Bundle-patient-update.md)

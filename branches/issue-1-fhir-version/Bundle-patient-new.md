@@ -1,0 +1,717 @@
+# patient-new - HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1 v1.0.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **patient-new**
+
+## Example Bundle: patient-new
+
+Pacote patient-new do tipo message
+
+-------
+
+Entrada 1
+
+Recurso MessageHeader:
+
+> **event**: cs-fhir-events: PATIENT_NEW (Novo utente)
+
+### Destinations
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Name** | **Receiver** |
+| * | EXTERNAL SYSTEM | [Unidade Local de Saúde Dev](Bundle-patient-new.md#Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8) |
+
+**sender**:[Unidade Local de Saúde Dev](Bundle-patient-new.md#Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8)
+
+### Sources
+
+| | |
+| :--- | :--- |
+| - | **Name** |
+| * | ADT |
+
+**focus**:[Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))](Bundle-patient-link.md#Patient_21af15d4-7e31-3976-8391-ff0b3a4ab37d)
+
+-------
+
+Entrada 2
+
+Recurso Patient:
+
+> 
+
+Última atualização: 2025-10-24 13:06:05+0100
+
+LILIA JOSE TESTE ALVES (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066)
+-------
+
+-------
+
+Entrada 3
+
+Recurso Practitioner:
+
+> **identifier**: Numero interno do profissional/1982 (utilização: usual, ), Numero mecanográfico do profissional/2060 (utilização: official, )**name**: Utilizador de Testes - 60
+
+-------
+
+Entrada 4
+
+Recurso Coverage:
+
+> **status**: Active**beneficiary**:[Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))](Bundle-patient-link.md#Patient_21af15d4-7e31-3976-8391-ff0b3a4ab37d)**period**: ?? --> 2026-10-31 00:00:00+0000
+
+-------
+
+Entrada 5
+
+Recurso Coverage:
+
+> **status**: Active**beneficiary**:[Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))](Bundle-patient-link.md#Patient_21af15d4-7e31-3976-8391-ff0b3a4ab37d)
+
+-------
+
+Entrada 6
+
+Recurso Practitioner:
+
+> **name**: FILIPE CASTRO
+
+-------
+
+Entrada 7
+
+Recurso Organization:
+
+> **identifier**: 3110300 (utilização: official, )**active**: true
+
+-------
+
+Entrada 8
+
+Recurso Organization:
+
+> **active**: true**name**: Unidade Local de Saúde Dev
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "patient-new",
+  "type" : "message",
+  "timestamp" : "2025-10-24T13:06:26.895+01:00",
+  "entry" : [
+    {
+      "resource" : {
+        "resourceType" : "MessageHeader",
+        "id" : "a8648ba8-095b-4970-9f5b-f351d82b8a58",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_a8648ba8-095b-4970-9f5b-f351d82b8a58\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: MessageHeader a8648ba8-095b-4970-9f5b-f351d82b8a58</b></p><a name=\"a8648ba8-095b-4970-9f5b-f351d82b8a58\"> </a><a name=\"hca8648ba8-095b-4970-9f5b-f351d82b8a58\"> </a><p><b>event</b>: cs-fhir-events: PATIENT_NEW (Novo utente)</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td>EXTERNAL SYSTEM</td><td>DEV/EXTERNALSYSTEM</td><td><a href=\"Bundle-patient-new.html#Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8\">Unidade Local de Saúde Dev</a></td></tr></table><p><b>sender</b>: <a href=\"Bundle-patient-new.html#Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8\">Unidade Local de Saúde Dev</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td>ADT</td><td>DEV/ADT</td></tr></table><p><b>focus</b>: <a href=\"Bundle-patient-link.html#Patient_21af15d4-7e31-3976-8391-ff0b3a4ab37d\">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))</a></p></div>"
+        },
+        "eventCoding" : {
+          "system" : "http://example.com/fhir/hl7pt/CodeSystem/cs-fhir-events",
+          "code" : "PATIENT_NEW",
+          "display" : "Novo utente"
+        },
+        "destination" : [
+          {
+            "name" : "EXTERNAL SYSTEM",
+            "endpoint" : "DEV/EXTERNALSYSTEM",
+            "receiver" : {
+              "reference" : "Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8",
+              "display" : "Unidade Local de Saúde Dev"
+            }
+          }
+        ],
+        "sender" : {
+          "reference" : "Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8",
+          "display" : "Unidade Local de Saúde Dev"
+        },
+        "source" : {
+          "name" : "ADT",
+          "endpoint" : "DEV/ADT"
+        },
+        "focus" : [
+          {
+            "reference" : "Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d"
+          }
+        ]
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Patient",
+        "id" : "21af15d4-7e31-3976-8391-ff0b3a4ab37d",
+        "meta" : {
+          "lastUpdated" : "2025-10-24T13:06:05.000+01:00"
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_21af15d4-7e31-3976-8391-ff0b3a4ab37d\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Patient 21af15d4-7e31-3976-8391-ff0b3a4ab37d</b></p><a name=\"21af15d4-7e31-3976-8391-ff0b3a4ab37d\"> </a><a name=\"hc21af15d4-7e31-3976-8391-ff0b3a4ab37d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Última atualização: 2025-10-24 13:06:05+0100</p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">LILIA JOSE TESTE ALVES (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Estado conhecido do doente\">Falecido:</td><td>false</td><td style=\"background-color: #f3f5da\" title=\"Estado civil conhecido do doente\">Estado civil:</td><td colspan=\"3\"><span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Casado</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>Passport number/589471XS</li><li>Número de identificação fiscal/254781369</li><li>Número de identificação da segurança social/658974581</li><li>Número do processo/18015692</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Formas de contactar o doente\">Detalhes do contacto</td><td colspan=\"3\"><ul><li>ph: 265842987(Home)</li><li>ph: 915469872(Mobile)</li><li><a href=\"mailto:li@email.com\">li@email.com</a></li><li>RUA DE CASA, N.2 ANÇÃ ANÇÃ 3060-009 PT (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Contacto nomeado: Other\">Other:</td><td colspan=\"3\"><ul><li>SOFIA </li><li>RUA DO SOL ABIUL 3100-013 PT </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Contacto nomeado: Emergency Contact\">Emergency Contact:</td><td colspan=\"3\"><ul><li>MAE ANA </li><li>ph: 965874528(Mobile)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Contacto nomeado: Self\">Self:</td><td colspan=\"3\"><ul><li>LI </li><li>ph: 966874589(Mobile)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Contacto nomeado: father\">father:</td><td colspan=\"3\"><ul><li>JOSE SANTOS </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Contacto nomeado: mother\">mother:</td><td colspan=\"3\"><ul><li>ANA MARIA FATIMA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ligações para doentes\">Ligações:</td><td colspan=\"3\"><ul><li>Médico de clínica geral: <a href=\"Bundle-patient-new.html#Practitioner_598fe4e3-dfb7-394f-b94c-1b0502ca3d1c\">Practitioner FILIPE CASTRO </a></li><li>Médico de clínica geral: <a href=\"Bundle-patient-new.html#Organization_86db4073-1bcb-3791-a7da-3675bdeb5177\">Organization: identifier = 3110300 (use: official, )</a></li><li>Organização de gestão: <a href=\"Bundle-patient-new.html#Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8\">Organization Unidade Local de Saúde Dev</a></li></ul></td></tr></table></div>"
+        },
+        "extension" : [
+          {
+            "extension" : [
+              {
+                "url" : "country",
+                "valueCodeableConcept" : {
+                  "coding" : [
+                    {
+                      "system" : "http://www.ine.pt",
+                      "code" : "PT"
+                    }
+                  ]
+                }
+              },
+              {
+                "url" : "county",
+                "valueCodeableConcept" : {
+                  "coding" : [
+                    {
+                      "system" : "http://www.ine.pt",
+                      "code" : "14"
+                    }
+                  ]
+                }
+              },
+              {
+                "url" : "municipality",
+                "valueCodeableConcept" : {
+                  "coding" : [
+                    {
+                      "system" : "http://www.ine.pt",
+                      "code" : "1410"
+                    }
+                  ]
+                }
+              },
+              {
+                "url" : "parish",
+                "valueCodeableConcept" : {
+                  "coding" : [
+                    {
+                      "system" : "http://www.ine.pt",
+                      "code" : "141001"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url" : "http://example.com/fhir/hl7pt/extensions/birthplace"
+          },
+          {
+            "url" : "http://eexample.com/fhir/hl7pt/extensions/nationality",
+            "valueCodeableConcept" : {
+              "coding" : [
+                {
+                  "system" : "http://www.ine.pt",
+                  "code" : "PT",
+                  "display" : "PORTUGAL"
+                }
+              ]
+            }
+          },
+          {
+            "url" : "notes",
+            "valueAnnotation" : {
+              "text" : "anotaçoes ao utente"
+            }
+          }
+        ],
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "PI",
+                  "display" : "Patient internal identifier"
+                }
+              ],
+              "text" : "Identificador sequencial do utente na entidade"
+            },
+            "system" : "SONHO",
+            "value" : "404066"
+          },
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "PPN",
+                  "display" : "Passport Number"
+                }
+              ],
+              "text" : "Passport number"
+            },
+            "system" : "SEF",
+            "value" : "589471XS"
+          },
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "TAX",
+                  "display" : "Tax ID number"
+                }
+              ],
+              "text" : "Número de identificação fiscal"
+            },
+            "system" : "AT",
+            "value" : "254781369"
+          },
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "SS",
+                  "display" : "Social Security Number"
+                }
+              ],
+              "text" : "Número de identificação da segurança social"
+            },
+            "system" : "SS",
+            "value" : "658974581"
+          },
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "MR",
+                  "display" : "Medical record number"
+                }
+              ],
+              "text" : "Número do processo"
+            },
+            "system" : "SONHO",
+            "value" : "18015692"
+          }
+        ],
+        "name" : [
+          {
+            "use" : "official",
+            "family" : "TESTE ALVES",
+            "given" : ["LILIA", "JOSE"]
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "265842987",
+            "use" : "home",
+            "rank" : 1
+          },
+          {
+            "system" : "phone",
+            "value" : "915469872",
+            "use" : "mobile"
+          },
+          {
+            "system" : "email",
+            "value" : "li@email.com"
+          }
+        ],
+        "gender" : "female",
+        "birthDate" : "1995-10-09",
+        "deceasedBoolean" : false,
+        "address" : [
+          {
+            "extension" : [
+              {
+                "extension" : [
+                  {
+                    "url" : "address-type",
+                    "valueCoding" : {
+                      "system" : "http://spms.min-saude.pt/rnu/extensions/address-types",
+                      "code" : "MA",
+                      "display" : "Main Address"
+                    }
+                  },
+                  {
+                    "url" : "county",
+                    "valueCodeableConcept" : {
+                      "coding" : [
+                        {
+                          "system" : "http://www.ine.pt",
+                          "code" : "06"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "url" : "municipality",
+                    "valueCodeableConcept" : {
+                      "coding" : [
+                        {
+                          "system" : "http://www.ine.pt",
+                          "code" : "0602"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "url" : "parish",
+                    "valueCodeableConcept" : {
+                      "coding" : [
+                        {
+                          "system" : "http://www.ine.pt",
+                          "code" : "060201"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "url" : "http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2"
+              }
+            ],
+            "use" : "home",
+            "type" : "both",
+            "line" : ["RUA DE CASA, N.2", "ANÇÃ"],
+            "city" : "ANÇÃ",
+            "district" : "COIMBRA",
+            "postalCode" : "3060-009",
+            "country" : "PT"
+          }
+        ],
+        "maritalStatus" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code" : "M",
+              "display" : "Casado"
+            }
+          ]
+        },
+        "contact" : [
+          {
+            "relationship" : [
+              {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code" : "O",
+                    "display" : "Other"
+                  }
+                ]
+              }
+            ],
+            "name" : {
+              "given" : ["SOFIA"]
+            },
+            "address" : {
+              "extension" : [
+                {
+                  "extension" : [
+                    {
+                      "url" : "address-type",
+                      "valueCoding" : {
+                        "system" : "V2",
+                        "code" : "C",
+                        "display" : "Current Or Temporary"
+                      }
+                    },
+                    {
+                      "url" : "county",
+                      "valueCodeableConcept" : {
+                        "coding" : [
+                          {
+                            "system" : "http://www.ine.pt",
+                            "code" : "10"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url" : "municipality",
+                      "valueCodeableConcept" : {
+                        "coding" : [
+                          {
+                            "system" : "http://www.ine.pt",
+                            "code" : "1015"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url" : "parish",
+                      "valueCodeableConcept" : {
+                        "coding" : [
+                          {
+                            "system" : "http://www.ine.pt",
+                            "code" : "101501"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url" : "http://example.com/fhir/hl7pt/extensions/extension-address-v1-1-2"
+                }
+              ],
+              "type" : "postal",
+              "line" : ["RUA DO SOL"],
+              "city" : "ABIUL",
+              "district" : "LEIRIA",
+              "postalCode" : "3100-013",
+              "country" : "PT"
+            }
+          },
+          {
+            "relationship" : [
+              {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code" : "C",
+                    "display" : "Emergency Contact"
+                  }
+                ]
+              }
+            ],
+            "name" : {
+              "family" : "ANA",
+              "given" : ["MAE"]
+            },
+            "telecom" : [
+              {
+                "system" : "phone",
+                "value" : "965874528",
+                "use" : "mobile"
+              }
+            ]
+          },
+          {
+            "relationship" : [
+              {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                    "code" : "ONESELF",
+                    "display" : "Self"
+                  }
+                ]
+              }
+            ],
+            "name" : {
+              "given" : ["LI"]
+            },
+            "telecom" : [
+              {
+                "system" : "phone",
+                "value" : "966874589",
+                "use" : "mobile"
+              }
+            ]
+          },
+          {
+            "relationship" : [
+              {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                    "code" : "FTH",
+                    "display" : "father"
+                  }
+                ]
+              }
+            ],
+            "name" : {
+              "family" : "SANTOS",
+              "given" : ["JOSE"]
+            }
+          },
+          {
+            "relationship" : [
+              {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                    "code" : "MTH",
+                    "display" : "mother"
+                  }
+                ]
+              }
+            ],
+            "name" : {
+              "family" : "FATIMA",
+              "given" : ["ANA", "MARIA"]
+            }
+          }
+        ],
+        "generalPractitioner" : [
+          {
+            "reference" : "Practitioner/598fe4e3-dfb7-394f-b94c-1b0502ca3d1c"
+          },
+          {
+            "reference" : "Organization/86db4073-1bcb-3791-a7da-3675bdeb5177"
+          }
+        ],
+        "managingOrganization" : {
+          "reference" : "Organization/70cfff33-ebcb-4f99-9bf5-c560575295d8"
+        }
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Practitioner",
+        "id" : "f8c0c968-6328-35cd-9333-08b1a494967f",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_f8c0c968-6328-35cd-9333-08b1a494967f\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Practitioner f8c0c968-6328-35cd-9333-08b1a494967f</b></p><a name=\"f8c0c968-6328-35cd-9333-08b1a494967f\"> </a><a name=\"hcf8c0c968-6328-35cd-9333-08b1a494967f\"> </a><p><b>identifier</b>: Numero interno do profissional/1982 (utilização: usual, ), Numero mecanográfico do profissional/2060 (utilização: official, )</p><p><b>name</b>: Utilizador de Testes - 60 </p></div>"
+        },
+        "identifier" : [
+          {
+            "use" : "usual",
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "EI",
+                  "display" : "Employee number"
+                }
+              ],
+              "text" : "Numero interno do profissional"
+            },
+            "system" : "SONHO",
+            "value" : "1982"
+          },
+          {
+            "use" : "official",
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "EI",
+                  "display" : "Employee number"
+                }
+              ],
+              "text" : "Numero mecanográfico do profissional"
+            },
+            "system" : "RHV",
+            "value" : "2060"
+          }
+        ],
+        "name" : [
+          {
+            "family" : "60",
+            "given" : ["Utilizador de Testes -"]
+          }
+        ]
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Coverage",
+        "id" : "87f702c0-808b-4f24-8830-fbf6edef1afa",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Coverage_87f702c0-808b-4f24-8830-fbf6edef1afa\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Coverage 87f702c0-808b-4f24-8830-fbf6edef1afa</b></p><a name=\"87f702c0-808b-4f24-8830-fbf6edef1afa\"> </a><a name=\"hc87f702c0-808b-4f24-8830-fbf6edef1afa\"> </a><p><b>status</b>: Active</p><p><b>beneficiary</b>: <a href=\"Bundle-patient-link.html#Patient_21af15d4-7e31-3976-8391-ff0b3a4ab37d\">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))</a></p><p><b>period</b>: ?? --&gt; 2026-10-31 00:00:00+0000</p><p><b>payor</b>: <a href=\"Organization/f1cf7567-92e6-3df8-9406-39892836a36b\">ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO</a></p></div>"
+        },
+        "status" : "active",
+        "beneficiary" : {
+          "reference" : "Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d",
+          "identifier" : {
+            "system" : "ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO",
+            "value" : "569845294AP"
+          }
+        },
+        "period" : {
+          "end" : "2026-10-31T00:00:00+00:00"
+        },
+        "payor" : [
+          {
+            "reference" : "Organization/f1cf7567-92e6-3df8-9406-39892836a36b",
+            "identifier" : {
+              "system" : "SONHO",
+              "value" : "910005"
+            },
+            "display" : "ADSE -  ASSISTENCIA DOENCA SERVIDORES ESTADO"
+          }
+        ]
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Coverage",
+        "id" : "e78e5ad2-1580-4c30-a44d-318538f88e40",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Coverage_e78e5ad2-1580-4c30-a44d-318538f88e40\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Coverage e78e5ad2-1580-4c30-a44d-318538f88e40</b></p><a name=\"e78e5ad2-1580-4c30-a44d-318538f88e40\"> </a><a name=\"hce78e5ad2-1580-4c30-a44d-318538f88e40\"> </a><p><b>status</b>: Active</p><p><b>beneficiary</b>: <a href=\"Bundle-patient-link.html#Patient_21af15d4-7e31-3976-8391-ff0b3a4ab37d\">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))</a></p><p><b>payor</b>: <a href=\"Organization/7a14a1a7-349c-3da4-8347-351a03cfb320\">SEGURANCA SOCIAL</a></p></div>"
+        },
+        "status" : "active",
+        "beneficiary" : {
+          "reference" : "Patient/21af15d4-7e31-3976-8391-ff0b3a4ab37d",
+          "identifier" : {
+            "system" : "SEGURANCA SOCIAL",
+            "value" : "658974581"
+          }
+        },
+        "payor" : [
+          {
+            "reference" : "Organization/7a14a1a7-349c-3da4-8347-351a03cfb320",
+            "identifier" : {
+              "system" : "SONHO",
+              "value" : "938001"
+            },
+            "display" : "SEGURANCA SOCIAL"
+          }
+        ]
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Practitioner",
+        "id" : "598fe4e3-dfb7-394f-b94c-1b0502ca3d1c",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_598fe4e3-dfb7-394f-b94c-1b0502ca3d1c\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Practitioner 598fe4e3-dfb7-394f-b94c-1b0502ca3d1c</b></p><a name=\"598fe4e3-dfb7-394f-b94c-1b0502ca3d1c\"> </a><a name=\"hc598fe4e3-dfb7-394f-b94c-1b0502ca3d1c\"> </a><p><b>name</b>: FILIPE CASTRO </p></div>"
+        },
+        "name" : [
+          {
+            "family" : "CASTRO",
+            "given" : ["FILIPE"]
+          }
+        ]
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Organization",
+        "id" : "86db4073-1bcb-3791-a7da-3675bdeb5177",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_86db4073-1bcb-3791-a7da-3675bdeb5177\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Organization 86db4073-1bcb-3791-a7da-3675bdeb5177</b></p><a name=\"86db4073-1bcb-3791-a7da-3675bdeb5177\"> </a><a name=\"hc86db4073-1bcb-3791-a7da-3675bdeb5177\"> </a><p><b>identifier</b>: 3110300 (utilização: official, )</p><p><b>active</b>: true</p></div>"
+        },
+        "identifier" : [
+          {
+            "use" : "official",
+            "value" : "3110300"
+          }
+        ],
+        "active" : true
+      }
+    },
+    {
+      "resource" : {
+        "resourceType" : "Organization",
+        "id" : "70cfff33-ebcb-4f99-9bf5-c560575295d8",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_70cfff33-ebcb-4f99-9bf5-c560575295d8\"> </a><p class=\"res-header-id\"><b>Narrativa gerada: Organization 70cfff33-ebcb-4f99-9bf5-c560575295d8</b></p><a name=\"70cfff33-ebcb-4f99-9bf5-c560575295d8\"> </a><a name=\"hc70cfff33-ebcb-4f99-9bf5-c560575295d8\"> </a><p><b>active</b>: true</p><p><b>name</b>: Unidade Local de Saúde Dev</p></div>"
+        },
+        "active" : true,
+        "name" : "Unidade Local de Saúde Dev"
+      }
+    }
+  ]
+}
+
+```

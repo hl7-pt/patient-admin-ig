@@ -1,0 +1,65 @@
+# hl7.fhir.pt.patient-admin-ig#1.0.0: HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1
+
+## Pages
+
+* [Inicio](index.md)
+* [Conversão de mensagens entre Standards](conversionFhirV2.md)
+* [Artifacts Summary](artifacts.md)
+* [Conversão de mensagens entre Standards](conversionV2Fhir.md)
+* [Especificação Funcional](fun_spec.md)
+* [Histórico de Alterações](changes.md)
+* [Especificação Técnica](tech_spec.md)
+* [Exemplos](examples.md)
+* [Downloads](downloads.md)
+
+## Resources
+
+### CodeSystems
+
+* [FHIR Events CodeSystem](CodeSystem-cs-fhir-events.md)
+
+### ValueSets
+
+* [Tipos de Identificadores de Paciente](ValueSet-patient-identifier-type.md)
+* [Tipos de Identificadores de Profissionais](ValueSet-practitioner-identifier-type.md)
+* [Eventos FHIR para Gestão de Identidade de Utentes](ValueSet-vs-patient-identity-events.md)
+
+### Resource Profiles
+
+* [PTBundleMessage](StructureDefinition-BundleMessage-Pt.md)
+* [PTBundleSearchset](StructureDefinition-BundleSearchset-Pt.md)
+* [PTCoverage](StructureDefinition-Coverage-Pt.md)
+* [PTMessageHeader](StructureDefinition-MessageHeader-Pt.md)
+* [PTOrganization](StructureDefinition-Organization-Pt.md)
+* [PTPatient](StructureDefinition-Patient-Pt.md)
+* [PTPractitioner](StructureDefinition-Practitioner-Pt.md)
+
+### Extensions
+
+* [PTAddressCountry](StructureDefinition-AddressCountry-Pt.md)
+* [PTAddressCounty](StructureDefinition-AddressCounty-Pt.md)
+* [PTAddressMunicipality](StructureDefinition-AddressMunicipality-Pt.md)
+* [PTAddressNuts](StructureDefinition-AddressNuts-Pt.md)
+* [PTAddressParish](StructureDefinition-AddressParish-Pt.md)
+* [PTAddressType](StructureDefinition-AddressType-Pt.md)
+* [PTContactIndicative](StructureDefinition-ContactIndicative-Pt.md)
+* [PTCoverageReason](StructureDefinition-CoverageReason-Pt.md)
+* [PTNationality](StructureDefinition-Nationality.md)
+* [PTNotes](StructureDefinition-Notes-pt.md)
+* [PTPatientEnrollmentCategoryPrimarycare](StructureDefinition-PatientEnrollmentCategoryPrimarycare-Pt.md)
+* [PTPatientPrimaryCarePeriod](StructureDefinition-PatientPrimaryCarePeriod-Pt.md)
+* [PTPersonBirthplace](StructureDefinition-PersonBirthplace-Pt.md)
+* [PTPersonEducation](StructureDefinition-PersonEducation-Pt.md)
+* [PTPersonOccupation](StructureDefinition-PersonOccupation-Pt.md)
+* [PTPersonRecordType](StructureDefinition-PersonRecordType-Pt.md)
+
+### ImplementationGuides
+
+* [HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1](index.md)
+
+### Examples
+
+* [patient-link (Bundle)](Bundle-patient-link.md)
+* [patient-merge (Bundle)](Bundle-patient-merge.md)
+* [patient-new (Bundle)](Bundle-patient-new.md)
+* [patient-update (Bundle)](Bundle-patient-update.md)

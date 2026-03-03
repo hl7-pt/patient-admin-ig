@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>patient-new - HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1 v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/affiliate.css" rel="stylesheet"/>
+<!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/colors.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"9.25"}
+    h3,h4,h5,h6{--heading-prefix:"9.25"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+  <a id="affiliate-logo" no-external="true" href="http://hl7.eu">
+    <img height="71" alt="Visit the HL7 affiliate website" src="assets/images/affiliate.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="30" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - STU1
+
+
+
+  <img alt="Portugal flag" src="assets/images/prt.svg" height="16" title="Portugal"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificação
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="fun_spec.html">Especificação Funcional</a>
+      </li>
+      <li>
+        <a href="tech_spec.html">Especificação Técnica</a>
+      </li>
+      <li>
+        <a href="conversionV2Fhir.html">Conversão HL7 v2 para FHIR</a>
+      </li>
+      <li>
+        <a href="conversionFhirV2.html">Conversão FHIR para HL7 v2</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefactos</a>
+  </li>
+  <li>
+    <a href="examples.html">Exemplos</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Histórico de Alterações</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>patient-new</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1, publicado por HL7 Portugal. Este guia não é uma publicação autorizada; é a compilação contínua para a versão 1.0.0 construída pela FHIR (HL7&reg; FHIR&reg; Standard) CI Build. Esta versão é baseada no conteúdo atual de <a href='https://github.com/hl7-pt/patient-admin-ig/tree/add-exemples'>https://github.com/hl7-pt/patient-admin-ig/tree/add-exemples</a> e muda regularmente. Veja o <a href='http://example.com/fhir/hl7pt/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-patient-new.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-patient-new.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-patient-new.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Example Bundle: patient-new</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div data-fhir="generated"><p class="res-header-id"/><a name="patient-new"> </a><a name="hcpatient-new"> </a><p>Pacote patient-new do tipo message</p><a name="urn-uuid-8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32"> </a><a name="MessageHeader_8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32"> </a><a name="hcMessageHeader_8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32"> </a><hr/><p>Entrada 1 - fullUrl = urn:uuid:8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32</p><p>Recurso MessageHeader:</p><blockquote><p class="res-header-id"/><a name="patient-new/8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32"> </a><a name="hcpatient-new/8f3aa0e0-4a19-4a7e-9f87-3e5b4d6f9b32"> </a><p><b>event</b>: <a href="CodeSystem-cs-fhir-events.html#cs-fhir-events-PATIENT_NEW">FHIR Events CodeSystem: PATIENT_NEW</a> (Criação de novo utente)</p><h3>Destinations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Receiver</b></td></tr><tr><td style="display: none">*</td><td>EXTERNAL SYSTEM</td><td><a href="Bundle-patient-new.html#urn-uuid-e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1">Unidade Local de Saúde Dev</a></td></tr></table><p><b>sender</b>: <a href="Bundle-patient-new.html#urn-uuid-e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1">Unidade Local de Saúde Dev</a></p><h3>Sources</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td></tr><tr><td style="display: none">*</td><td>ADT</td></tr></table><p><b>focus</b>: <a href="Bundle-patient-new.html#urn-uuid-2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))</a></p></blockquote><a name="urn-uuid-2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021"> </a><a name="Patient_2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021"> </a><a name="hcPatient_2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021"> </a><hr/><p>Entrada 2 - fullUrl = urn:uuid:2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021</p><p>Recurso Patient:</p><blockquote><p class="res-header-id"/><a name="patient-new/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021"> </a><a name="hcpatient-new/2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Etiqueta de segurança: Normal (Pormenores: Confidentiality código N = 'Normal')</p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: b4d3104a-7d7d-4fc0-a61b-3547836fb84c (use: usual, ))</p><hr/><table class="grid" data-fhir="generated"><tr><td style="background-color: #f3f5da" title="O registo está ativo">Ativo:</td><td>true</td><td style="background-color: #f3f5da" title="Estado conhecido do doente">Falecido:</td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li>Identificador sequencial do utente na entidade/404066 (utilização: usual, )</li><li>Número do processo/18015692 (utilização: official, )</li><li>Número de identificação fiscal/254781369 (utilização: official, )</li><li>Passport number/589471XS (utilização: official, )</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Formas de contactar o doente">Detalhes do contacto</td><td colspan="3"><ul><li>ph: 265842987</li><li>ph: 915469872(Mobile)</li><li><a href="mailto:li@email.com">li@email.com</a></li><li>Rua De Casa, N.2 Ançã 3060-009 (billing)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Contacto nomeado: Self">Self:</td><td colspan="3"><ul><li>Lilia Jose Teste Alves (Official)</li><li>ph: 265842987</li><li>ph: 915469872(Mobile)</li><li><a href="mailto:li@email.com">li@email.com</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ligações para doentes">Ligações:</td><td colspan="3"><ul><li>Médico de clínica geral: <a href="Bundle-patient-new.html#urn-uuid-0f4cfb73-91ea-43a7-bb84-1b0c2419837f">Practitioner Ana Torres </a></li><li>Médico de clínica geral: <a href="Bundle-patient-new.html#urn-uuid-3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96">Organization USF DEV</a></li><li>Organização de gestão: <a href="Bundle-patient-new.html#urn-uuid-e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1">Organization ULS DEV</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Represents the patient's nationality"><a href="StructureDefinition-nationality-pt.html">Nationality Extension</a></td><td colspan="3"><span title="Códigos:{https://www.iso.org/iso-3166-country-codes.html PT}">Portugal</span></td></tr></table></blockquote><a name="urn-uuid-5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5"> </a><a name="Practitioner_5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5"> </a><a name="hcPractitioner_5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5"> </a><hr/><p>Entrada 3 - fullUrl = urn:uuid:5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5</p><p>Recurso Practitioner:</p><blockquote><p class="res-header-id"/><a name="patient-new/5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5"> </a><a name="hcpatient-new/5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5"> </a><p><b>identifier</b>: Numero interno do profissional/5bdc0d91-2c0f-47a8-bbb2-7f6fcb7c4ef5 (utilização: usual, ), Numero mecanográfico do profissional/30047 (utilização: official, )</p><p><b>active</b>: true</p></blockquote><a name="urn-uuid-91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07"> </a><a name="Coverage_91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07"> </a><a name="hcCoverage_91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07"> </a><hr/><p>Entrada 4 - fullUrl = urn:uuid:91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07</p><p>Recurso Coverage:</p><blockquote><p class="res-header-id"/><a name="patient-new/91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07"> </a><a name="hcpatient-new/91b6c6fa-0d5e-4d72-9d89-4ffbcb3fae07"> </a><p><b>PTCoverageReason</b>: <span title="Códigos:{http://example.org/SONHO 705}">Insuficiencia Económica</span></p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Códigos:{http://spms.min-saude.pt/rnu/systemcodes/coverage-type BU}">Beneficio do utente</span></p><p><b>beneficiary</b>: <a href="Bundle-patient-new.html#urn-uuid-2c1e7f78-41cd-4df4-a6de-1f8c7bd4a021">Lilia Jose Teste Alves (official) Female, DoB: 1995-10-09 ( Identificador sequencial do utente na entidade: 404066 (use: usual, ))</a></p><p><b>period</b>: 2024-12-08 00:00:00+0000 --&gt; (em curso)</p></blockquote><a name="urn-uuid-6b3e55bb-98c4-4dbd-a45f-dc941f093e5e"> </a><a name="Organization_6b3e55bb-98c4-4dbd-a45f-dc941f093e5e"> </a><a name="hcOrganization_6b3e55bb-98c4-4dbd-a45f-dc941f093e5e"> </a><hr/><p>Entrada 5 - fullUrl = urn:uuid:6b3e55bb-98c4-4dbd-a45f-dc941f093e5e</p><p>Recurso Organization:</p><blockquote><p class="res-header-id"/><a name="patient-new/6b3e55bb-98c4-4dbd-a45f-dc941f093e5e"> </a><a name="hcpatient-new/6b3e55bb-98c4-4dbd-a45f-dc941f093e5e"> </a><p><b>identifier</b>: <code>http://example.org/SONHO</code>/935601 (utilização: usual, )</p><p><b>active</b>: true</p><p><b>name</b>: Serviço Nacional de Saúde</p></blockquote><a name="urn-uuid-0f4cfb73-91ea-43a7-bb84-1b0c2419837f"> </a><a name="Practitioner_0f4cfb73-91ea-43a7-bb84-1b0c2419837f"> </a><a name="hcPractitioner_0f4cfb73-91ea-43a7-bb84-1b0c2419837f"> </a><hr/><p>Entrada 6 - fullUrl = urn:uuid:0f4cfb73-91ea-43a7-bb84-1b0c2419837f</p><p>Recurso Practitioner:</p><blockquote><p class="res-header-id"/><a name="patient-new/0f4cfb73-91ea-43a7-bb84-1b0c2419837f"> </a><a name="hcpatient-new/0f4cfb73-91ea-43a7-bb84-1b0c2419837f"> </a><p><b>active</b>: true</p><p><b>name</b>: Ana Torres </p></blockquote><a name="urn-uuid-e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1"> </a><a name="Organization_e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1"> </a><a name="hcOrganization_e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1"> </a><hr/><p>Entrada 7 - fullUrl = urn:uuid:e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1</p><p>Recurso Organization:</p><blockquote><p class="res-header-id"/><a name="patient-new/e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1"> </a><a name="hcpatient-new/e10c7e4f-6c49-4ee3-a6dd-71e5b70230c1"> </a><p><b>identifier</b>: <code>http://example.org/SONHO</code>/454321 (utilização: usual, )</p><p><b>active</b>: true</p><p><b>name</b>: ULS DEV</p></blockquote><a name="urn-uuid-3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96"> </a><a name="Organization_3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96"> </a><a name="hcOrganization_3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96"> </a><hr/><p>Entrada 8 - fullUrl = urn:uuid:3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96</p><p>Recurso Organization:</p><blockquote><p class="res-header-id"/><a name="patient-new/3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96"> </a><a name="hcpatient-new/3a9e5ae2-2dcf-44d0-bd38-a12439ac0a96"> </a><p><b>identifier</b>: <code>http://example.org/SONHO</code>/454321 (utilização: usual, )</p><p><b>active</b>: true</p><p><b>name</b>: USF DEV</p></blockquote></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.pt">HL7 Portugal</a>.  Package hl7.fhir.pt.patient-admin-ig#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 8, 2025 20:13+0000">2025-12-08</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
