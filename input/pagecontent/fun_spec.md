@@ -236,5 +236,5 @@ Para desassociação de utentes
 Tabela 3 - Subconjunto de eventos nas mensagens FHIR de Gestão de Identidade do Utente
 
 
-Os eventos aqui apresentados têm igualmente em conta o standard HL7 v2.x e a documentação pública de especificação da SPMS, que está implementada em grande parte das instituições de prestação de cuidados de Saúde em particular nos Cuidados de Saúde Hospitalares. No caso do evento de atualização de utentes as mensagens HL7 v2 defenidas pela SPMS, conforme especificação publica, aplicam a mensagem e evento ADT^A08.
+Os eventos aqui apresentados têm igualmente em conta o _standard_ HL7 v2.x e a documentação pública de especificação da SPMS, que está implementada em grande parte das instituições de prestação de cuidados de Saúde em particular nos Cuidados de Saúde Hospitalares. No caso do evento de atualização de utentes as mensagens HL7 v2 definidas pela SPMS, conforme especificação pública, aplicam a mensagem e evento ADT^A08.
 
