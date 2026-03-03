@@ -44,7 +44,7 @@ O NNU é essencial para ligar episódios clínicos e administrativos de diferent
 
 No entanto, se o utente não está registado no RNU ou se não tem informação suficiente para validar o seu registo no RNU, o sistema ADT tem que proceder ao registo e manutenção dos dados desses utentes no sistema local, e mais tarde sendo possivel proceder à sincronização de dados com o RNU. 
 
-Outro cenário possível, é o registo de utentes não identificados no sistema ADT, que ocorre quando não é possivel identificar utentes que dão entrada no hospital sem condições de se proceder à sua identificação. Este é um cenário particular da Urgencia Hospitalar.
+Outro cenário possível, é o registo de utentes não identificados no sistema ADT, que ocorre quando não é possivel identificar utentes que dão entrada no hospital sem condições de se proceder à sua identificação. Este é um cenário particular da Urgência Hospitalar.
 
 
 ### Casos de Uso
@@ -52,7 +52,7 @@ Outro cenário possível, é o registo de utentes não identificados no sistema 
 _O sr. Joaquim Silva sentiu-se mal e decidiu dirigir-se ao Hospital X para ser atendido por médico._
 
 
-_O funcionário administrativo do secretariado da Urgencia inicia o processo de criação de um novo utente para o Joaquim Silva, com base nas limitadas informações por ele fornecidas. Nesta fase, apenas estão disponíveis detalhes básicos sobre José Silva; sua data de nascimento. O endereço da residencia e número de telefone da residencia são desconhecidos. Utilizando o aplicativo de registo, o funcionário cria a identidade inicial do utente José Silva, e o sistema ADT garante que uma mensagem de Criação do Utente seja enviada para todas as aplicações que necessitam de ter cenhecimento do novo utente, com as informações pessoais disponíveis._
+_O funcionário administrativo do secretariado da Urgência inicia o processo de criação de um novo utente para o Joaquim Silva, com base nas limitadas informações por ele fornecidas. Nesta fase, apenas estão disponíveis detalhes básicos sobre José Silva; sua data de nascimento. O endereço da residencia e número de telefone da residencia são desconhecidos. Utilizando o aplicativo de registo, o funcionário cria a identidade inicial do utente José Silva, e o sistema ADT garante que uma mensagem de Criação do Utente seja enviada para todas as aplicações que necessitam de ter cenhecimento do novo utente, com as informações pessoais disponíveis._
 
 
 _Mais tarde nesse dia, são disponibilizadas informações pessoais mais detalhadas sobre o José Silva. O administrativo atualiza o registo de identidade da paciente no sistema ADT e este envia uma mensagem de Atualização do Paciente para refletir esses novos detalhes nos sistemas que necessitam destas informações._
@@ -139,7 +139,7 @@ O Administrativo cria um registo de um novo utente no sistema que pode ser por v
     - Para uma mensagem PATIENT_NEW é esperada uma resposta PATIENT_NEW_RESPONSE
     - Para as mensagems de resposta é obrigatorio o envio do elemento MessageHeader.response
 - Patient
-- Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)
+- Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Médico de Família)
 - Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)
 - Coverage (Sistema ou Subsistema de saúde/Motivos de isenção de taxas moderadoras/ Planos/Apólices de Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
@@ -160,7 +160,7 @@ O Administrativo atualiza o registo de um utente existente no sistema. Esta atua
     - Para uma mensagem PATIENT_UPDATE é esperada uma resposta PATIENT_UPDATE_RESPONSE
     - Para as mensagems de resposta é obrigatorio o envio do elemento MessageHeader.response
 - Patient
-- Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Medico de Familia)
+- Practitioner (Utilizador que fez os registos de criação ou atualização do utente, Médico de Família)
 - Organization (Entidade de origem, entidade de destino, Centro de Saúde do Utente)
 - Coverage (Sistema ou Subsistema de saúde/Motivos de isenção de taxas moderadoras/ Planos/Apólices de Seguros de saúde associados ao Utente com referencia à Entidade Responsavel)
 
